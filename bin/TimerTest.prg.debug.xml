@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="D:\Rapetti\eclipse-workspace\TimerTest\manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="3" lineNum="10" pc="268435456" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="3" lineNum="12" pc="268435460" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="3" lineNum="13" pc="268435478" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="4" lineNum="16" pc="268435489" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="4" lineNum="18" pc="268435493" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="4" lineNum="20" pc="268435504" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="4" lineNum="22" pc="268435599" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="4" lineNum="24" pc="268435610" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="4" lineNum="25" pc="268435638" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="4" lineNum="26" pc="268435655" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="4" lineNum="27" pc="268435708" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="4" lineNum="28" pc="268435761" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="4" lineNum="30" pc="268435816" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="4" lineNum="32" pc="268435827" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="4" lineNum="33" pc="268435855" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="4" lineNum="34" pc="268435872" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="4" lineNum="35" pc="268435925" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="4" lineNum="36" pc="268435978" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="6" lineNum="43" pc="268436034" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="6" lineNum="45" pc="268436038" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="7" lineNum="48" pc="268436057" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="7" lineNum="50" pc="268436061" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="7" lineNum="52" pc="268436072" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="7" lineNum="54" pc="268436095" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="7" lineNum="56" pc="268436106" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="9" lineNum="63" pc="268436130" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="9" lineNum="65" pc="268436134" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="10" lineNum="68" pc="268436153" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="10" lineNum="70" pc="268436157" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="10" lineNum="72" pc="268436168" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="10" lineNum="74" pc="268436191" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SettingsMenuDelegate.mc" id="10" lineNum="76" pc="268436202" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\StartupView.mc" id="12" lineNum="12" pc="268436226" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\StartupView.mc" id="12" lineNum="14" pc="268436230" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\StartupView.mc" id="12" lineNum="16" pc="268436248" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\StartupView.mc" id="12" lineNum="17" pc="268436264" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\StartupView.mc" id="13" lineNum="22" pc="268436275" symbol="onShow"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\StartupView.mc" id="13" lineNum="24" pc="268436279" symbol="onShow"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="15" lineNum="10" pc="268436324" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="15" lineNum="11" pc="268436328" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="15" lineNum="12" pc="268436338" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="16" lineNum="16" pc="268436357" symbol="onUpdate"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="16" lineNum="17" pc="268436361" symbol="onUpdate"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="16" lineNum="18" pc="268436389" symbol="onUpdate"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="16" lineNum="19" pc="268436406" symbol="onUpdate"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="16" lineNum="21" pc="268436481" symbol="onUpdate"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="16" lineNum="22" pc="268436506" symbol="onUpdate"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="16" lineNum="23" pc="268436609" symbol="onUpdate"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="16" lineNum="24" pc="268436632" symbol="onUpdate"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="16" lineNum="26" pc="268436654" symbol="onUpdate"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="16" lineNum="27" pc="268436677" symbol="onUpdate"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="16" lineNum="29" pc="268436699" symbol="onUpdate"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="16" lineNum="30" pc="268436722" symbol="onUpdate"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="17" lineNum="35" pc="268436745" symbol="setupDisplay"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="17" lineNum="36" pc="268436749" symbol="setupDisplay"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="17" lineNum="37" pc="268436760" symbol="setupDisplay"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="17" lineNum="39" pc="268436799" symbol="setupDisplay"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="17" lineNum="41" pc="268436835" symbol="setupDisplay"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="18" lineNum="44" pc="268436848" symbol="topText"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="18" lineNum="45" pc="268436852" symbol="topText"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="19" lineNum="48" pc="268436925" symbol="bottomText"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="19" lineNum="49" pc="268436929" symbol="bottomText"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="20" lineNum="52" pc="268437002" symbol="largeText"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="20" lineNum="53" pc="268437006" symbol="largeText"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="21" lineNum="56" pc="268437079" symbol="timerString"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestView.mc" id="21" lineNum="57" pc="268437083" symbol="timerString"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\MainMenuDelegate.mc" id="23" lineNum="17" pc="268437119" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\MainMenuDelegate.mc" id="23" lineNum="19" pc="268437123" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\MainMenuDelegate.mc" id="23" lineNum="21" pc="268437141" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\MainMenuDelegate.mc" id="23" lineNum="22" pc="268437151" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\MainMenuDelegate.mc" id="23" lineNum="23" pc="268437161" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\MainMenuDelegate.mc" id="23" lineNum="24" pc="268437171" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\MainMenuDelegate.mc" id="23" lineNum="25" pc="268437181" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\MainMenuDelegate.mc" id="23" lineNum="26" pc="268437191" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\MainMenuDelegate.mc" id="23" lineNum="27" pc="268437201" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\MainMenuDelegate.mc" id="24" lineNum="30" pc="268437212" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\MainMenuDelegate.mc" id="24" lineNum="32" pc="268437216" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\MainMenuDelegate.mc" id="24" lineNum="34" pc="268437227" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\MainMenuDelegate.mc" id="24" lineNum="37" pc="268437296" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\MainMenuDelegate.mc" id="24" lineNum="39" pc="268437307" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="27" lineNum="31" pc="268437403" symbol="LoadSettings"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="27" lineNum="33" pc="268437407" symbol="LoadSettings"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="27" lineNum="34" pc="268437448" symbol="LoadSettings"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="27" lineNum="35" pc="268437489" symbol="LoadSettings"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="27" lineNum="36" pc="268437530" symbol="LoadSettings"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="27" lineNum="37" pc="268437567" symbol="LoadSettings"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="28" lineNum="40" pc="268437605" symbol="SaveSettings"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="28" lineNum="42" pc="268437609" symbol="SaveSettings"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="28" lineNum="43" pc="268437647" symbol="SaveSettings"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="28" lineNum="44" pc="268437685" symbol="SaveSettings"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="28" lineNum="46" pc="268437723" symbol="SaveSettings"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="29" lineNum="49" pc="268437762" symbol="SetBackground"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="29" lineNum="51" pc="268437766" symbol="SetBackground"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="29" lineNum="52" pc="268437788" symbol="SetBackground"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="29" lineNum="53" pc="268437828" symbol="SetBackground"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="29" lineNum="54" pc="268437868" symbol="SetBackground"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="30" lineNum="57" pc="268437909" symbol="GetTimerValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="30" lineNum="59" pc="268437913" symbol="GetTimerValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="30" lineNum="60" pc="268437923" symbol="GetTimerValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="31" lineNum="62" pc="268437933" symbol="SetTimerValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="31" lineNum="64" pc="268437937" symbol="SetTimerValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="31" lineNum="65" pc="268437962" symbol="SetTimerValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="32" lineNum="69" pc="268437973" symbol="GetLapValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="32" lineNum="71" pc="268437977" symbol="GetLapValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="32" lineNum="72" pc="268437987" symbol="GetLapValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="33" lineNum="74" pc="268437997" symbol="SetLapValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="33" lineNum="76" pc="268438001" symbol="SetLapValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="33" lineNum="77" pc="268438026" symbol="SetLapValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="34" lineNum="80" pc="268438037" symbol="GetRoundsValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="34" lineNum="82" pc="268438041" symbol="GetRoundsValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="34" lineNum="83" pc="268438051" symbol="GetRoundsValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="35" lineNum="85" pc="268438061" symbol="SetRoundsValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="35" lineNum="87" pc="268438065" symbol="SetRoundsValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="35" lineNum="88" pc="268438090" symbol="SetRoundsValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="36" lineNum="91" pc="268438101" symbol="GetPrepValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="36" lineNum="93" pc="268438105" symbol="GetPrepValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="36" lineNum="94" pc="268438115" symbol="GetPrepValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="37" lineNum="96" pc="268438125" symbol="SetPrepValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="37" lineNum="98" pc="268438129" symbol="SetPrepValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="37" lineNum="99" pc="268438154" symbol="SetPrepValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="38" lineNum="102" pc="268438165" symbol="GetWorkValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="38" lineNum="104" pc="268438169" symbol="GetWorkValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="38" lineNum="105" pc="268438179" symbol="GetWorkValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="39" lineNum="107" pc="268438189" symbol="SetWorkValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="39" lineNum="109" pc="268438193" symbol="SetWorkValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="39" lineNum="110" pc="268438218" symbol="SetWorkValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="40" lineNum="113" pc="268438229" symbol="GetRestValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="40" lineNum="115" pc="268438233" symbol="GetRestValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="40" lineNum="116" pc="268438243" symbol="GetRestValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="41" lineNum="118" pc="268438253" symbol="SetRestValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="41" lineNum="120" pc="268438257" symbol="SetRestValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="41" lineNum="121" pc="268438282" symbol="SetRestValue"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="42" lineNum="124" pc="268438293" symbol="SetAutoRecording"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="42" lineNum="126" pc="268438297" symbol="SetAutoRecording"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="42" lineNum="15" pc="268443142" symbol="&lt;init&gt;"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="42" lineNum="16" pc="268443162" symbol="&lt;init&gt;"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Settings.mc" id="42" lineNum="17" pc="268443182" symbol="&lt;init&gt;"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestMenuDelegate.mc" id="44" lineNum="7" pc="268438323" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestMenuDelegate.mc" id="44" lineNum="8" pc="268438327" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestMenuDelegate.mc" id="45" lineNum="11" pc="268438346" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestMenuDelegate.mc" id="45" lineNum="12" pc="268438350" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestMenuDelegate.mc" id="45" lineNum="13" pc="268438361" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestMenuDelegate.mc" id="45" lineNum="14" pc="268438385" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestMenuDelegate.mc" id="45" lineNum="15" pc="268438396" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="47" lineNum="29" pc="268438421" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="48" lineNum="32" pc="268438426" symbol="start"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="48" lineNum="33" pc="268438430" symbol="start"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="48" lineNum="34" pc="268438455" symbol="start"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="48" lineNum="35" pc="268438480" symbol="start"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="48" lineNum="36" pc="268438505" symbol="start"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="48" lineNum="37" pc="268438530" symbol="start"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="48" lineNum="38" pc="268438555" symbol="start"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="48" lineNum="39" pc="268438571" symbol="start"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="48" lineNum="41" pc="268438596" symbol="start"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="48" lineNum="42" pc="268438637" symbol="start"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="48" lineNum="43" pc="268438649" symbol="start"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="46" pc="268438666" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="47" pc="268438670" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="48" pc="268438687" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="50" pc="268438709" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="51" pc="268438729" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="52" pc="268438741" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="53" pc="268438756" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="54" pc="268438773" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="55" pc="268438791" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="56" pc="268438804" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="57" pc="268438820" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="58" pc="268438839" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="59" pc="268438858" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="60" pc="268438873" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="61" pc="268438890" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="62" pc="268438903" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="63" pc="268438919" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="64" pc="268438934" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="66" pc="268438951" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="67" pc="268438971" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="68" pc="268438984" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="69" pc="268439000" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="70" pc="268439013" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="72" pc="268439028" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="73" pc="268439041" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="74" pc="268439057" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="75" pc="268439076" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="76" pc="268439095" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="49" lineNum="80" pc="268439110" symbol="refresh"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="50" lineNum="83" pc="268439127" symbol="finishUp"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="50" lineNum="84" pc="268439131" symbol="finishUp"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="50" lineNum="85" pc="268439141" symbol="finishUp"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="50" lineNum="86" pc="268439159" symbol="finishUp"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="50" lineNum="87" pc="268439177" symbol="finishUp"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="51" lineNum="90" pc="268439196" symbol="startBuzz"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="51" lineNum="91" pc="268439200" symbol="startBuzz"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="51" lineNum="92" pc="268439239" symbol="startBuzz"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="52" lineNum="95" pc="268439257" symbol="stopBuzz"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="52" lineNum="96" pc="268439261" symbol="stopBuzz"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="52" lineNum="97" pc="268439300" symbol="stopBuzz"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="53" lineNum="100" pc="268439318" symbol="intervalBuzz"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="53" lineNum="101" pc="268439322" symbol="intervalBuzz"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="53" lineNum="102" pc="268439361" symbol="intervalBuzz"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="54" lineNum="105" pc="268439379" symbol="vibrate"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="54" lineNum="106" pc="268439383" symbol="vibrate"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="54" lineNum="107" pc="268439432" symbol="vibrate"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="55" lineNum="110" pc="268439451" symbol="beep"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="55" lineNum="111" pc="268439455" symbol="beep"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="55" lineNum="112" pc="268439473" symbol="beep"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="55" lineNum="15" pc="268443245" symbol="&lt;init&gt;"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="55" lineNum="16" pc="268443265" symbol="&lt;init&gt;"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="55" lineNum="19" pc="268443281" symbol="&lt;init&gt;"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="55" lineNum="24" pc="268443363" symbol="&lt;init&gt;"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="55" lineNum="26" pc="268443397" symbol="&lt;init&gt;"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestModel.mc" id="55" lineNum="27" pc="268443446" symbol="&lt;init&gt;"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestApp.mc" id="57" lineNum="8" pc="268439477" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestApp.mc" id="57" lineNum="9" pc="268439481" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestApp.mc" id="58" lineNum="12" pc="268439500" symbol="getInitialView"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestApp.mc" id="58" lineNum="13" pc="268439504" symbol="getInitialView"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestApp.mc" id="58" lineNum="14" pc="268439534" symbol="getInitialView"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestApp.mc" id="59" lineNum="17" pc="268439618" symbol="onStop"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestApp.mc" id="59" lineNum="18" pc="268439622" symbol="onStop"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestApp.mc" id="59" lineNum="19" pc="268439648" symbol="onStop"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Done.mc" id="61" lineNum="5" pc="268439706" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Done.mc" id="61" lineNum="6" pc="268439710" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Done.mc" id="62" lineNum="9" pc="268439729" symbol="onLayout"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Done.mc" id="62" lineNum="10" pc="268439733" symbol="onLayout"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Done.mc" id="64" lineNum="16" pc="268439771" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Done.mc" id="64" lineNum="17" pc="268439775" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Done.mc" id="65" lineNum="20" pc="268439794" symbol="onSelect"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Done.mc" id="65" lineNum="21" pc="268439798" symbol="onSelect"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Done.mc" id="65" lineNum="22" pc="268439822" symbol="onSelect"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\Done.mc" id="65" lineNum="23" pc="268439898" symbol="onSelect"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerView.mc" id="67" lineNum="16" pc="268439902" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerView.mc" id="67" lineNum="18" pc="268439906" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerView.mc" id="67" lineNum="19" pc="268439924" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerView.mc" id="67" lineNum="20" pc="268439934" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerView.mc" id="67" lineNum="21" pc="268439944" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerView.mc" id="67" lineNum="22" pc="268439954" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerView.mc" id="68" lineNum="27" pc="268439989" symbol="onShow"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerView.mc" id="68" lineNum="29" pc="268439993" symbol="onShow"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerView.mc" id="68" lineNum="30" pc="268440034" symbol="onShow"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerView.mc" id="68" lineNum="32" pc="268440071" symbol="onShow"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerView.mc" id="69" lineNum="38" pc="268440100" symbol="onHide"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerView.mc" id="69" lineNum="40" pc="268440104" symbol="onHide"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerView.mc" id="69" lineNum="41" pc="268440114" symbol="onHide"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerView.mc" id="70" lineNum="45" pc="268440133" symbol="AddOneSec"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerView.mc" id="70" lineNum="47" pc="268440137" symbol="AddOneSec"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerView.mc" id="70" lineNum="48" pc="268440156" symbol="AddOneSec"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerView.mc" id="71" lineNum="51" pc="268440173" symbol="SubOneSec"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerView.mc" id="71" lineNum="53" pc="268440177" symbol="SubOneSec"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerView.mc" id="71" lineNum="54" pc="268440196" symbol="SubOneSec"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerView.mc" id="72" lineNum="57" pc="268440213" symbol="DownToMinute"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerView.mc" id="72" lineNum="59" pc="268440217" symbol="DownToMinute"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerView.mc" id="72" lineNum="60" pc="268440254" symbol="DownToMinute"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="74" lineNum="10" pc="268440271" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="74" lineNum="12" pc="268440275" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="74" lineNum="13" pc="268440293" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="16" pc="268440304" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="18" pc="268440308" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="20" pc="268440319" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="22" pc="268440345" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="24" pc="268440356" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="26" pc="268440382" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="28" pc="268440393" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="30" pc="268440419" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="32" pc="268440430" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="34" pc="268440456" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="36" pc="268440467" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="38" pc="268440493" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="40" pc="268440504" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="42" pc="268440530" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="44" pc="268440541" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="46" pc="268440567" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="48" pc="268440578" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="50" pc="268440604" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="52" pc="268440615" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="54" pc="268440641" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="56" pc="268440652" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="58" pc="268440678" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="60" pc="268440689" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="63" pc="268440715" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="64" pc="268440743" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\SetTimerMenuDelegate.mc" id="75" lineNum="65" pc="268440771" symbol="onMenuItem"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestDelegate.mc" id="77" lineNum="8" pc="268440838" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestDelegate.mc" id="77" lineNum="9" pc="268440842" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestDelegate.mc" id="77" lineNum="10" pc="268440852" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestDelegate.mc" id="78" lineNum="13" pc="268440871" symbol="onKey"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestDelegate.mc" id="78" lineNum="14" pc="268440875" symbol="onKey"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestDelegate.mc" id="78" lineNum="15" pc="268440917" symbol="onKey"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestDelegate.mc" id="78" lineNum="16" pc="268440940" symbol="onKey"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestDelegate.mc" id="78" lineNum="17" pc="268440963" symbol="onKey"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestDelegate.mc" id="78" lineNum="18" pc="268440986" symbol="onKey"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestDelegate.mc" id="78" lineNum="19" pc="268441009" symbol="onKey"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestDelegate.mc" id="78" lineNum="21" pc="268441032" symbol="onKey"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestDelegate.mc" id="78" lineNum="22" pc="268441050" symbol="onKey"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestDelegate.mc" id="78" lineNum="23" pc="268441060" symbol="onKey"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\TimerTestDelegate.mc" id="78" lineNum="25" pc="268441066" symbol="onKey"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerViewDelegate.mc" id="80" lineNum="7" pc="268441087" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerViewDelegate.mc" id="80" lineNum="9" pc="268441091" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerViewDelegate.mc" id="80" lineNum="10" pc="268441109" symbol="initialize"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerViewDelegate.mc" id="81" lineNum="13" pc="268441120" symbol="onMenu"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerViewDelegate.mc" id="81" lineNum="15" pc="268441124" symbol="onMenu"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerViewDelegate.mc" id="81" lineNum="16" pc="268441152" symbol="onMenu"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerViewDelegate.mc" id="82" lineNum="19" pc="268441156" symbol="onNextPage"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerViewDelegate.mc" id="82" lineNum="21" pc="268441160" symbol="onNextPage"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerViewDelegate.mc" id="82" lineNum="22" pc="268441178" symbol="onNextPage"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerViewDelegate.mc" id="83" lineNum="25" pc="268441182" symbol="onPreviousPage"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerViewDelegate.mc" id="83" lineNum="27" pc="268441186" symbol="onPreviousPage"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerViewDelegate.mc" id="83" lineNum="28" pc="268441204" symbol="onPreviousPage"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerViewDelegate.mc" id="84" lineNum="31" pc="268441208" symbol="onBack"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerViewDelegate.mc" id="84" lineNum="33" pc="268441212" symbol="onBack"/>
+        <entry filename="D:\\Rapetti\\eclipse-workspace\\TimerTest\\source\\RaceTimerViewDelegate.mc" id="84" lineNum="34" pc="268441230" symbol="onBack"/>
+        <entry filename="Rez" id="90" lineNum="18" pc="268441234" symbol="DoneLayout"/>
+        <entry filename="Rez" id="90" lineNum="20" pc="268441246" symbol="DoneLayout"/>
+        <entry filename="Rez" id="90" lineNum="21" pc="268441428" symbol="DoneLayout"/>
+        <entry filename="Rez" id="90" lineNum="23" pc="268441580" symbol="DoneLayout"/>
+        <entry filename="Rez" id="91" lineNum="32" pc="268441608" symbol="MainLayout"/>
+        <entry filename="Rez" id="91" lineNum="34" pc="268441620" symbol="MainLayout"/>
+        <entry filename="Rez" id="91" lineNum="35" pc="268441772" symbol="MainLayout"/>
+        <entry filename="Rez" id="91" lineNum="36" pc="268441884" symbol="MainLayout"/>
+        <entry filename="Rez" id="91" lineNum="38" pc="268441924" symbol="MainLayout"/>
+        <entry filename="Rez" id="94" lineNum="52" pc="268441952" symbol="initialize"/>
+        <entry filename="Rez" id="94" lineNum="53" pc="268441956" symbol="initialize"/>
+        <entry filename="Rez" id="94" lineNum="54" pc="268441974" symbol="initialize"/>
+        <entry filename="Rez" id="94" lineNum="55" pc="268441997" symbol="initialize"/>
+        <entry filename="Rez" id="94" lineNum="56" pc="268442053" symbol="initialize"/>
+        <entry filename="Rez" id="94" lineNum="57" pc="268442109" symbol="initialize"/>
+        <entry filename="Rez" id="94" lineNum="58" pc="268442165" symbol="initialize"/>
+        <entry filename="Rez" id="94" lineNum="59" pc="268442221" symbol="initialize"/>
+        <entry filename="Rez" id="94" lineNum="60" pc="268442277" symbol="initialize"/>
+        <entry filename="Rez" id="94" lineNum="61" pc="268442333" symbol="initialize"/>
+        <entry filename="Rez" id="96" lineNum="73" pc="268442390" symbol="initialize"/>
+        <entry filename="Rez" id="96" lineNum="74" pc="268442394" symbol="initialize"/>
+        <entry filename="Rez" id="96" lineNum="75" pc="268442412" symbol="initialize"/>
+        <entry filename="Rez" id="96" lineNum="76" pc="268442435" symbol="initialize"/>
+        <entry filename="Rez" id="96" lineNum="77" pc="268442491" symbol="initialize"/>
+        <entry filename="Rez" id="98" lineNum="89" pc="268442548" symbol="initialize"/>
+        <entry filename="Rez" id="98" lineNum="90" pc="268442552" symbol="initialize"/>
+        <entry filename="Rez" id="98" lineNum="91" pc="268442570" symbol="initialize"/>
+        <entry filename="Rez" id="98" lineNum="92" pc="268442626" symbol="initialize"/>
+        <entry filename="Rez" id="100" lineNum="104" pc="268442683" symbol="initialize"/>
+        <entry filename="Rez" id="100" lineNum="105" pc="268442687" symbol="initialize"/>
+        <entry filename="Rez" id="100" lineNum="106" pc="268442705" symbol="initialize"/>
+        <entry filename="Rez" id="100" lineNum="107" pc="268442728" symbol="initialize"/>
+        <entry filename="Rez" id="100" lineNum="108" pc="268442750" symbol="initialize"/>
+        <entry filename="Rez" id="100" lineNum="109" pc="268442772" symbol="initialize"/>
+        <entry filename="Rez" id="100" lineNum="110" pc="268442794" symbol="initialize"/>
+        <entry filename="Rez" id="100" lineNum="111" pc="268442816" symbol="initialize"/>
+        <entry filename="Rez" id="100" lineNum="112" pc="268442838" symbol="initialize"/>
+        <entry filename="Rez" id="100" lineNum="113" pc="268442860" symbol="initialize"/>
+        <entry filename="Rez" id="100" lineNum="114" pc="268442882" symbol="initialize"/>
+        <entry filename="Rez" id="100" lineNum="115" pc="268442904" symbol="initialize"/>
+        <entry filename="Rez" id="100" lineNum="116" pc="268442926" symbol="initialize"/>
+        <entry filename="Rez" id="100" lineNum="117" pc="268442948" symbol="initialize"/>
+        <entry filename="Rez" id="102" lineNum="129" pc="268442971" symbol="initialize"/>
+        <entry filename="Rez" id="102" lineNum="130" pc="268442975" symbol="initialize"/>
+        <entry filename="Rez" id="102" lineNum="131" pc="268442993" symbol="initialize"/>
+        <entry filename="Rez" id="102" lineNum="132" pc="268443016" symbol="initialize"/>
+        <entry filename="Rez" id="102" lineNum="133" pc="268443038" symbol="initialize"/>
+        <entry filename="Rez" id="102" lineNum="134" pc="268443060" symbol="initialize"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="74" method="true" symbol="finishUp"/>
+        <entry id="19" object="true" symbol="TimerTestApp"/>
+        <entry id="160" symbol="exitSave"/>
+        <entry id="8389346" symbol="text"/>
+        <entry field="true" id="119" symbol="_lapView"/>
+        <entry field="true" id="100" symbol="wpEpsilonTitle"/>
+        <entry id="54" method="true" symbol="GetPrepValue"/>
+        <entry field="true" id="71" symbol="refreshTimer"/>
+        <entry field="true" id="131" symbol="_mainMenuDelegate"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="149" symbol="id5"/>
+        <entry id="148" symbol="id4"/>
+        <entry id="147" symbol="id3"/>
+        <entry id="146" symbol="id2"/>
+        <entry id="145" symbol="id1"/>
+        <entry id="95" object="true" symbol="SettingMenu"/>
+        <entry id="5" module="true" symbol="globals/Rez/Menus"/>
+        <entry id="24" object="true" symbol="TimerTestDelegate"/>
+        <entry field="true" id="66" symbol="currentRound"/>
+        <entry id="8388638" module="true" symbol="ActivityRecording"/>
+        <entry id="97" method="true" symbol="MainLayout"/>
+        <entry field="true" id="69" symbol="done"/>
+        <entry id="15" object="true" symbol="MainMenuDelegate"/>
+        <entry field="true" id="67" symbol="phase"/>
+        <entry field="true" id="107" symbol="isWhiteBackgroundTitle"/>
+        <entry field="true" id="8388890" symbol="sport"/>
+        <entry id="13" object="true" symbol="StartupView"/>
+        <entry id="47" method="true" symbol="SetBackground"/>
+        <entry field="true" id="41" symbol="IsAutoRecording"/>
+        <entry field="true" id="37" symbol="IsRoundsValueUpdated"/>
+        <entry field="true" id="106" symbol="mmenuCruise"/>
+        <entry id="91" object="true" symbol="MainMenuFull"/>
+        <entry id="60" method="true" symbol="SetAutoRecording"/>
+        <entry field="true" id="44" symbol="WpEpsilon"/>
+        <entry id="156" symbol="cruiseView"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="58" method="true" symbol="GetRestValue"/>
+        <entry field="true" id="109" symbol="mmenuExitSave"/>
+        <entry id="25" object="true" symbol="RaceTimerViewDelegate"/>
+        <entry id="22" object="true" symbol="RaceTimerView"/>
+        <entry field="true" id="104" symbol="AppName"/>
+        <entry id="9" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8389080" method="true" symbol="onMenu"/>
+        <entry id="8388772" module="true" symbol="Fonts"/>
+        <entry id="84" method="true" symbol="largeText"/>
+        <entry field="true" id="120" symbol="_waypointView"/>
+        <entry id="8389345" symbol="rezId"/>
+        <entry id="20" object="true" symbol="DoneView"/>
+        <entry field="true" id="112" symbol="BackgroundPropertyName"/>
+        <entry id="12" object="true" symbol="AutoRecordingMenuDelegate"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="8389081" method="true" symbol="onBack"/>
+        <entry id="135" symbol="isAutoStartRecording"/>
+        <entry field="true" id="27" symbol="PREP_TIME"/>
+        <entry id="3" module="true" symbol="globals/Rez"/>
+        <entry field="true" id="101" symbol="restart"/>
+        <entry field="true" id="114" symbol="prompt"/>
+        <entry field="true" id="89" symbol="id_monkey"/>
+        <entry field="true" id="117" symbol="_cruiseView"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry field="true" id="32" symbol="BackgroundColor"/>
+        <entry field="true" id="8389719" method="true" symbol="round"/>
+        <entry id="137" symbol="isAutoOff"/>
+        <entry field="true" id="103" symbol="mmenuLapsView"/>
+        <entry id="8388771" module="true" symbol="Drawables"/>
+        <entry id="8389348" symbol="font"/>
+        <entry id="50" method="true" symbol="GetLapValue"/>
+        <entry id="78" method="true" symbol="beep"/>
+        <entry id="143" symbol="item_2"/>
+        <entry id="142" symbol="item_1"/>
+        <entry id="8389079" method="true" symbol="onPreviousPage"/>
+        <entry id="88" module="true" symbol="Menus"/>
+        <entry id="7" module="true" symbol="globals/Rez/Layouts"/>
+        <entry field="true" id="30" symbol="NUM_ROUNDS"/>
+        <entry id="96" method="true" symbol="DoneLayout"/>
+        <entry id="83" method="true" symbol="bottomText"/>
+        <entry id="75" method="true" symbol="startBuzz"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry field="true" id="64" symbol="HAS_TONES"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry id="8389349" symbol="justification"/>
+        <entry id="52" method="true" symbol="GetRoundsValue"/>
+        <entry id="56" method="true" symbol="GetWorkValue"/>
+        <entry id="8388987" method="true" symbol="vibrate"/>
+        <entry id="68" symbol="prep"/>
+        <entry field="true" id="124" symbol="_timer"/>
+        <entry id="59" method="true" symbol="SetRestValue"/>
+        <entry field="true" id="28" symbol="REST_TIME"/>
+        <entry id="133" symbol="white"/>
+        <entry field="true" id="105" symbol="mmenuRacetimer"/>
+        <entry id="134" symbol="black"/>
+        <entry id="8" module="true" symbol="globals/Rez/JsonData"/>
+        <entry field="true" id="36" symbol="IsLapValueUpdated"/>
+        <entry id="49" method="true" symbol="SetTimerValue"/>
+        <entry field="true" id="86" symbol="_raceTimerView"/>
+        <entry field="true" id="113" symbol="mmenuExitDiscard"/>
+        <entry field="true" id="115" symbol="UserIdTitle"/>
+        <entry id="4" module="true" symbol="globals/Rez/Drawables"/>
+        <entry field="true" id="130" symbol="_mainMenuView"/>
+        <entry id="92" object="true" symbol="MainMenuLess"/>
+        <entry field="true" id="122" symbol="_routeCustomMenuView"/>
+        <entry id="55" method="true" symbol="SetPrepValue"/>
+        <entry field="true" id="42" symbol="IsWhiteBackground"/>
+        <entry id="93" object="true" symbol="MainMenu"/>
+        <entry id="18" object="true" symbol="Model"/>
+        <entry id="127" method="true" symbol="AddOneSec"/>
+        <entry id="23" object="true" symbol="SetTimerMenuDelegate"/>
+        <entry id="16" object="true" symbol="Settings"/>
+        <entry field="true" id="63" symbol="TOTAL_ROUNDS"/>
+        <entry id="8388985" method="true" symbol="playTone"/>
+        <entry id="94" object="true" symbol="SetTimerMenu"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="85" method="true" symbol="timerString"/>
+        <entry id="17" object="true" symbol="TimerTestMenuDelegate"/>
+        <entry id="82" method="true" symbol="topText"/>
+        <entry id="8389619" method="true" symbol="onSelect"/>
+        <entry id="8388645" module="true" symbol="Time"/>
+        <entry id="8388769" module="true" symbol="Rez"/>
+        <entry id="10" object="true" symbol="SettingMenuDelegate"/>
+        <entry id="159" symbol="exitDiscard"/>
+        <entry id="77" method="true" symbol="intervalBuzz"/>
+        <entry id="158" symbol="lapView"/>
+        <entry id="14" object="true" symbol="TimerTestView"/>
+        <entry field="true" id="116" symbol="IsAutoRecordingTitle"/>
+        <entry field="true" id="79" symbol="_setTimerView"/>
+        <entry field="true" id="26" symbol="NUM_LAP"/>
+        <entry field="true" id="62" symbol="started"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry id="8390088" module="true" symbol="JsonData"/>
+        <entry field="true" id="35" symbol="IsTimerValueUpdated"/>
+        <entry field="true" id="72" symbol="sensors"/>
+        <entry id="144" symbol="onTimerUpdate"/>
+        <entry field="true" id="118" symbol="_gpsWrapper"/>
+        <entry field="true" id="65" symbol="counter"/>
+        <entry field="true" id="90" symbol="LauncherIcon"/>
+        <entry id="53" method="true" symbol="SetRoundsValue"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="140" symbol="raceTimer"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="2" module="true" symbol="globals/Settings"/>
+        <entry id="45" method="true" symbol="LoadSettings"/>
+        <entry id="128" method="true" symbol="SubOneSec"/>
+        <entry id="8388643" module="true" symbol="Sensor"/>
+        <entry field="true" id="126" symbol="_isTimerRun"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="138" symbol="rest"/>
+        <entry id="129" method="true" symbol="DownToMinute"/>
+        <entry id="8388770" module="true" symbol="Strings"/>
+        <entry field="true" id="29" symbol="WORK_TIME"/>
+        <entry id="21" object="true" symbol="DoneDelegate"/>
+        <entry id="136" symbol="isAutoOn"/>
+        <entry field="true" id="123" symbol="_raceTimerViewDc"/>
+        <entry field="true" id="39" symbol="IsRestValueUpdated"/>
+        <entry id="132" symbol="setTimer"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry field="true" id="61" symbol="model"/>
+        <entry id="141" symbol="setting"/>
+        <entry field="true" id="8388891" symbol="subSport"/>
+        <entry field="true" id="102" symbol="TimerValueTitle"/>
+        <entry id="73" method="true" symbol="refresh"/>
+        <entry field="true" id="8388892" symbol="name"/>
+        <entry field="true" id="38" symbol="IsPrepValueUpdated"/>
+        <entry id="51" method="true" symbol="SetLapValue"/>
+        <entry field="true" id="125" symbol="_timerValue"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry field="true" id="80" symbol="_setTimerDelegate"/>
+        <entry id="8389109" method="true" symbol="onMenuItem"/>
+        <entry id="8389347" symbol="color"/>
+        <entry field="true" id="31" symbol="ForegroundColor"/>
+        <entry id="8389097" method="true" symbol="onKey"/>
+        <entry field="true" id="43" symbol="CurrentRoute"/>
+        <entry id="155" symbol="id60"/>
+        <entry id="154" symbol="id50"/>
+        <entry field="true" id="99" symbol="mmenuSetting"/>
+        <entry id="153" symbol="id40"/>
+        <entry id="152" symbol="id30"/>
+        <entry id="151" symbol="id20"/>
+        <entry field="true" id="33" symbol="DimColor"/>
+        <entry field="true" id="98" symbol="AppVersionTitle"/>
+        <entry id="8388646" module="true" object="true" symbol="Timer"/>
+        <entry id="150" symbol="id10"/>
+        <entry id="87" module="true" symbol="Layouts"/>
+        <entry id="8388636" module="true" symbol="Attention"/>
+        <entry field="true" id="34" symbol="TimerValue"/>
+        <entry id="8388698" method="true" symbol="start"/>
+        <entry field="true" id="40" symbol="IsWorkValueUpdated"/>
+        <entry id="81" method="true" symbol="setupDisplay"/>
+        <entry id="157" symbol="routeMenu"/>
+        <entry id="6" module="true" symbol="globals/Rez/Fonts"/>
+        <entry id="139" symbol="work"/>
+        <entry field="true" id="8389743" symbol="backgroundColor"/>
+        <entry id="11" object="true" symbol="BackgroundColorMenuDelegate"/>
+        <entry id="48" method="true" symbol="GetTimerValue"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry field="true" id="70" symbol="session"/>
+        <entry id="46" method="true" symbol="SaveSettings"/>
+        <entry id="8389078" method="true" symbol="onNextPage"/>
+        <entry field="true" id="121" symbol="_selectRouteView"/>
+        <entry id="57" method="true" symbol="SetWorkValue"/>
+        <entry field="true" id="108" symbol="mmenuRoute"/>
+        <entry field="true" id="111" symbol="menu_label_2"/>
+        <entry field="true" id="110" symbol="menu_label_1"/>
+        <entry id="76" method="true" symbol="stopBuzz"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435489" name="raceTimerView" stackId="1" startPc="268435456"/>
+        <entry endPc="268435813" name="backgroundMenu" stackId="2" startPc="268435610"/>
+        <entry endPc="268436030" name="autoRecordingMenu" stackId="3" startPc="268435827"/>
+        <entry arg="true" endPc="268436034" name="item" stackId="1" startPc="268435489"/>
+        <entry arg="true" endPc="268436130" name="item" stackId="1" startPc="268436057"/>
+        <entry arg="true" endPc="268436226" name="item" stackId="1" startPc="268436153"/>
+        <entry arg="true" endPc="268436275" name="mainMenuView" stackId="1" startPc="268436226"/>
+        <entry arg="true" endPc="268436275" name="mainMenuDelegate" stackId="2" startPc="268436226"/>
+        <entry arg="true" endPc="268436357" name="mdl" stackId="1" startPc="268436324"/>
+        <entry arg="true" endPc="268436745" name="dc" stackId="1" startPc="268436357"/>
+        <entry arg="true" endPc="268436848" name="phase" stackId="2" startPc="268436745"/>
+        <entry arg="true" endPc="268436848" name="dc" stackId="1" startPc="268436745"/>
+        <entry arg="true" endPc="268436925" name="dc" stackId="2" startPc="268436848"/>
+        <entry arg="true" endPc="268436925" name="text" stackId="1" startPc="268436848"/>
+        <entry arg="true" endPc="268437002" name="dc" stackId="2" startPc="268436925"/>
+        <entry arg="true" endPc="268437002" name="text" stackId="1" startPc="268436925"/>
+        <entry arg="true" endPc="268437079" name="dc" stackId="2" startPc="268437002"/>
+        <entry arg="true" endPc="268437079" name="text" stackId="1" startPc="268437002"/>
+        <entry arg="true" endPc="268437212" name="selectRouteView" stackId="5" startPc="268437119"/>
+        <entry arg="true" endPc="268437212" name="routeCustomMenuView" stackId="6" startPc="268437119"/>
+        <entry arg="true" endPc="268437212" name="waypointView" stackId="4" startPc="268437119"/>
+        <entry arg="true" endPc="268437212" name="gpsWrapper" stackId="7" startPc="268437119"/>
+        <entry arg="true" endPc="268437212" name="raceTimerView" stackId="2" startPc="268437119"/>
+        <entry arg="true" endPc="268437212" name="cruiseView" stackId="1" startPc="268437119"/>
+        <entry arg="true" endPc="268437212" name="lapView" stackId="3" startPc="268437119"/>
+        <entry arg="true" endPc="268437403" name="item" stackId="1" startPc="268437212"/>
+        <entry arg="true" endPc="268437909" name="isWhiteBackground" stackId="1" startPc="268437762"/>
+        <entry arg="true" endPc="268437973" name="value" stackId="1" startPc="268437933"/>
+        <entry arg="true" endPc="268438037" name="value" stackId="1" startPc="268437997"/>
+        <entry arg="true" endPc="268438101" name="value" stackId="1" startPc="268438061"/>
+        <entry arg="true" endPc="268438165" name="value" stackId="1" startPc="268438125"/>
+        <entry arg="true" endPc="268438229" name="value" stackId="1" startPc="268438189"/>
+        <entry arg="true" endPc="268438293" name="value" stackId="1" startPc="268438253"/>
+        <entry arg="true" endPc="268438320" name="isAutoRecording" stackId="1" startPc="268438293"/>
+        <entry arg="true" endPc="268438421" name="item" stackId="1" startPc="268438346"/>
+        <entry endPc="268439256" name="foo" stackId="1" startPc="268439200"/>
+        <entry endPc="268439317" name="foo" stackId="1" startPc="268439261"/>
+        <entry endPc="268439378" name="foo" stackId="1" startPc="268439322"/>
+        <entry endPc="268439450" name="vibrateData" stackId="2" startPc="268439383"/>
+        <entry arg="true" endPc="268439451" name="duration" stackId="1" startPc="268439379"/>
+        <entry arg="true" endPc="268439477" name="tone" stackId="1" startPc="268439451"/>
+        <entry endPc="268439702" name="result" stackId="1" startPc="268439648"/>
+        <entry arg="true" endPc="268439771" name="dc" stackId="1" startPc="268439729"/>
+        <entry endPc="268439901" name="model" stackId="1" startPc="268439798"/>
+        <entry arg="true" endPc="268439989" name="raceTimerViewDc" stackId="3" startPc="268439902"/>
+        <entry arg="true" endPc="268439989" name="gpsWrapper" stackId="1" startPc="268439902"/>
+        <entry arg="true" endPc="268439989" name="cruiseView" stackId="2" startPc="268439902"/>
+        <entry arg="true" endPc="268440304" name="raceTimerView" stackId="1" startPc="268440271"/>
+        <entry arg="true" endPc="268440838" name="item" stackId="1" startPc="268440304"/>
+        <entry arg="true" endPc="268440871" name="mdl" stackId="1" startPc="268440838"/>
+        <entry arg="true" endPc="268441087" name="evt" stackId="1" startPc="268440871"/>
+        <entry arg="true" endPc="268441120" name="raceTimerView" stackId="1" startPc="268441087"/>
+        <entry endPc="268441607" name="rez_cmp_local_text_8416401784" stackId="3" startPc="268441246"/>
+        <entry endPc="268441607" name="rez_cmp_local_text_3073152034" stackId="2" startPc="268441246"/>
+        <entry arg="true" endPc="268441608" name="dc" stackId="1" startPc="268441234"/>
+        <entry endPc="268441951" name="rez_cmp_local_text_7608441811" stackId="2" startPc="268441620"/>
+        <entry endPc="268441951" name="rez_cmp_local_bitmap_id_monkey" stackId="3" startPc="268441620"/>
+        <entry arg="true" endPc="268441952" name="dc" stackId="1" startPc="268441608"/>
+    </localVars>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="id_monkey"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppVersionTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="mmenuSetting"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="wpEpsilonTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="restart"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="TimerValueTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="mmenuLapsView"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="done"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="mmenuRacetimer"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="mmenuCruise"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="isWhiteBackgroundTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="mmenuRoute"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="mmenuExitSave"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_1"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_2"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="BackgroundPropertyName"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="mmenuExitDiscard"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="prompt"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="UserIdTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="IsAutoRecordingTitle"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="95" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/DoneView" offset="270" parentId="globals" symbolId="DoneView" type="class"/>
+        <dataEntry label="globals/Settings" offset="325" parentId="globals" symbolId="Settings" type="class"/>
+        <dataEntry label="globals/Settings/statics" offset="372" parentId="globals" symbolId="globals/Settings" type="class"/>
+        <dataEntry label="globals/TimerTestDelegate" offset="683" parentId="globals" symbolId="TimerTestDelegate" type="class"/>
+        <dataEntry label="globals/Model" offset="754" parentId="globals" symbolId="Model" type="class"/>
+        <dataEntry label="globals/TimerTestView" offset="985" parentId="globals" symbolId="TimerTestView" type="class"/>
+        <dataEntry label="globals/RaceTimerViewDelegate" offset="1104" parentId="globals" symbolId="RaceTimerViewDelegate" type="class"/>
+        <dataEntry label="globals/Rez" offset="1191" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/Rez/Drawables" offset="1270" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="1317" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Menus/SetTimerMenu" offset="1388" parentId="Menus" symbolId="SetTimerMenu" type="class"/>
+        <dataEntry label="globals/Rez/Menus/SettingMenu" offset="1435" parentId="Menus" symbolId="SettingMenu" type="class"/>
+        <dataEntry label="globals/Rez/Menus/MainMenuLess" offset="1482" parentId="Menus" symbolId="MainMenuLess" type="class"/>
+        <dataEntry label="globals/Rez/Menus/MainMenu" offset="1529" parentId="Menus" symbolId="MainMenu" type="class"/>
+        <dataEntry label="globals/Rez/Menus/MainMenuFull" offset="1576" parentId="Menus" symbolId="MainMenuFull" type="class"/>
+        <dataEntry label="globals/Rez/Fonts" offset="1623" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="1654" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/JsonData" offset="1701" parentId="Rez" symbolId="JsonData" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="1732" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/TimerTestApp" offset="1923" parentId="globals" symbolId="TimerTestApp" type="class"/>
+        <dataEntry label="globals/MainMenuDelegate" offset="1994" parentId="globals" symbolId="MainMenuDelegate" type="class"/>
+        <dataEntry label="globals/TimerTestMenuDelegate" offset="2105" parentId="globals" symbolId="TimerTestMenuDelegate" type="class"/>
+        <dataEntry label="globals/DoneDelegate" offset="2160" parentId="globals" symbolId="DoneDelegate" type="class"/>
+        <dataEntry label="globals/AutoRecordingMenuDelegate" offset="2215" parentId="globals" symbolId="AutoRecordingMenuDelegate" type="class"/>
+        <dataEntry label="globals/RaceTimerView" offset="2270" parentId="globals" symbolId="RaceTimerView" type="class"/>
+        <dataEntry label="globals/SettingMenuDelegate" offset="2405" parentId="globals" symbolId="SettingMenuDelegate" type="class"/>
+        <dataEntry label="globals/BackgroundColorMenuDelegate" offset="2468" parentId="globals" symbolId="BackgroundColorMenuDelegate" type="class"/>
+        <dataEntry label="globals/StartupView" offset="2523" parentId="globals" symbolId="StartupView" type="class"/>
+        <dataEntry label="globals/SetTimerMenuDelegate" offset="2594" parentId="globals" symbolId="SetTimerMenuDelegate" type="class"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" name="initialize" parent="SettingMenuDelegate">
+            <param id="raceTimerView"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onMenuItem" parent="SettingMenuDelegate">
+            <param id="item"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="BackgroundColorMenuDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onMenuItem" parent="BackgroundColorMenuDelegate">
+            <param id="item"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="AutoRecordingMenuDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onMenuItem" parent="AutoRecordingMenuDelegate">
+            <param id="item"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="StartupView">
+            <param id="mainMenuView"/>
+            <param id="mainMenuDelegate"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="StartupView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="TimerTestView">
+            <param id="mdl"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onUpdate" parent="TimerTestView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="setupDisplay" parent="TimerTestView">
+            <param id="dc"/>
+            <param id="phase"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="topText" parent="TimerTestView">
+            <param id="text"/>
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="bottomText" parent="TimerTestView">
+            <param id="text"/>
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="largeText" parent="TimerTestView">
+            <param id="text"/>
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="timerString" parent="TimerTestView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="MainMenuDelegate">
+            <param id="cruiseView"/>
+            <param id="raceTimerView"/>
+            <param id="lapView"/>
+            <param id="waypointView"/>
+            <param id="selectRouteView"/>
+            <param id="routeCustomMenuView"/>
+            <param id="gpsWrapper"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onMenuItem" parent="MainMenuDelegate">
+            <param id="item"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="LoadSettings" parent="Settings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="SaveSettings" parent="Settings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="SetBackground" parent="Settings">
+            <param id="isWhiteBackground"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="GetTimerValue" parent="Settings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="SetTimerValue" parent="Settings">
+            <param id="value"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="GetLapValue" parent="Settings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="SetLapValue" parent="Settings">
+            <param id="value"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="GetRoundsValue" parent="Settings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="SetRoundsValue" parent="Settings">
+            <param id="value"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="GetPrepValue" parent="Settings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="SetPrepValue" parent="Settings">
+            <param id="value"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="GetWorkValue" parent="Settings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="SetWorkValue" parent="Settings">
+            <param id="value"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="GetRestValue" parent="Settings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="SetRestValue" parent="Settings">
+            <param id="value"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="SetAutoRecording" parent="Settings">
+            <param id="isAutoRecording"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="TimerTestMenuDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onMenuItem" parent="TimerTestMenuDelegate">
+            <param id="item"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="Model">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="start" parent="Model">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="refresh" parent="Model">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="finishUp" parent="Model">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="startBuzz" parent="Model">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="stopBuzz" parent="Model">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="intervalBuzz" parent="Model">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="vibrate" parent="Model">
+            <param id="duration"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="beep" parent="Model">
+            <param id="tone"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="TimerTestApp">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getInitialView" parent="TimerTestApp">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStop" parent="TimerTestApp">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="DoneView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onLayout" parent="DoneView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="DoneDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onSelect" parent="DoneDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="RaceTimerView">
+            <param id="gpsWrapper"/>
+            <param id="cruiseView"/>
+            <param id="raceTimerViewDc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="RaceTimerView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="RaceTimerView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="AddOneSec" parent="RaceTimerView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="SubOneSec" parent="RaceTimerView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="DownToMinute" parent="RaceTimerView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="SetTimerMenuDelegate">
+            <param id="raceTimerView"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onMenuItem" parent="SetTimerMenuDelegate">
+            <param id="item"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="TimerTestDelegate">
+            <param id="mdl"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onKey" parent="TimerTestDelegate">
+            <param id="evt"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="RaceTimerViewDelegate">
+            <param id="raceTimerView"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onMenu" parent="RaceTimerViewDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onNextPage" parent="RaceTimerViewDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onPreviousPage" parent="RaceTimerViewDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onBack" parent="RaceTimerViewDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="DoneLayout" parent="Layouts">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="MainLayout" parent="Layouts">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="MainMenuFull">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="MainMenuLess">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="MainMenu">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="SetTimerMenu">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="SettingMenu">
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>
