@@ -6,23 +6,25 @@ class TimerTestView extends Ui.View {
   	var model;
 	hidden var _setTimerView;
 	hidden var _setTimerDelegate;
-	static var heartGoal;
+	static var heartWorkGoal;
+	static var heartRestGoal;
+	
 	var heartVar;
 	
 	function initialize(mdl) {
 		model = mdl;
 		View.initialize();
-		heartGoal = Settings.HEART_GOAL;
+		heartWorkGoal = Settings.HEART_WORK_GOAL;
+		heartRestGoal = Settings.HEART_REST_GOAL;
 		heartVar = Settings.HEART_VAR;
 
 	  }
 	  
-  function SetupHeartGoal(heartGoalValue) {
- 	heartGoal = heartGoalValue;
- }
 
   function onUpdate(dc) {
- 	heartGoal = Settings.HEART_GOAL;
+  	model.update();
+ 	heartWorkGoal = model.HEART_WORK_GOAL;
+ 	heartRestGoal = model.HEART_REST_GOAL;
   	setupDisplay(dc, model.phase);
   	if (model.done){
   		Ui.switchToView(new DoneView(), new DoneDelegate(), Ui.SLIDE_IMMEDIATE);
@@ -30,30 +32,42 @@ class TimerTestView extends Ui.View {
   		largeText(timerString(), dc);
     	bottomText( "" +  model.currentRound + "/" + model.NUM_ROUNDS + " | " + "" + model.round + "/" + model.TOTAL_ROUNDS, dc);
     	if (model.phase == :prep) {
-    		topText("" + heartGoal + " | PREP | " + model.heartRate + "", dc);
+    		topText("" + heartRestGoal + " |PREP| " + model.heartRate + "", dc);
     	}
     	if (model.phase == :rest) {
-    		topText("" + heartGoal + " | REST | " + model.heartRate + "", dc);
+    		topText("" + heartRestGoal + " |REST| " + model.heartRate + "", dc);
     	}
-      if (model.phase == :work) {
-    		topText("" + heartGoal + " | GO | " + model.heartRate + "", dc);
+      	if (model.phase == :work) {
+    		topText("" + heartWorkGoal + " |GO| " + model.heartRate + "", dc);
+    	}
+    	if (model.phase == :rounds) {
+    		topText("" + heartWorkGoal + " |ROUND| " + model.heartRate + "", dc);
+    	}
+    	if (model.phase == :lap) {
+    		topText("" + heartWorkGoal + " |LAP| " + model.heartRate + "", dc);
+    	}
+      	if (model.phase == :workHeart) {
+    		topText("" + heartWorkGoal + " |W HR| " + model.heartRate + "", dc);
+    	}
+    	if (model.phase == :restHeart) {
+    		topText("" + heartRestGoal + " |R HR| " + model.heartRate + "", dc);
     	}
   	}
   }
 
   function setupDisplay(dc, phase){
   	if (phase == :work) {
-  		if(heartGoal-heartGoal*heartVar > model.heartRate){
+  		if(model.heartRate < heartWorkGoal-heartWorkGoal*heartVar ){
   			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLUE);
-  		} else if (model.heartRate > heartGoal-heartGoal*heartVar){
+  		} else if (model.heartRate > heartWorkGoal+heartWorkGoal*heartVar){
   			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_RED);
   		} else { 
-  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_GREEN);
+  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_DK_GREEN);
   	}
   	} else if (phase == :rest) {
-	  	if(heartGoal-3*heartGoal*heartVar > model.heartRate){
-	  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLUE);
-	  	}  else if (model.heartRate > heartGoal-heartGoal*heartVar){
+	  	if(model.heartRate < heartRestGoal-2*heartRestGoal*heartVar ){
+	  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_DK_BLUE);
+	  	}  else if (model.heartRate > heartRestGoal+heartRestGoal*heartVar){
   			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_RED);
   		} else { 
   			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_GREEN);
@@ -77,6 +91,10 @@ class TimerTestView extends Ui.View {
   }
 
   function timerString(){
-    return "0:" + model.counter.format("%02d");
+  	if (model.started ==true) {
+    	return "0:" + model.counter.format("%02d");
+    } else{
+    	 return "0:" + model.counterBis.format("%02d");
+    }
   }
 }

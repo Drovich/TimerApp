@@ -12,6 +12,8 @@ class Model{
 	var REST_TIME = 3;
 	var WORK_TIME = 3;
 	var NUM_ROUNDS = 3;
+	var HEART_WORK_GOAL = 150;
+	var HEART_REST_GOAL = 130;
 	var TOTAL_ROUNDS = NUM_ROUNDS*NUM_LAP;
 	const HAS_TONES = Attention has :playTone;
 
@@ -19,7 +21,9 @@ class Model{
 	var heartRate = 60;
 	var speed = 10;
 	var counter = PREP_TIME;
+	var counterBis =PREP_TIME;
 	var round = 0;
+	var started = false;
 	var currentRound = 0;
 	var phase = :prep;
 	var done = false;
@@ -34,12 +38,27 @@ class Model{
 	
 	}
 
-	function start(){
+	function update(){	
 		NUM_LAP = Settings.GetLapValue();
 		PREP_TIME = Settings.GetPrepValue();
 		REST_TIME = Settings.GetRestValue();
 		WORK_TIME = Settings.GetWorkValue();
 		NUM_ROUNDS = Settings.GetRoundsValue();
+		HEART_WORK_GOAL = Settings.GetHeartWorkValue();
+		HEART_REST_GOAL = Settings.GetHeartRestValue();
+		TOTAL_ROUNDS = NUM_ROUNDS*NUM_LAP;
+		if (phase == :prep) {
+			counterBis = PREP_TIME;
+		} else if (phase == :work) {
+			counterBis = WORK_TIME;
+		}else if (phase == :rest) {
+			counterBis = REST_TIME;
+		}
+
+	}
+	function start(){
+		
+		started = true;
 		counter = PREP_TIME;
 		TOTAL_ROUNDS = NUM_ROUNDS*NUM_LAP;
 		
@@ -95,6 +114,7 @@ class Model{
 
 	function finishUp() {
 		done = true;
+		started = false;
 		session.stop();
 		/*session.save();*/
 		refreshTimer.stop();

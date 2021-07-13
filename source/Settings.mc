@@ -11,7 +11,9 @@ class Settings
 	static var REST_TIME = 5;
 	static var WORK_TIME = 5;
 	static var NUM_ROUNDS = 5;
-	static var HEART_GOAL = 150;
+	static var HEART_WORK_GOAL = 150;
+	static var HEART_REST_GOAL = 130;
+	
 	static var HEART_VAR = 0.1;
 	
 	
@@ -21,7 +23,8 @@ class Settings
 	static var IsRoundsValueUpdated = false;
 	static var IsPrepValueUpdated = false;
 	static var IsRestValueUpdated = false;
-	static var IsHeartValueUpdated = false;
+	static var IsHeartWorkValueUpdated = false;
+	static var IsHeartRestValueUpdated = false;
 	static var IsWorkValueUpdated = false;
 	
 	static var DimColor = Gfx.COLOR_LT_GRAY;
@@ -127,20 +130,80 @@ class Settings
 		IsRestValueUpdated = true;
 	}
 	
-	static function GetHeartValue()
+	static function GetHeartWorkValue()
 	{
-		IsHeartValueUpdated = false; 
-		return HEART_GOAL;
+		IsHeartWorkValueUpdated = false; 
+		return HEART_WORK_GOAL;
 	}
-	static function SetHeartValue(value)
+	static function SetHeartWorkValue(value)
 	{
-		HEART_GOAL = (value == null) ? 150 : value;
-		IsHeartValueUpdated = true;
+		HEART_WORK_GOAL = (value == null) ? 150 : value;
+		IsHeartWorkValueUpdated = true;
 	}
+	
+	static function GetHeartRestValue()
+	{
+		IsHeartRestValueUpdated = false; 
+		return HEART_REST_GOAL;
+	}
+	static function SetHeartRestValue(value)
+	{
+		HEART_REST_GOAL = (value == null) ? 150 : value;
+		IsHeartRestValueUpdated = true;
+	}
+	
 
 	static function SetAutoRecording(isAutoRecording)
 	{
 		IsAutoRecording = (isAutoRecording == null) ? false : isAutoRecording;
+	}
+	
+	static function Increment(phase){
+		if (phase == :prep) {
+    		PREP_TIME++;
+    	}
+    	if (phase == :rest) {
+    		REST_TIME++;
+    	}
+     	if (phase == :work) {
+    		WORK_TIME++;
+    	}
+		if (phase == :lap) {
+		NUM_LAP++;
+	}
+		if (phase == :rounds) {
+		NUM_ROUNDS++;
+	}
+		if (phase == :workHeart) {
+		HEART_WORK_GOAL++;
+	}
+		if (phase == :restHeart) {
+		HEART_REST_GOAL++;
+    	}
+	}
+	
+		static function Decrement(phase){
+		if (phase == :prep) {
+    		if(PREP_TIME>1){PREP_TIME--;}
+    	}
+    	if (phase == :rest) {
+    		if(REST_TIME>1){REST_TIME--;}
+    	}
+     	if (phase == :work) {
+    		if(WORK_TIME>1){WORK_TIME--;}
+    	}
+		if (phase == :lap) {
+			if(NUM_LAP>1){NUM_LAP--;}
+		}
+		if (phase == :rounds) {
+			if(NUM_ROUNDS>1){NUM_ROUNDS--;}
+		}
+		if (phase == :workHeart) {
+			if(HEART_WORK_GOAL>40){HEART_WORK_GOAL--;}
+		}
+		if (phase == :restHeart) {
+			if(HEART_REST_GOAL>30){HEART_REST_GOAL--;}
+	    }
 	}
 	
 	static function SetTimerParameter(lap,rounds,prep,work,rest,heart)
@@ -150,7 +213,7 @@ class Settings
 		Settings.SetPrepValue(prep);
 		Settings.SetRestValue(work);
 		Settings.SetWorkValue(rest);
-		Settings.SetHeartValue(heart);
+		Settings.SetHeartWorkValue(heart);
 		
 	}
 }
