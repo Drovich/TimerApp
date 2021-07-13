@@ -17,6 +17,7 @@ class Model{
 
 
 	var heartRate = 60;
+	var speed = 10;
 	var counter = PREP_TIME;
 	var round = 0;
 	var currentRound = 0;
@@ -26,7 +27,8 @@ class Model{
 	var session = ActivityRecording.createSession({:sport => ActivityRecording.SPORT_TRAINING, :subSport => ActivityRecording.SUB_SPORT_CARDIO_TRAINING, :name => "Tabata"});
 
 	hidden var refreshTimer = new Timer.Timer();
-	hidden var sensors = Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE]);
+	hidden var sensors = Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE,Sensor.SENSOR_FOOTPOD]);
+	
 
 	function initialize(){	
 	
@@ -48,7 +50,10 @@ class Model{
 	}
 	
 	function onSensor(sensorInfo) {
+		if (sensorInfo.heartRate == null){
+		} else {
     	heartRate = sensorInfo.heartRate;
+    	}/*speed = sensorInfo.speed * 3.6;*/
 }
 
 	function refresh(){

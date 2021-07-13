@@ -12,12 +12,8 @@ class TimerTestDelegate extends Ui.InputDelegate {
 
 	function onKey(evt) {
 		if(evt.getKey() == Ui.KEY_ENTER && !started) {
-		Settings.SetLapValue(4);
-		Settings.SetRoundsValue(5);
-		Settings.SetPrepValue(2);
-		Settings.SetRestValue(2);
-		Settings.SetWorkValue(2);
-		
+		Settings.SetTimerParameter(3,4,10,20,30,100); /*Lap,Rounds,Prep,Work,Rest,Heart*/
+		/*TimerTestView.SetupHeartGoal(100);*/
   		model.start();
 			started = true;
 			return true;

@@ -11,6 +11,9 @@ class Settings
 	static var REST_TIME = 5;
 	static var WORK_TIME = 5;
 	static var NUM_ROUNDS = 5;
+	static var HEART_GOAL = 150;
+	static var HEART_VAR = 0.1;
+	
 	
 	static var TimerValue = 300;
 	static var IsTimerValueUpdated = false;
@@ -18,6 +21,7 @@ class Settings
 	static var IsRoundsValueUpdated = false;
 	static var IsPrepValueUpdated = false;
 	static var IsRestValueUpdated = false;
+	static var IsHeartValueUpdated = false;
 	static var IsWorkValueUpdated = false;
 	
 	static var DimColor = Gfx.COLOR_LT_GRAY;
@@ -122,9 +126,31 @@ class Settings
 		REST_TIME = (value == null) ? 5 : value;
 		IsRestValueUpdated = true;
 	}
+	
+	static function GetHeartValue()
+	{
+		IsHeartValueUpdated = false; 
+		return HEART_GOAL;
+	}
+	static function SetHeartValue(value)
+	{
+		HEART_GOAL = (value == null) ? 150 : value;
+		IsHeartValueUpdated = true;
+	}
 
 	static function SetAutoRecording(isAutoRecording)
 	{
 		IsAutoRecording = (isAutoRecording == null) ? false : isAutoRecording;
+	}
+	
+	static function SetTimerParameter(lap,rounds,prep,work,rest,heart)
+	{
+		Settings.SetLapValue(lap);
+		Settings.SetRoundsValue(rounds);
+		Settings.SetPrepValue(prep);
+		Settings.SetRestValue(work);
+		Settings.SetWorkValue(rest);
+		Settings.SetHeartValue(heart);
+		
 	}
 }
