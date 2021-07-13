@@ -44,19 +44,19 @@ class TimerTestView extends Ui.View {
   function setupDisplay(dc, phase){
   	if (phase == :work) {
   		if(heartGoal-heartGoal*heartVar > model.heartRate){
-  			dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_WHITE);
+  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLUE);
   		} else if (model.heartRate > heartGoal-heartGoal*heartVar){
-  			dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_WHITE);
+  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_RED);
   		} else { 
-  			dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_WHITE);
+  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_GREEN);
   	}
   	} else if (phase == :rest) {
 	  	if(heartGoal-3*heartGoal*heartVar > model.heartRate){
-	  			dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_BLACK);
+	  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLUE);
 	  	}  else if (model.heartRate > heartGoal-heartGoal*heartVar){
-  			dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_BLACK);
+  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_RED);
   		} else { 
-  			dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_BLACK);
+  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_GREEN);
   		}
   	}else {
   		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
