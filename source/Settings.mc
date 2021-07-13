@@ -12,9 +12,6 @@ class Settings
 	static var WORK_TIME = 5;
 	static var NUM_ROUNDS = 5;
 	
-	static var ForegroundColor = Gfx.COLOR_WHITE;
-	static var BackgroundColor = Gfx.COLOR_BLACK;
-	static var DimColor = Gfx.COLOR_LT_GRAY;
 	static var TimerValue = 300;
 	static var IsTimerValueUpdated = false;
 	static var IsLapValueUpdated = false;
@@ -22,6 +19,11 @@ class Settings
 	static var IsPrepValueUpdated = false;
 	static var IsRestValueUpdated = false;
 	static var IsWorkValueUpdated = false;
+	
+	static var DimColor = Gfx.COLOR_LT_GRAY;
+	static var ForegroundColor = Gfx.COLOR_WHITE;
+	static var BackgroundColor = Gfx.COLOR_BLACK;
+	
 	static var IsAutoRecording = false;
 	static var IsWhiteBackground = false;
 

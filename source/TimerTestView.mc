@@ -19,7 +19,7 @@ class TimerTestView extends Ui.View {
   		Ui.switchToView(new DoneView(), new DoneDelegate(), Ui.SLIDE_IMMEDIATE);
   	} else {
   		largeText(timerString(), dc);
-    	bottomText("" +  model.currentRound + "/" + model.NUM_ROUNDS + " | " + "" + model.round + "/" + model.TOTAL_ROUNDS, dc);
+    	bottomText("" +  model.heartRate + " | " +  model.currentRound + "/" + model.NUM_ROUNDS + " | " + "" + model.round + "/" + model.TOTAL_ROUNDS, dc);
     	if (model.phase == :prep) {
     		topText("PREP", dc);
     	}
@@ -34,8 +34,10 @@ class TimerTestView extends Ui.View {
 
   function setupDisplay(dc, phase){
   	if (phase == :work) {
-  		dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_WHITE);
-  	} else {
+  		dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_BLACK);
+  	} else if (phase == :rest) {
+  		dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_BLACK);
+  	}else {
   		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
   	}
     dc.clear();

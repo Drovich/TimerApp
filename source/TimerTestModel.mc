@@ -16,17 +16,20 @@ class Model{
 	const HAS_TONES = Attention has :playTone;
 
 
+	var heartRate = 60;
 	var counter = PREP_TIME;
 	var round = 0;
 	var currentRound = 0;
 	var phase = :prep;
 	var done = false;
+
 	var session = ActivityRecording.createSession({:sport => ActivityRecording.SPORT_TRAINING, :subSport => ActivityRecording.SUB_SPORT_CARDIO_TRAINING, :name => "Tabata"});
 
 	hidden var refreshTimer = new Timer.Timer();
 	hidden var sensors = Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE]);
 
 	function initialize(){	
+	
 	}
 
 	function start(){
@@ -37,11 +40,16 @@ class Model{
 		NUM_ROUNDS = Settings.GetRoundsValue();
 		counter = PREP_TIME;
 		TOTAL_ROUNDS = NUM_ROUNDS*NUM_LAP;
-	
+		
+		Sensor.enableSensorEvents(method(:onSensor));
 		refreshTimer.start(method(:refresh), 1000, true);
 		startBuzz();
 		Ui.requestUpdate();
 	}
+	
+	function onSensor(sensorInfo) {
+    	heartRate = sensorInfo.heartRate;
+}
 
 	function refresh(){
 		if (counter > 1){
@@ -51,7 +59,7 @@ class Model{
 						finishUp();
 						stopBuzz();
 			} else if (phase == :prep) {
-				session.start();
+			/*	session.start();*/
 				phase = :work;
 				counter = WORK_TIME;
 				round++;
@@ -83,7 +91,7 @@ class Model{
 	function finishUp() {
 		done = true;
 		session.stop();
-		session.save();
+		/*session.save();*/
 		refreshTimer.stop();
 	}
 
