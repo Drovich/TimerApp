@@ -6,6 +6,8 @@ class TimerTestDelegate extends Ui.InputDelegate {
 	hidden var started = false;
 	hidden var yCoordonate;
 	hidden var xCoordonate;
+	hidden var decreaseCount = 0;
+	hidden var increaseCount = 0;
 
   function initialize(mdl) {
   	model = mdl;
@@ -32,14 +34,20 @@ class TimerTestDelegate extends Ui.InputDelegate {
 		System.println("Next: " + xCoordonate);*/
 		if(clickEvent.getType() == CLICK_TYPE_TAP && !started) {
 			if (yCoordonate > 120){
-				Settings.Decrement(model.phase); 
+				decreaseCount++;
+				increaseCount=0;
+				Settings.Decrement(model.phase,decreaseCount); 
 				Ui.requestUpdate();
 				return true;
 			}else if (yCoordonate < 80){
-				Settings.Increment(model.phase); 
+				decreaseCount=0;
+				increaseCount++;
+				Settings.Increment(model.phase,increaseCount); 
 				Ui.requestUpdate();
 				return true;
 			}else if (xCoordonate > 80){
+				decreaseCount=0;
+				increaseCount=0;
 				if(model.phase == :prep){
 					model.phase = :rest;
 				}else if(model.phase == :rest){
@@ -56,6 +64,8 @@ class TimerTestDelegate extends Ui.InputDelegate {
 					model.phase = :prep;
 				}
 			}else if (xCoordonate < 60){
+				decreaseCount=0;
+				increaseCount=0;
 				if(model.phase == :prep){
 					model.phase = :lap;
 				}else if(model.phase == :rest){

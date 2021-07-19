@@ -6,11 +6,11 @@ using Toybox.Application as App;
 class Settings
 {
 
-	static var NUM_LAP = 5;
-	static var PREP_TIME = 5;
-	static var REST_TIME = 5;
-	static var WORK_TIME = 5;
-	static var NUM_ROUNDS = 5;
+	static var NUM_LAP = 4;
+	static var PREP_TIME = 30;
+	static var REST_TIME = 10;
+	static var WORK_TIME = 20;
+	static var NUM_ROUNDS = 8;
 	static var HEART_WORK_GOAL = 150;
 	static var HEART_REST_GOAL = 130;
 	
@@ -158,51 +158,55 @@ class Settings
 		IsAutoRecording = (isAutoRecording == null) ? false : isAutoRecording;
 	}
 	
-	static function Increment(phase){
+	static function Increment(phase,count){
+		var quotient = 5*(count/6);
+		if (quotient == 0){quotient = 1;}
 		if (phase == :prep) {
-    		PREP_TIME++;
+    		PREP_TIME=PREP_TIME+quotient;
     	}
     	if (phase == :rest) {
-    		REST_TIME++;
+    		REST_TIME=REST_TIME+quotient;
     	}
      	if (phase == :work) {
-    		WORK_TIME++;
+    		WORK_TIME=WORK_TIME+quotient;
     	}
 		if (phase == :lap) {
-		NUM_LAP++;
+		NUM_LAP=NUM_LAP+quotient;
 	}
 		if (phase == :rounds) {
-		NUM_ROUNDS++;
+		NUM_ROUNDS=NUM_ROUNDS+quotient;
 	}
 		if (phase == :workHeart) {
-		HEART_WORK_GOAL++;
+		HEART_WORK_GOAL=HEART_WORK_GOAL+quotient;
 	}
 		if (phase == :restHeart) {
-		HEART_REST_GOAL++;
+		HEART_REST_GOAL=HEART_REST_GOAL+quotient;
     	}
 	}
 	
-		static function Decrement(phase){
+		static function Decrement(phase,count){
+		var quotient = 5*(count/6);
+		if (quotient == 0){quotient = 1;}
 		if (phase == :prep) {
-    		if(PREP_TIME>1){PREP_TIME--;}
+    		if(PREP_TIME>quotient){PREP_TIME=PREP_TIME-quotient;}
     	}
     	if (phase == :rest) {
-    		if(REST_TIME>1){REST_TIME--;}
+    		if(REST_TIME>quotient){REST_TIME=REST_TIME-quotient;}
     	}
      	if (phase == :work) {
-    		if(WORK_TIME>1){WORK_TIME--;}
+    		if(WORK_TIME>quotient){WORK_TIME=WORK_TIME-quotient;}
     	}
 		if (phase == :lap) {
-			if(NUM_LAP>1){NUM_LAP--;}
+			if(NUM_LAP>quotient){NUM_LAP=NUM_LAP-quotient;}
 		}
 		if (phase == :rounds) {
-			if(NUM_ROUNDS>1){NUM_ROUNDS--;}
+			if(NUM_ROUNDS>quotient){NUM_ROUNDS=NUM_ROUNDS-quotient;}
 		}
 		if (phase == :workHeart) {
-			if(HEART_WORK_GOAL>40){HEART_WORK_GOAL--;}
+			if(HEART_WORK_GOAL>40+quotient){HEART_WORK_GOAL=HEART_WORK_GOAL-quotient;}
 		}
 		if (phase == :restHeart) {
-			if(HEART_REST_GOAL>30){HEART_REST_GOAL--;}
+			if(HEART_REST_GOAL>30+quotient){HEART_REST_GOAL=HEART_REST_GOAL-quotient;}
 	    }
 	}
 	
