@@ -91,10 +91,16 @@ class TimerTestView extends Ui.View {
   }
 
   function timerString(){
+  var counterMin;
+  var counterSec;
   	if (model.started ==true) {
-    	return "0:" + model.counter.format("%02d");
+  		counterMin = model.counter/60;
+  		counterSec = model.counter%60;
+    	return counterMin.format("%02d")+ ":" + counterSec.format("%02d");
     } else{
-    	 return "0:" + model.counterBis.format("%02d");
+    	counterMin = model.counterBis/60;
+  		counterSec = model.counterBis%60;
+    	return counterMin.format("%02d")+ ":" + counterSec.format("%02d");
     }
   }
 }
