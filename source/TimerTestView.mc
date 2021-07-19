@@ -52,6 +52,13 @@ class TimerTestView extends Ui.View {
     	if (model.phase == :restHeart) {
     		topText("" + heartRestGoal + " |R HR| " + model.heartRate + "", dc);
     	}
+    	if (model.phase == :isRecord){
+	    	if (model.isRecorded == true){
+	    		topText("Record True", dc);
+	    	}else{
+	    		topText("Record False", dc);
+	    	}
+    	}
   	}
   }
 
@@ -98,9 +105,9 @@ class TimerTestView extends Ui.View {
   		counterSec = model.counter%60;
     	return counterMin.format("%02d")+ ":" + counterSec.format("%02d");
     } else{
-    	counterMin = model.counterBis/60;
-  		counterSec = model.counterBis%60;
-    	return counterMin.format("%02d")+ ":" + counterSec.format("%02d");
-    }
+	    	counterMin = model.counterBis/60;
+	  		counterSec = model.counterBis%60;
+	    	return counterMin.format("%02d")+ ":" + counterSec.format("%02d");
+   }
   }
 }

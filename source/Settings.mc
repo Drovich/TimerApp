@@ -13,6 +13,7 @@ class Settings
 	static var NUM_ROUNDS = 8;
 	static var HEART_WORK_GOAL = 150;
 	static var HEART_REST_GOAL = 130;
+	static var isRecorded = false;
 	
 	static var HEART_VAR = 0.1;
 	
@@ -26,6 +27,8 @@ class Settings
 	static var IsHeartWorkValueUpdated = false;
 	static var IsHeartRestValueUpdated = false;
 	static var IsWorkValueUpdated = false;
+	static var IsRecordedValueUpdated = false;
+	
 	
 	static var DimColor = Gfx.COLOR_LT_GRAY;
 	static var ForegroundColor = Gfx.COLOR_WHITE;
@@ -152,6 +155,12 @@ class Settings
 		IsHeartRestValueUpdated = true;
 	}
 	
+	static function GetIsRecorded()
+	{
+		IsRecordedValueUpdated = false; 
+		return isRecorded;
+	}
+	
 
 	static function SetAutoRecording(isAutoRecording)
 	{
@@ -182,6 +191,10 @@ class Settings
 		if (phase == :restHeart) {
 		HEART_REST_GOAL=HEART_REST_GOAL+quotient;
     	}
+    	if (phase == :isRecord) {
+			if(isRecorded==true){isRecorded=false;
+			}else{isRecorded=true;}
+	    }
 	}
 	
 		static function Decrement(phase,count){
@@ -207,6 +220,10 @@ class Settings
 		}
 		if (phase == :restHeart) {
 			if(HEART_REST_GOAL>30+quotient){HEART_REST_GOAL=HEART_REST_GOAL-quotient;}
+	    }
+	    if (phase == :isRecord) {
+			if(isRecorded==true){isRecorded=false;
+			}else{isRecorded=true;}
 	    }
 	}
 	

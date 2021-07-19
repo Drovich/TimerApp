@@ -61,13 +61,15 @@ class TimerTestDelegate extends Ui.InputDelegate {
 				}else if(model.phase == :rounds){
 					model.phase = :lap;
 				}else if(model.phase == :lap){
+					model.phase = :isRecord;
+				}else if(model.phase == :isRecord){
 					model.phase = :prep;
 				}
 			}else if (xCoordonate < 60){
 				decreaseCount=0;
 				increaseCount=0;
 				if(model.phase == :prep){
-					model.phase = :lap;
+					model.phase = :isRecord;
 				}else if(model.phase == :rest){
 					model.phase = :prep;
 				}else if(model.phase == :work){
@@ -80,6 +82,8 @@ class TimerTestDelegate extends Ui.InputDelegate {
 					model.phase = :restHeart;
 				}else if(model.phase == :lap){
 					model.phase = :rounds;
+				}else if(model.phase == :isRecord){
+					model.phase = :lap;
 				}
 				Ui.requestUpdate();
 				return true;

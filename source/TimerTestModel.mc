@@ -8,6 +8,7 @@ using Toybox.Time as Time;
 class Model{
 
 	var NUM_LAP = 3;
+	var isRecorded = false;
 	var PREP_TIME = 3;
 	var REST_TIME = 3;
 	var WORK_TIME = 3;
@@ -46,6 +47,7 @@ class Model{
 		NUM_ROUNDS = Settings.GetRoundsValue();
 		HEART_WORK_GOAL = Settings.GetHeartWorkValue();
 		HEART_REST_GOAL = Settings.GetHeartRestValue();
+		isRecorded = Settings.isRecorded;
 		TOTAL_ROUNDS = NUM_ROUNDS*NUM_LAP;
 		if (phase == :prep) {
 			counterBis = PREP_TIME;
@@ -116,7 +118,9 @@ class Model{
 		done = true;
 		started = false;
 		session.stop();
-		/*session.save();*/
+		if(isRecorded==true){
+			session.save();
+		}		
 		refreshTimer.stop();
 	}
 
