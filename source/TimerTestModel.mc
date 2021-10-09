@@ -63,7 +63,10 @@ class Model{
 		started = true;
 		counter = PREP_TIME;
 		TOTAL_ROUNDS = NUM_ROUNDS*NUM_LAP;
-		
+		if(isRecorded==true){
+			session.start();
+		}		
+		/*System.println(isRecorded);*/
 		Sensor.enableSensorEvents(method(:onSensor));
 		refreshTimer.start(method(:refresh), 1000, true);
 		startBuzz();
@@ -78,50 +81,74 @@ class Model{
 }
 
 	function refresh(){
+		buzzHandler(counter);
 		if (counter > 1){
-			counter--;
+			counter--;	
 		} else {
 			if (round == TOTAL_ROUNDS){
 						finishUp();
-						stopBuzz();
+						//stopBuzz();
 			} else if (phase == :prep) {
-			/*	session.start();*/
+				
 				phase = :work;
 				counter = WORK_TIME;
 				round++;
 				currentRound++;
-				intervalBuzz();
+				//intervalBuzz();
 			} else if (phase == :work) {
 				phase = :rest;
 				counter = REST_TIME;
-				intervalBuzz();
-			}else if (phase == :rest) {
+				//intervalBuzz();
+			} else if (phase == :rest) {
 			
 				if (currentRound == NUM_ROUNDS){
 					phase = :prep;
 					counter = PREP_TIME;
 					currentRound=0;
-					intervalBuzz();
+					//intervalBuzz();
 				} else {
 						phase = :work;
 						counter = WORK_TIME;
 						round++;
 						currentRound++;
-						intervalBuzz();
+						//intervalBuzz();
 				}
 			}
 		}
 		Ui.requestUpdate();
 	}
-
+	
 	function finishUp() {
 		done = true;
 		started = false;
-		session.stop();
+		
+		/*System.println(isRecorded);*/
 		if(isRecorded==true){
+			session.stop();
 			session.save();
 		}		
 		refreshTimer.stop();
+	}
+	
+	function buzzHandler(counter){
+		if (counter == 1){
+			if (round == TOTAL_ROUNDS){
+				stopBuzz();
+			}else {
+				intervalBuzz();
+			}
+		} else if (buzzCondition(counter)){
+			preBuzz();
+		}
+	}
+		
+	function buzzCondition(counter){	
+	if (	(phase == :prep && counter == PREP_TIME/2+1) || 
+			(phase == :work && counter == WORK_TIME/2+1) ||
+			(phase == :rest && counter == REST_TIME/2+1) ||
+			(counter < 5)
+		){return true;}
+		else {return false;}
 	}
 
 	function startBuzz(){
@@ -137,6 +164,11 @@ class Model{
 	function intervalBuzz(){
 		var foo = HAS_TONES && beep(Attention.TONE_LOUD_BEEP);
 		vibrate(1000);
+	}
+	
+	function preBuzz(){
+		var foo = HAS_TONES && beep(Attention.TONE_LOUD_BEEP);
+		vibrate(250);
 	}
 
 	function vibrate(duration){
