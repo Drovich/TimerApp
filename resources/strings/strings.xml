@@ -16,6 +16,14 @@
     <string id="BackgroundPropertyName">isWhiteBackground</string>
     <string id="UserIdTitle">User ID</string>
     <string id="TimerValueTitle">Race Timer</string>
+    <string id="PrepTimeValueTitle">Prep Time</string>
+    <string id="RestTimeValueTitle">Rest Time</string>
+    <string id="WorkTimeValueTitle">Work Time</string>
+    <string id="NumRoundValueTitle">Number of Rounds</string>
+    <string id="NumLapValueTitle">Number of Laps</string>
+    <string id="HeartWorkValueTitle">Work Heart</string>
+    <string id="HeartRestValueTitle">Rest Heart</string>
+    
     <string id="IsAutoRecordingTitle">Enable Auto Recording</string>
     <string id="isWhiteBackgroundTitle">White Background</string>
     <string id="wpEpsilonTitle">Pass Waypoint Radius (m)</string>

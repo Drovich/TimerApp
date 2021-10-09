@@ -1,16 +1,18 @@
 using Toybox.Graphics as Gfx;
 using Toybox.Application as App;
+using Toybox.Application.Storage;
 
 // set of permanently stored values
 //
+
+
 class Settings
 {
-
-	static var NUM_LAP = 4;
 	static var PREP_TIME = 30;
 	static var REST_TIME = 10;
 	static var WORK_TIME = 20;
 	static var NUM_ROUNDS = 8;
+	static var NUM_LAP = 4;
 	static var HEART_WORK_GOAL = 150;
 	static var HEART_REST_GOAL = 130;
 	static var isRecorded = false;
@@ -18,7 +20,7 @@ class Settings
 	static var HEART_VAR = 0.1;
 	
 	
-	static var TimerValue = 300;
+	static var TimerValue = 40;
 	static var IsTimerValueUpdated = false;
 	static var IsLapValueUpdated = false;
 	static var IsRoundsValueUpdated = false;
@@ -38,14 +40,20 @@ class Settings
 	static var IsWhiteBackground = false;
 
 	static var CurrentRoute = null;
-	static var WpEpsilon = 100;
 
 	static function LoadSettings()
 	{
 		SetAutoRecording(App.getApp().getProperty("IsAutoRecording"));
-		SetTimerValue(App.getApp().getProperty("timerValue"));
+		//SetTimerValue(App.getApp().getProperty("timerValue"));
+		//SetPrepValue(App.getApp().getProperty("timerValue"));
+		SetPrepValue(App.getApp().getProperty("prepTime"));
+		SetRestValue(App.getApp().getProperty("restTime"));
+		SetWorkValue(App.getApp().getProperty("workTime"));
+		SetRoundsValue(App.getApp().getProperty("NumRound"));
+		SetLapValue(App.getApp().getProperty("NumLap"));
+		SetHeartWorkValue(App.getApp().getProperty("HeartWork"));
+		SetHeartRestValue(App.getApp().getProperty("HeartRest"));
 		SetBackground(App.getApp().getProperty("isWhiteBackground"));
-		WpEpsilon = App.getApp().getProperty("wpEpsilon");
 		CurrentRoute = App.getApp().getProperty("CurrentRoute");
 	}
 
@@ -53,6 +61,11 @@ class Settings
 	{
 		App.getApp().setProperty("isWhiteBackground", IsWhiteBackground);
 		App.getApp().setProperty("timerValue", TimerValue);
+		App.getApp().setProperty("prepTime", PREP_TIME);
+		App.getApp().setProperty("restTime", REST_TIME);
+		App.getApp().setProperty("workTime", WORK_TIME);
+		App.getApp().setProperty("NumRound", NUM_ROUNDS);
+		App.getApp().setProperty("NumLap", NUM_LAP);
 		App.getApp().setProperty("IsAutoRecording", IsAutoRecording);
 		
 		App.getApp().setProperty("CurrentRoute", CurrentRoute);
@@ -107,7 +120,7 @@ class Settings
 	}
 	static function SetPrepValue(value)
 	{
-		PREP_TIME = (value == null) ? 5 : value;
+		PREP_TIME =  (value == null) ? 5 : value;
 		IsPrepValueUpdated = true;
 	}
 
@@ -171,7 +184,7 @@ class Settings
 		var quotient = 5*(count/6);
 		if (quotient == 0){quotient = 1;}
 		if (phase == :prep) {
-    		PREP_TIME=PREP_TIME+quotient;
+			PREP_TIME=PREP_TIME+quotient;
     	}
     	if (phase == :rest) {
     		REST_TIME=REST_TIME+quotient;
@@ -235,6 +248,6 @@ class Settings
 		Settings.SetRestValue(work);
 		Settings.SetWorkValue(rest);
 		Settings.SetHeartWorkValue(heart);
-		
+		LoadSettings();
 	}
 }

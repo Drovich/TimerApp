@@ -29,7 +29,7 @@ class Model{
 	var phase = :prep;
 	var done = false;
 
-	var session = ActivityRecording.createSession({:sport => ActivityRecording.SPORT_TRAINING, :subSport => ActivityRecording.SUB_SPORT_CARDIO_TRAINING, :name => "Tabata"});
+	var session = ActivityRecording.createSession({:sport => ActivityRecording.SPORT_TRAINING, :subSport => ActivityRecording.SUB_SPORT_CARDIO_TRAINING, :name => "Interval Training"});
 
 	hidden var refreshTimer = new Timer.Timer();
 	hidden var sensors = Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE,Sensor.SENSOR_FOOTPOD]);
@@ -87,31 +87,25 @@ class Model{
 		} else {
 			if (round == TOTAL_ROUNDS){
 						finishUp();
-						//stopBuzz();
 			} else if (phase == :prep) {
-				
 				phase = :work;
 				counter = WORK_TIME;
 				round++;
 				currentRound++;
-				//intervalBuzz();
 			} else if (phase == :work) {
 				phase = :rest;
 				counter = REST_TIME;
-				//intervalBuzz();
 			} else if (phase == :rest) {
 			
 				if (currentRound == NUM_ROUNDS){
 					phase = :prep;
 					counter = PREP_TIME;
 					currentRound=0;
-					//intervalBuzz();
 				} else {
 						phase = :work;
 						counter = WORK_TIME;
 						round++;
 						currentRound++;
-						//intervalBuzz();
 				}
 			}
 		}

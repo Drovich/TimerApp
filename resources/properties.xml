@@ -1,7 +1,14 @@
 <properties>
     <property id="appVersion" type="string">0</property>
     <property id="isWhiteBackground" type="boolean">false</property>
-    <property id="timerValue" type="number">300</property>
+    <property id="timerValue" type="number">45</property>
+    <property id="prepTime" type="number">45</property>
+    <property id="restTime" type="number">45</property>
+    <property id="workTime" type="number">45</property>
+    <property id="NumRound" type="number">4</property>
+    <property id="NumLap" type="number">5</property>
+    <property id="HeartWork" type="number">165</property>
+    <property id="HeartRest" type="number">145</property>
     <property id="IsAutoRecording" type="boolean">false</property>
     <property id="userId" type = "string"></property>
     <property id="wpEpsilon" type="number">100</property>

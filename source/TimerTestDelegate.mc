@@ -11,6 +11,7 @@ class TimerTestDelegate extends Ui.InputDelegate {
 
   function initialize(mdl) {
   	model = mdl;
+  	Settings.LoadSettings();
     InputDelegate.initialize();
   }
 

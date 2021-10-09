@@ -8,11 +8,36 @@
         <settingConfig type="alphaNumeric" required="true" />
     </setting>
 
-    <setting propertyKey="@Properties.wpEpsilon" title="@Strings.wpEpsilonTitle">
-        <settingConfig type="numeric" />
-    </setting>
 
     <setting propertyKey="@Properties.timerValue" title="@Strings.TimerValueTitle">
+        <settingConfig type="numeric" />
+    </setting>
+    
+    <setting propertyKey="@Properties.prepTime" title="@Strings.PrepTimeValueTitle">
+        <settingConfig type="numeric" />
+    </setting>
+    
+     <setting propertyKey="@Properties.restTime" title="@Strings.RestTimeValueTitle">
+        <settingConfig type="numeric" />
+    </setting>
+    
+     <setting propertyKey="@Properties.workTime" title="@Strings.WorkTimeValueTitle">
+        <settingConfig type="numeric" />
+    </setting>
+    
+    <setting propertyKey="@Properties.NumRound" title="@Strings.NumRoundValueTitle">
+        <settingConfig type="numeric" />
+    </setting>
+    
+    <setting propertyKey="@Properties.NumLap" title="@Strings.NumLapValueTitle">
+        <settingConfig type="numeric" />
+    </setting>
+    
+    <setting propertyKey="@Properties.HeartWork" title="@Strings.HeartWorkValueTitle">
+        <settingConfig type="numeric" />
+    </setting>
+    
+    <setting propertyKey="@Properties.HeartRest" title="@Strings.HeartRestValueTitle">
         <settingConfig type="numeric" />
     </setting>
 
