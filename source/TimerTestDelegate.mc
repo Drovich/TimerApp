@@ -11,7 +11,7 @@ class TimerTestDelegate extends Ui.InputDelegate {
 
   function initialize(mdl) {
   	model = mdl;
-  	Settings.LoadSettings();
+  	Settings.LoadSettings(model.version);
     InputDelegate.initialize();
   }
 
@@ -64,12 +64,16 @@ class TimerTestDelegate extends Ui.InputDelegate {
 				}else if(model.phase == :lap){
 					model.phase = :isRecord;
 				}else if(model.phase == :isRecord){
+					model.phase = :version;
+				}else if(model.phase == :version){
 					model.phase = :prep;
 				}
 			}else if (xCoordonate < 60){
 				decreaseCount=0;
 				increaseCount=0;
 				if(model.phase == :prep){
+					model.phase = :version;
+				}else if(model.phase == :version){
 					model.phase = :isRecord;
 				}else if(model.phase == :rest){
 					model.phase = :prep;

@@ -17,7 +17,6 @@ class TimerTestView extends Ui.View {
 		heartWorkGoal = Settings.HEART_WORK_GOAL;
 		heartRestGoal = Settings.HEART_REST_GOAL;
 		heartVar = Settings.HEART_VAR;
-
 	  }
 	  
 
@@ -25,6 +24,7 @@ class TimerTestView extends Ui.View {
   	model.update();
  	heartWorkGoal = model.HEART_WORK_GOAL;
  	heartRestGoal = model.HEART_REST_GOAL;
+ 	
   	setupDisplay(dc, model.phase);
   	if (model.done){
   		Ui.switchToView(new DoneView(), new DoneDelegate(), Ui.SLIDE_IMMEDIATE);
@@ -52,15 +52,18 @@ class TimerTestView extends Ui.View {
     	if (model.phase == :restHeart) {
     		topText("" + heartRestGoal + " |R HR| " + model.heartRate + "", dc);
     	}
-    	if (model.phase == :isRecord){
-	    	if (model.isRecorded == true){
-	    		topText("Record True", dc);
-	    	}else{
-	    		topText("Record False", dc);
+    	if (model.phase == :version){
+	    	topText("" + heartWorkGoal + " |Work"+model.version + "| " + model.heartRate + "" , dc);
+		}
+	   	if (model.phase == :isRecord){
+		    	if (model.isRecorded == true){
+		    		topText("Record True", dc);
+		    	}else{
+		    		topText("Record False", dc);
+		    	}
 	    	}
-    	}
-  	}
-  }
+	  	}
+	  }
 
   function setupDisplay(dc, phase){
   	if (phase == :work) {

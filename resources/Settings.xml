@@ -8,39 +8,6 @@
         <settingConfig type="alphaNumeric" required="true" />
     </setting>
 
-
-    <setting propertyKey="@Properties.timerValue" title="@Strings.TimerValueTitle">
-        <settingConfig type="numeric" />
-    </setting>
-    
-    <setting propertyKey="@Properties.prepTime" title="@Strings.PrepTimeValueTitle">
-        <settingConfig type="numeric" />
-    </setting>
-    
-     <setting propertyKey="@Properties.restTime" title="@Strings.RestTimeValueTitle">
-        <settingConfig type="numeric" />
-    </setting>
-    
-     <setting propertyKey="@Properties.workTime" title="@Strings.WorkTimeValueTitle">
-        <settingConfig type="numeric" />
-    </setting>
-    
-    <setting propertyKey="@Properties.NumRound" title="@Strings.NumRoundValueTitle">
-        <settingConfig type="numeric" />
-    </setting>
-    
-    <setting propertyKey="@Properties.NumLap" title="@Strings.NumLapValueTitle">
-        <settingConfig type="numeric" />
-    </setting>
-    
-    <setting propertyKey="@Properties.HeartWork" title="@Strings.HeartWorkValueTitle">
-        <settingConfig type="numeric" />
-    </setting>
-    
-    <setting propertyKey="@Properties.HeartRest" title="@Strings.HeartRestValueTitle">
-        <settingConfig type="numeric" />
-    </setting>
-
     <setting propertyKey="@Properties.IsAutoRecording" title="@Strings.IsAutoRecordingTitle">
         <settingConfig type="boolean" />
     </setting>
@@ -48,5 +15,55 @@
     <setting propertyKey="@Properties.isWhiteBackground" title="@Strings.isWhiteBackgroundTitle">
         <settingConfig type="boolean" />
     </setting>
+    
+    <setting propertyKey="@Properties.timerValue" title="@Strings.TimerValueTitle">
+        <settingConfig type="numeric" />
+    </setting>
+    
+    <setting propertyKey="@Properties.prepTime1" title="@Strings.PrepTimeValueTitle1">
+        <settingConfig type="numeric" />
+    </setting>
+     <setting propertyKey="@Properties.restTime1" title="@Strings.RestTimeValueTitle1">
+        <settingConfig type="numeric" />
+    </setting>
+     <setting propertyKey="@Properties.workTime1" title="@Strings.WorkTimeValueTitle1">
+        <settingConfig type="numeric" />
+    </setting>    
+    <setting propertyKey="@Properties.NumRound1" title="@Strings.NumRoundValueTitle1">
+        <settingConfig type="numeric" />
+    </setting>    
+    <setting propertyKey="@Properties.NumLap1" title="@Strings.NumLapValueTitle1">
+        <settingConfig type="numeric" />
+    </setting>    
+    <setting propertyKey="@Properties.HeartWork1" title="@Strings.HeartWorkValueTitle1">
+        <settingConfig type="numeric" />
+    </setting>
+    <setting propertyKey="@Properties.HeartRest1" title="@Strings.HeartRestValueTitle1">
+        <settingConfig type="numeric" />
+    </setting>
+    
+    <setting propertyKey="@Properties.prepTime2" title="@Strings.PrepTimeValueTitle2">
+        <settingConfig type="numeric" />
+    </setting>
+     <setting propertyKey="@Properties.restTime2" title="@Strings.RestTimeValueTitle2">
+        <settingConfig type="numeric" />
+    </setting>
+     <setting propertyKey="@Properties.workTime2" title="@Strings.WorkTimeValueTitle2">
+        <settingConfig type="numeric" />
+    </setting>    
+    <setting propertyKey="@Properties.NumRound2" title="@Strings.NumRoundValueTitle2">
+        <settingConfig type="numeric" />
+    </setting>    
+    <setting propertyKey="@Properties.NumLap2" title="@Strings.NumLapValueTitle2">
+        <settingConfig type="numeric" />
+    </setting>    
+    <setting propertyKey="@Properties.HeartWork2" title="@Strings.HeartWorkValueTitle2">
+        <settingConfig type="numeric" />
+    </setting>
+    <setting propertyKey="@Properties.HeartRest2" title="@Strings.HeartRestValueTitle2">
+        <settingConfig type="numeric" />
+    </setting>
+
+
 	
 </settings>

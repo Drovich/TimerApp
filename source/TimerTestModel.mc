@@ -27,6 +27,7 @@ class Model{
 	var started = false;
 	var currentRound = 0;
 	var phase = :prep;
+	var version = 1;
 	var done = false;
 
 	var session = ActivityRecording.createSession({:sport => ActivityRecording.SPORT_TRAINING, :subSport => ActivityRecording.SUB_SPORT_CARDIO_TRAINING, :name => "Interval Training"});
@@ -40,6 +41,8 @@ class Model{
 	}
 
 	function update(){	
+		version = Settings.version;
+		Settings.LoadSettings(version);
 		NUM_LAP = Settings.GetLapValue();
 		PREP_TIME = Settings.GetPrepValue();
 		REST_TIME = Settings.GetRestValue();
@@ -48,6 +51,7 @@ class Model{
 		HEART_WORK_GOAL = Settings.GetHeartWorkValue();
 		HEART_REST_GOAL = Settings.GetHeartRestValue();
 		isRecorded = Settings.isRecorded;
+		
 		TOTAL_ROUNDS = NUM_ROUNDS*NUM_LAP;
 		if (phase == :prep) {
 			counterBis = PREP_TIME;
@@ -55,6 +59,8 @@ class Model{
 			counterBis = WORK_TIME;
 		}else if (phase == :rest) {
 			counterBis = REST_TIME;
+		}else {
+			counterBis = WORK_TIME;
 		}
 
 	}

@@ -16,6 +16,7 @@ class Settings
 	static var HEART_WORK_GOAL = 150;
 	static var HEART_REST_GOAL = 130;
 	static var isRecorded = false;
+	static var version = 1;
 	
 	static var HEART_VAR = 0.1;
 	
@@ -41,34 +42,42 @@ class Settings
 
 	static var CurrentRoute = null;
 
-	static function LoadSettings()
+	static function LoadSettings(version)
 	{
 		SetAutoRecording(App.getApp().getProperty("IsAutoRecording"));
 		//SetTimerValue(App.getApp().getProperty("timerValue"));
 		//SetPrepValue(App.getApp().getProperty("timerValue"));
-		SetPrepValue(App.getApp().getProperty("prepTime"));
-		SetRestValue(App.getApp().getProperty("restTime"));
-		SetWorkValue(App.getApp().getProperty("workTime"));
-		SetRoundsValue(App.getApp().getProperty("NumRound"));
-		SetLapValue(App.getApp().getProperty("NumLap"));
-		SetHeartWorkValue(App.getApp().getProperty("HeartWork"));
-		SetHeartRestValue(App.getApp().getProperty("HeartRest"));
+		//CurrentRoute = App.getApp().getProperty("CurrentRoute");
 		SetBackground(App.getApp().getProperty("isWhiteBackground"));
-		CurrentRoute = App.getApp().getProperty("CurrentRoute");
+		
+		SetPrepValue(App.getApp().getProperty("prepTime"+version));
+		SetRestValue(App.getApp().getProperty("restTime"+version));
+		SetWorkValue(App.getApp().getProperty("workTime"+version));
+		SetHeartWorkValue(App.getApp().getProperty("HeartWork"+version));
+		SetHeartRestValue(App.getApp().getProperty("HeartRest"+version));
+		SetRoundsValue(App.getApp().getProperty("NumRound"+version));
+		SetLapValue(App.getApp().getProperty("NumLap"+version));
+		
+
 	}
 
-	static function SaveSettings()
+	static function SaveSettings(version)
 	{
 		App.getApp().setProperty("isWhiteBackground", IsWhiteBackground);
 		App.getApp().setProperty("timerValue", TimerValue);
-		App.getApp().setProperty("prepTime", PREP_TIME);
-		App.getApp().setProperty("restTime", REST_TIME);
-		App.getApp().setProperty("workTime", WORK_TIME);
-		App.getApp().setProperty("NumRound", NUM_ROUNDS);
-		App.getApp().setProperty("NumLap", NUM_LAP);
 		App.getApp().setProperty("IsAutoRecording", IsAutoRecording);
-		
 		App.getApp().setProperty("CurrentRoute", CurrentRoute);
+		
+		App.getApp().setProperty("prepTime"+version, PREP_TIME);
+		App.getApp().setProperty("restTime"+version, REST_TIME);
+		App.getApp().setProperty("workTime"+version, WORK_TIME);
+		App.getApp().setProperty("HeartWork"+version, HEART_WORK_GOAL);
+		App.getApp().setProperty("HeartRest"+version, HEART_REST_GOAL);
+		App.getApp().setProperty("NumRound"+version, NUM_ROUNDS);
+		App.getApp().setProperty("NumLap"+version, NUM_LAP);
+		
+		
+		
 	}
 
 	static function SetBackground(isWhiteBackground)
@@ -181,8 +190,11 @@ class Settings
 	}
 	
 	static function Increment(phase,count){
-		var quotient = 5*(count/6);
+		var quotient = 5*(count/9);
 		if (quotient == 0){quotient = 1;}
+		if (phase == :version) {
+			if(version==1){version=2;}else{version=1;}
+	    }else{
 		if (phase == :prep) {
 			PREP_TIME=PREP_TIME+quotient;
     	}
@@ -208,11 +220,16 @@ class Settings
 			if(isRecorded==true){isRecorded=false;
 			}else{isRecorded=true;}
 	    }
+	    SaveSettings(version);
+	    }
 	}
 	
 		static function Decrement(phase,count){
-		var quotient = 5*(count/6);
+		var quotient = 5*(count/9);
 		if (quotient == 0){quotient = 1;}
+		if (phase == :version) {
+			if(version==1){version=2;}else{version=1;}
+	    }else{
 		if (phase == :prep) {
     		if(PREP_TIME>quotient){PREP_TIME=PREP_TIME-quotient;}
     	}
@@ -234,9 +251,12 @@ class Settings
 		if (phase == :restHeart) {
 			if(HEART_REST_GOAL>30+quotient){HEART_REST_GOAL=HEART_REST_GOAL-quotient;}
 	    }
+	    
 	    if (phase == :isRecord) {
 			if(isRecorded==true){isRecorded=false;
 			}else{isRecorded=true;}
+	    }
+	    SaveSettings(version);
 	    }
 	}
 	

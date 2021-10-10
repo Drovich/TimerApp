@@ -16,17 +16,24 @@
     <string id="BackgroundPropertyName">isWhiteBackground</string>
     <string id="UserIdTitle">User ID</string>
     <string id="TimerValueTitle">Race Timer</string>
-    <string id="PrepTimeValueTitle">Prep Time</string>
-    <string id="RestTimeValueTitle">Rest Time</string>
-    <string id="WorkTimeValueTitle">Work Time</string>
-    <string id="NumRoundValueTitle">Number of Rounds</string>
-    <string id="NumLapValueTitle">Number of Laps</string>
-    <string id="HeartWorkValueTitle">Work Heart</string>
-    <string id="HeartRestValueTitle">Rest Heart</string>
-    
     <string id="IsAutoRecordingTitle">Enable Auto Recording</string>
     <string id="isWhiteBackgroundTitle">White Background</string>
-    <string id="wpEpsilonTitle">Pass Waypoint Radius (m)</string>
+    
+    <string id="PrepTimeValueTitle1">1. Prep Time</string>
+    <string id="RestTimeValueTitle1">1. Rest Time</string>
+    <string id="WorkTimeValueTitle1">1. Work Time</string>
+    <string id="NumRoundValueTitle1">1. Number of Rounds</string>
+    <string id="NumLapValueTitle1">1. Number of Laps</string>
+    <string id="HeartWorkValueTitle1">1. Work Heart</string>
+    <string id="HeartRestValueTitle1">1. Rest Heart</string>
+    
+    <string id="PrepTimeValueTitle2">2. Prep Time</string>
+    <string id="RestTimeValueTitle2">2. Rest Time</string>
+    <string id="WorkTimeValueTitle2">2. Work Time</string>
+    <string id="NumRoundValueTitle2">2. Number of Rounds</string>
+    <string id="NumLapValueTitle2">2. Number of Laps</string>
+    <string id="HeartWorkValueTitle2">2. Work Heart</string>
+    <string id="HeartRestValueTitle2">2. Rest Heart</string>
     
     <string id="mmenuRacetimer">Race Timer</string>
     <string id="mmenuCruise">Cruise</string>
