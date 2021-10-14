@@ -110,8 +110,9 @@ class TimerTestView extends Ui.View {
 
   function setupDisplay(dc, phase){
  	if (model.heartRate == null){
- 		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
- 	}else{
+ 		model.heartRate=100;
+ 	}
+ 	if (model.goal == :heartRate){
 	  	if (phase == :work) {
 	  		if(model.heartRate < heartWorkGoal-heartWorkGoal*heartVar ){
 	  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLUE);
@@ -131,7 +132,28 @@ class TimerTestView extends Ui.View {
 	  	}else {
 	  		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
 	  	}
-	}
+	  }
+	  if (model.goal == :speed){
+		  if (phase == :work) {
+		  		if(model.speed < speedWorkGoal-speedWorkGoal*speedVar ){
+		  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLUE);
+		  		} else if (model.speed > speedWorkGoal+speedWorkGoal*speedVar){
+		  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_RED);
+		  		} else { 
+		  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_DK_GREEN);
+		  	}
+		  	} else if (phase == :rest) {
+			  	if(model.speed < speedRestGoal-2*speedRestGoal*speedVar ){
+			  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_DK_BLUE);
+			  	}  else if (model.speed > speedRestGoal+speedRestGoal*speedVar){
+		  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_RED);
+		  		} else { 
+		  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_GREEN);
+		  		}
+		  	}else {
+		  		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
+		  	}
+	  }
     dc.clear();
   }
 
