@@ -99,7 +99,7 @@ class TimerTestView extends Ui.View {
 		}
 		
 	   	if (model.phase == :isRecord){
-		    	if (model.isRecorded == true){
+		    	if (model.IsAutoRecording == true){
 		    		topText("Record True", dc);
 		    	}else{
 		    		topText("Record False", dc);

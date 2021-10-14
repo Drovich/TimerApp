@@ -255,8 +255,8 @@ class Settings
 			SPEED_REST_GOAL=SPEED_REST_GOAL+quotient;
     	}
     	if (phase == :isRecord) {
-			if(isRecorded==true){isRecorded=false;
-			}else{isRecorded=true;}
+			if(IsAutoRecording==true){IsAutoRecording=false;
+			}else{IsAutoRecording=true;}
 	    }
 	    if (phase == :goal) {
 			if(goal==:speed){goal=:heartRate;
@@ -301,8 +301,8 @@ class Settings
 	    }
 	    
 	    if (phase == :isRecord) {
-			if(isRecorded==true){isRecorded=false;
-			}else{isRecorded=true;}
+			if(IsAutoRecording==true){IsAutoRecording=false;
+			}else{IsAutoRecording=true;}
 	    }
 	    if (phase == :goal) {
 			if(goal==:speed){goal=:heartRate;
