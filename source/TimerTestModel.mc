@@ -2,6 +2,7 @@ using Toybox.Timer as Timer;
 using Toybox.WatchUi as Ui;
 using Toybox.Attention as Attention;
 using Toybox.ActivityRecording as ActivityRecording;
+using Toybox.Activity as Activity;
 using Toybox.Sensor as Sensor;
 using Toybox.Time as Time;
 
@@ -15,6 +16,8 @@ class Model{
 	var NUM_ROUNDS = 3;
 	var HEART_WORK_GOAL = 150;
 	var HEART_REST_GOAL = 130;
+	var SPEED_WORK_GOAL = 15;
+	var SPEED_REST_GOAL = 13;
 	var TOTAL_ROUNDS = NUM_ROUNDS*NUM_LAP;
 	const HAS_TONES = Attention has :playTone;
 
@@ -27,10 +30,15 @@ class Model{
 	var started = false;
 	var currentRound = 0;
 	var phase = :prep;
+	var goal = :heartRate;
 	var version = 1;
 	var done = false;
 
-	var session = ActivityRecording.createSession({:sport => ActivityRecording.SPORT_TRAINING, :subSport => ActivityRecording.SUB_SPORT_CARDIO_TRAINING, :name => "Interval Training"});
+	var session = ActivityRecording.createSession({
+			:sport => ActivityRecording.SPORT_RUNNING, 
+			//:subSport => ActivityRecording.SUB_SPORT_CARDIO_TRAINING, 
+			:name => "Interval Training"}
+		);
 
 	hidden var refreshTimer = new Timer.Timer();
 	hidden var sensors = Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE,Sensor.SENSOR_FOOTPOD]);
@@ -50,7 +58,10 @@ class Model{
 		NUM_ROUNDS = Settings.GetRoundsValue();
 		HEART_WORK_GOAL = Settings.GetHeartWorkValue();
 		HEART_REST_GOAL = Settings.GetHeartRestValue();
+		heartRate = Activity.getActivityInfo().currentHeartRate;		
+		speed = Activity.getActivityInfo().currentSpeed;
 		isRecorded = Settings.isRecorded;
+		goal = Settings.goal;
 		
 		TOTAL_ROUNDS = NUM_ROUNDS*NUM_LAP;
 		if (phase == :prep) {
@@ -82,7 +93,7 @@ class Model{
 	function onSensor(sensorInfo) {
 		if (sensorInfo.heartRate == null){
 		} else {
-    	heartRate = sensorInfo.heartRate;
+    	//heartRate = sensorInfo.heartRate;
     	}/*speed = sensorInfo.speed * 3.6;*/
 }
 
@@ -91,6 +102,7 @@ class Model{
 		if (counter > 1){
 			counter--;	
 		} else {
+			session.addLap();
 			if (round == TOTAL_ROUNDS){
 						finishUp();
 			} else if (phase == :prep) {

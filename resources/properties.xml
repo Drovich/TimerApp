@@ -10,8 +10,10 @@
     <property id="workTime1" type="number">45</property>
     <property id="NumRound1" type="number">4</property>
     <property id="NumLap1" type="number">3</property>
-    <property id="HeartWork1" type="number">165</property>
+    <property id="HeartWork1" type="number">155</property>
     <property id="HeartRest1" type="number">145</property>
+    <property id="SpeedWork1" type="number">12</property>
+    <property id="SpeedRest1" type="number">8</property>
     
     <property id="prepTime2" type="number">120</property>
     <property id="restTime2" type="number">5</property>
@@ -19,6 +21,8 @@
     <property id="NumRound2" type="number">3</property>
     <property id="NumLap2" type="number">12</property>
     <property id="HeartWork2" type="number">165</property>
-    <property id="HeartRest2" type="number">145</property>
+    <property id="HeartRest2" type="number">125</property>
+	<property id="SpeedWork2" type="number">15</property>
+    <property id="SpeedRest2" type="number">4</property>
 
 </properties>

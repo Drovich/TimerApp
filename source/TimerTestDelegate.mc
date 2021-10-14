@@ -53,16 +53,26 @@ class TimerTestDelegate extends Ui.InputDelegate {
 					model.phase = :rest;
 				}else if(model.phase == :rest){
 					model.phase = :work;
-				}else if(model.phase == :work){
+					
+				}else if(model.phase == :work && model.goal == :heartRate){
 					model.phase = :workHeart;
 				}else if(model.phase == :workHeart){
 					model.phase = :restHeart;
+				}else if(model.phase == :work && model.goal == :speed){
+					model.phase = :workSpeed;
+				}else if(model.phase == :workSpeed){
+					model.phase = :restSpeed;
+				}else if(model.phase == :restSpeed){
+					model.phase = :rounds;
 				}else if(model.phase == :restHeart){
 					model.phase = :rounds;
+					
 				}else if(model.phase == :rounds){
 					model.phase = :lap;
-				}else if(model.phase == :lap){
+				}else if(model.phase == :goal){
 					model.phase = :isRecord;
+				}else if(model.phase == :lap){
+					model.phase = :goal;
 				}else if(model.phase == :isRecord){
 					model.phase = :version;
 				}else if(model.phase == :version){
@@ -79,16 +89,27 @@ class TimerTestDelegate extends Ui.InputDelegate {
 					model.phase = :prep;
 				}else if(model.phase == :work){
 					model.phase = :rest;
+					
+				}else if(model.phase == :workSpeed){
+					model.phase = :work;
+				}else if(model.phase == :restSpeed){
+					model.phase = :workSpeed;
 				}else if(model.phase == :workHeart){
 					model.phase = :work;
 				}else if(model.phase == :restHeart){
 					model.phase = :workHeart;
-				}else if(model.phase == :rounds){
+				}
+				else if(model.phase == :rounds && model.goal == :heartRate){
 					model.phase = :restHeart;
+				}else if(model.phase == :rounds && model.goal == :speed){
+					model.phase = :restSpeed;
+					
 				}else if(model.phase == :lap){
 					model.phase = :rounds;
-				}else if(model.phase == :isRecord){
+				}else if(model.phase == :goal){
 					model.phase = :lap;
+				}else if(model.phase == :isRecord){
+					model.phase = :goal;
 				}
 				Ui.requestUpdate();
 				return true;

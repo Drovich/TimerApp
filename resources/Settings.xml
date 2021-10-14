@@ -41,6 +41,12 @@
     <setting propertyKey="@Properties.HeartRest1" title="@Strings.HeartRestValueTitle1">
         <settingConfig type="numeric" />
     </setting>
+    <setting propertyKey="@Properties.SpeedWork1" title="@Strings.SpeedWorkValueTitle1">
+        <settingConfig type="numeric" />
+    </setting>
+    <setting propertyKey="@Properties.SpeedRest1" title="@Strings.SpeedRestValueTitle1">
+        <settingConfig type="numeric" />
+    </setting>
     
     <setting propertyKey="@Properties.prepTime2" title="@Strings.PrepTimeValueTitle2">
         <settingConfig type="numeric" />
@@ -63,6 +69,13 @@
     <setting propertyKey="@Properties.HeartRest2" title="@Strings.HeartRestValueTitle2">
         <settingConfig type="numeric" />
     </setting>
+    <setting propertyKey="@Properties.SpeedWork2" title="@Strings.SpeedWorkValueTitle2">
+        <settingConfig type="numeric" />
+    </setting>
+    <setting propertyKey="@Properties.SpeedRest2" title="@Strings.SpeedRestValueTitle2">
+        <settingConfig type="numeric" />
+    </setting>
+    
 
 
 	

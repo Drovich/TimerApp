@@ -15,10 +15,14 @@ class Settings
 	static var NUM_LAP = 4;
 	static var HEART_WORK_GOAL = 150;
 	static var HEART_REST_GOAL = 130;
+	static var SPEED_WORK_GOAL = 12;
+	static var SPEED_REST_GOAL = 8;
 	static var isRecorded = false;
+	static var goal = :heartRate;
 	static var version = 1;
 	
 	static var HEART_VAR = 0.1;
+	static var SPEED_VAR = 0.1;
 	
 	
 	static var TimerValue = 40;
@@ -29,6 +33,8 @@ class Settings
 	static var IsRestValueUpdated = false;
 	static var IsHeartWorkValueUpdated = false;
 	static var IsHeartRestValueUpdated = false;
+	static var IsSpeedWorkValueUpdated = false;
+	static var IsSpeedRestValueUpdated = false;
 	static var IsWorkValueUpdated = false;
 	static var IsRecordedValueUpdated = false;
 	
@@ -55,6 +61,8 @@ class Settings
 		SetWorkValue(App.getApp().getProperty("workTime"+version));
 		SetHeartWorkValue(App.getApp().getProperty("HeartWork"+version));
 		SetHeartRestValue(App.getApp().getProperty("HeartRest"+version));
+		SetSpeedWorkValue(App.getApp().getProperty("SpeedWork"+version));
+		SetSpeedRestValue(App.getApp().getProperty("SpeedRest"+version));
 		SetRoundsValue(App.getApp().getProperty("NumRound"+version));
 		SetLapValue(App.getApp().getProperty("NumLap"+version));
 		
@@ -73,6 +81,8 @@ class Settings
 		App.getApp().setProperty("workTime"+version, WORK_TIME);
 		App.getApp().setProperty("HeartWork"+version, HEART_WORK_GOAL);
 		App.getApp().setProperty("HeartRest"+version, HEART_REST_GOAL);
+		App.getApp().setProperty("SpeedWork"+version, SPEED_WORK_GOAL);
+		App.getApp().setProperty("SpeedRest"+version, SPEED_REST_GOAL);
 		App.getApp().setProperty("NumRound"+version, NUM_ROUNDS);
 		App.getApp().setProperty("NumLap"+version, NUM_LAP);
 		
@@ -177,6 +187,28 @@ class Settings
 		IsHeartRestValueUpdated = true;
 	}
 	
+	static function GetSpeedWorkValue()
+	{
+		IsSpeedWorkValueUpdated = false; 
+		return SPEED_WORK_GOAL;
+	}
+	static function SetSpeedWorkValue(value)
+	{
+		SPEED_WORK_GOAL = (value == null) ? 150 : value;
+		IsSpeedWorkValueUpdated = true;
+	}
+	
+	static function GetSpeedRestValue()
+	{
+		IsSpeedRestValueUpdated = false; 
+		return SPEED_REST_GOAL;
+	}
+	static function SetSpeedRestValue(value)
+	{
+		SPEED_REST_GOAL = (value == null) ? 150 : value;
+		IsSpeedRestValueUpdated = true;
+	}
+	
 	static function GetIsRecorded()
 	{
 		IsRecordedValueUpdated = false; 
@@ -205,20 +237,30 @@ class Settings
     		WORK_TIME=WORK_TIME+quotient;
     	}
 		if (phase == :lap) {
-		NUM_LAP=NUM_LAP+quotient;
-	}
+			NUM_LAP=NUM_LAP+quotient;
+		}
 		if (phase == :rounds) {
-		NUM_ROUNDS=NUM_ROUNDS+quotient;
-	}
+			NUM_ROUNDS=NUM_ROUNDS+quotient;
+		}
 		if (phase == :workHeart) {
-		HEART_WORK_GOAL=HEART_WORK_GOAL+quotient;
-	}
+			HEART_WORK_GOAL=HEART_WORK_GOAL+quotient;
+		}
 		if (phase == :restHeart) {
-		HEART_REST_GOAL=HEART_REST_GOAL+quotient;
+			HEART_REST_GOAL=HEART_REST_GOAL+quotient;
+    	}
+    	if (phase == :workSpeed) {
+			SPEED_WORK_GOAL=SPEED_WORK_GOAL+quotient;
+		}
+		if (phase == :restSpeed) {
+			SPEED_REST_GOAL=SPEED_REST_GOAL+quotient;
     	}
     	if (phase == :isRecord) {
 			if(isRecorded==true){isRecorded=false;
 			}else{isRecorded=true;}
+	    }
+	    if (phase == :goal) {
+			if(goal==:speed){goal=:heartRate;
+			}else if (goal == :heartRate) {goal=:speed;}
 	    }
 	    SaveSettings(version);
 	    }
@@ -251,10 +293,20 @@ class Settings
 		if (phase == :restHeart) {
 			if(HEART_REST_GOAL>30+quotient){HEART_REST_GOAL=HEART_REST_GOAL-quotient;}
 	    }
+	    if (phase == :workSpeed) {
+			if(SPEED_WORK_GOAL>40+quotient){SPEED_WORK_GOAL=SPEED_WORK_GOAL-quotient;}
+		}
+		if (phase == :restSpeed) {
+			if(SPEED_REST_GOAL>30+quotient){SPEED_REST_GOAL=SPEED_REST_GOAL-quotient;}
+	    }
 	    
 	    if (phase == :isRecord) {
 			if(isRecorded==true){isRecorded=false;
 			}else{isRecorded=true;}
+	    }
+	    if (phase == :goal) {
+			if(goal==:speed){goal=:heartRate;
+			}else if (goal == :heartRate) {goal=:speed;}
 	    }
 	    SaveSettings(version);
 	    }
