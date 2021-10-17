@@ -9,7 +9,7 @@ using Toybox.Time as Time;
 class Model{
 
 	var NUM_LAP = 3;
-	var IsAutoRecording = false;
+	var isRecorded = false;
 	var PREP_TIME = 3;
 	var REST_TIME = 3;
 	var WORK_TIME = 3;
@@ -30,7 +30,7 @@ class Model{
 	var started = false;
 	var currentRound = 0;
 	var phase = :prep;
-	var goal = :speed;
+	var goal = :heartRate;
 	var version = 1;
 	var done = false;
 
@@ -60,7 +60,7 @@ class Model{
 		HEART_REST_GOAL = Settings.GetHeartRestValue();
 		heartRate = Activity.getActivityInfo().currentHeartRate;		
 		speed = Activity.getActivityInfo().currentSpeed;
-		IsAutoRecording = Settings.IsAutoRecording;
+		isRecorded = Settings.isRecorded;
 		goal = Settings.goal;
 		
 		TOTAL_ROUNDS = NUM_ROUNDS*NUM_LAP;
@@ -135,7 +135,7 @@ class Model{
 		started = false;
 		
 		/*System.println(isRecorded);*/
-		if(IsAutoRecording==true){
+		if(isRecorded==true){
 			session.stop();
 			session.save();
 		}		

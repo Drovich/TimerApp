@@ -1,7 +1,7 @@
 <properties>
     <property id="appVersion" type="string">0</property>
     <property id="isWhiteBackground" type="boolean">false</property>
-    <property id="IsAutoRecording" type="boolean">false</property>
+    <property id="isRecorded" type="boolean">false</property>
     <property id="userId" type = "string">Bob</property>
     <property id="timerValue" type="number">45</property>
     <property id="version" type="number">1</property>
@@ -26,7 +26,7 @@
 	<property id="SpeedWork2" type="number">15</property>
     <property id="SpeedRest2" type="number">2</property>
     
-    <property id="prepTime3" type="number">180</property>
+    <!-- <property id="prepTime3" type="number">180</property>
     <property id="restTime3" type="number">12</property>
     <property id="workTime3" type="number">18</property>
     <property id="NumRound3" type="number">16</property>
@@ -124,6 +124,6 @@
     <property id="HeartWork11" type="number">155</property>
     <property id="HeartRest11" type="number">145</property>
     <property id="SpeedWork11" type="number">12</property>
-    <property id="SpeedRest11" type="number">8</property>
+    <property id="SpeedRest11" type="number">8</property> -->
 
 </properties>

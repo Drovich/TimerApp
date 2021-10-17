@@ -18,7 +18,7 @@ class Settings
 	static var SPEED_WORK_GOAL = 12;
 	static var SPEED_REST_GOAL = 8;
 	static var isRecorded = false;
-	static var goal = :speed;
+	static var goal = :heartRate;
 	static var version = 1;
 	
 	static var HEART_VAR = 0.1;
@@ -44,7 +44,6 @@ class Settings
 	static var ForegroundColor = Gfx.COLOR_WHITE;
 	static var BackgroundColor = Gfx.COLOR_BLACK;
 	
-	static var IsAutoRecording = false;
 	static var IsWhiteBackground = false;
 
 	static function LoadSettings(version)
@@ -52,7 +51,7 @@ class Settings
 //		if (version<1 || version>11){version =1;}
 //		SetVersion(App.getApp().getProperty("version"));
 		
-		SetAutoRecording(App.getApp().getProperty("IsAutoRecording"));
+		SetIsRecorded(App.getApp().getProperty("isRecorded"));
 		//SetTimerValue(App.getApp().getProperty("timerValue"));
 		//SetPrepValue(App.getApp().getProperty("timerValue"));
 		SetBackground(App.getApp().getProperty("isWhiteBackground"));
@@ -78,7 +77,7 @@ class Settings
 		
 		App.getApp().setProperty("isWhiteBackground", IsWhiteBackground);
 		App.getApp().setProperty("timerValue", TimerValue);
-		App.getApp().setProperty("IsAutoRecording", IsAutoRecording);
+		App.getApp().setProperty("isRecorded", isRecorded);
 		
 		
 		App.getApp().setProperty("prepTime"+version, PREP_TIME);
@@ -231,11 +230,9 @@ class Settings
 		IsRecordedValueUpdated = false; 
 		return isRecorded;
 	}
-	
-
-	static function SetAutoRecording(isAutoRecording)
+	static function SetIsRecorded(isRecorded)
 	{
-		IsAutoRecording = (isAutoRecording == null) ? false : isAutoRecording;
+		isRecorded = (isRecorded == null) ? false : isRecorded;
 	}
 	
 	static function Increment(phase,count){
@@ -272,8 +269,8 @@ class Settings
 			SPEED_REST_GOAL=SPEED_REST_GOAL+quotient;
     	}
     	if (phase == :isRecord) {
-			if(IsAutoRecording==true){IsAutoRecording=false;
-			}else{IsAutoRecording=true;}
+			if(isRecorded==true){isRecorded=false;
+			}else{isRecorded=true;}
 	    }
 	    if (phase == :goal) {
 			if(goal==:speed){goal=:heartRate;
@@ -318,8 +315,8 @@ class Settings
 	    }
 	    
 	    if (phase == :isRecord) {
-			if(IsAutoRecording==true){IsAutoRecording=false;
-			}else{IsAutoRecording=true;}
+			if(isRecorded==true){isRecorded=false;
+			}else{isRecorded=true;}
 	    }
 	    if (phase == :goal) {
 			if(goal==:speed){goal=:heartRate;

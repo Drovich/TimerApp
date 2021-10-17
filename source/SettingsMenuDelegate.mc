@@ -31,8 +31,8 @@ class SettingMenuDelegate extends Ui.MenuInputDelegate
         {
             var autoRecordingMenu = new Ui.Menu();
             autoRecordingMenu.setTitle("Auto Recording");
-            autoRecordingMenu.addItem((Settings.IsAutoRecording ? "*" : "") + " On", :isAutoOn);
-            autoRecordingMenu.addItem((Settings.IsAutoRecording ? "" : "*") + " Off", :isAutoOff);
+            autoRecordingMenu.addItem((Settings.isRecorded ? "*" : "") + " On", :isAutoOn);
+            autoRecordingMenu.addItem((Settings.isRecorded ? "" : "*") + " Off", :isAutoOff);
             Ui.pushView(autoRecordingMenu, new AutoRecordingMenuDelegate(), Ui.SLIDE_LEFT);
         }
     }
@@ -69,11 +69,11 @@ class AutoRecordingMenuDelegate extends Ui.MenuInputDelegate
     {
         if (item == :isAutoOn)
         {
-            Settings.SetAutoRecording(true);
+            Settings.SetIsRecorded(true);
         }
         else if (item == :isAutoOff)
         {
-            Settings.SetAutoRecording(false);
+            Settings.SetIsRecorded(false);
         }
     }
 }

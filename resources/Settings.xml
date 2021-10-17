@@ -8,7 +8,7 @@
         <settingConfig type="alphaNumeric" required="true" />
     </setting>
 
-    <setting propertyKey="@Properties.IsAutoRecording" title="@Strings.IsAutoRecordingTitle">
+    <setting propertyKey="@Properties.isRecorded" title="@Strings.isRecordedTitle">
         <settingConfig type="boolean" />
     </setting>
     
@@ -80,7 +80,7 @@
         <settingConfig type="numeric" />
     </setting>
     
-    <setting propertyKey="@Properties.prepTime3" title="@Strings.PrepTimeValueTitle3">
+<!--     <setting propertyKey="@Properties.prepTime3" title="@Strings.PrepTimeValueTitle3">
         <settingConfig type="numeric" />
     </setting>
      <setting propertyKey="@Properties.restTime3" title="@Strings.RestTimeValueTitle3">
@@ -108,7 +108,7 @@
         <settingConfig type="numeric" />
     </setting>
     
-        <setting propertyKey="@Properties.prepTime4" title="@Strings.PrepTimeValueTitle4">
+    <setting propertyKey="@Properties.prepTime4" title="@Strings.PrepTimeValueTitle4">
         <settingConfig type="numeric" />
     </setting>
      <setting propertyKey="@Properties.restTime4" title="@Strings.RestTimeValueTitle4">
@@ -137,7 +137,7 @@
     </setting>
     
     
-        <setting propertyKey="@Properties.prepTime5" title="@Strings.PrepTimeValueTitle5">
+    <setting propertyKey="@Properties.prepTime5" title="@Strings.PrepTimeValueTitle5">
         <settingConfig type="numeric" />
     </setting>
      <setting propertyKey="@Properties.restTime5" title="@Strings.RestTimeValueTitle5">
@@ -165,7 +165,7 @@
         <settingConfig type="numeric" />
     </setting>
     
-        <setting propertyKey="@Properties.prepTime6" title="@Strings.PrepTimeValueTitle6">
+    <setting propertyKey="@Properties.prepTime6" title="@Strings.PrepTimeValueTitle6">
         <settingConfig type="numeric" />
     </setting>
      <setting propertyKey="@Properties.restTime6" title="@Strings.RestTimeValueTitle6">
@@ -193,7 +193,7 @@
         <settingConfig type="numeric" />
     </setting>
     
-        <setting propertyKey="@Properties.prepTime7" title="@Strings.PrepTimeValueTitle7">
+    <setting propertyKey="@Properties.prepTime7" title="@Strings.PrepTimeValueTitle7">
         <settingConfig type="numeric" />
     </setting>
      <setting propertyKey="@Properties.restTime7" title="@Strings.RestTimeValueTitle7">
@@ -221,7 +221,7 @@
         <settingConfig type="numeric" />
     </setting>
     
-        <setting propertyKey="@Properties.prepTime8" title="@Strings.PrepTimeValueTitle8">
+    <setting propertyKey="@Properties.prepTime8" title="@Strings.PrepTimeValueTitle8">
         <settingConfig type="numeric" />
     </setting>
      <setting propertyKey="@Properties.restTime8" title="@Strings.RestTimeValueTitle8">
@@ -249,7 +249,7 @@
         <settingConfig type="numeric" />
     </setting>
     
-        <setting propertyKey="@Properties.prepTime9" title="@Strings.PrepTimeValueTitle9">
+    <setting propertyKey="@Properties.prepTime9" title="@Strings.PrepTimeValueTitle9">
         <settingConfig type="numeric" />
     </setting>
      <setting propertyKey="@Properties.restTime9" title="@Strings.RestTimeValueTitle9">
@@ -331,6 +331,6 @@
     </setting>
     <setting propertyKey="@Properties.SpeedRest11" title="@Strings.SpeedRestValueTitle11">
         <settingConfig type="numeric" />
-    </setting>
+    </setting> -->
 	
 </settings>
