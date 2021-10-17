@@ -18,7 +18,7 @@ class Settings
 	static var SPEED_WORK_GOAL = 12;
 	static var SPEED_REST_GOAL = 8;
 	static var isRecorded = false;
-	static var goal = :heartRate;
+//	static var goal = :speed;
 	static var version = 1;
 	
 	static var HEART_VAR = 0.1;
@@ -37,6 +37,7 @@ class Settings
 	static var IsSpeedRestValueUpdated = false;
 	static var IsWorkValueUpdated = false;
 	static var IsRecordedValueUpdated = false;
+	static var IsVersionUpdated = false; 
 	
 	
 	static var DimColor = Gfx.COLOR_LT_GRAY;
@@ -46,16 +47,15 @@ class Settings
 	static var IsAutoRecording = false;
 	static var IsWhiteBackground = false;
 
-	static var CurrentRoute = null;
-
 	static function LoadSettings(version)
 	{
+		if (version<1 || version>11){version =1;}
 		SetAutoRecording(App.getApp().getProperty("IsAutoRecording"));
 		//SetTimerValue(App.getApp().getProperty("timerValue"));
 		//SetPrepValue(App.getApp().getProperty("timerValue"));
-		//CurrentRoute = App.getApp().getProperty("CurrentRoute");
 		SetBackground(App.getApp().getProperty("isWhiteBackground"));
 		
+		SetVersion(App.getApp().getProperty("version"+version));
 		SetPrepValue(App.getApp().getProperty("prepTime"+version));
 		SetRestValue(App.getApp().getProperty("restTime"+version));
 		SetWorkValue(App.getApp().getProperty("workTime"+version));
@@ -71,11 +71,12 @@ class Settings
 
 	static function SaveSettings(version)
 	{
+		if (version<1 || version>11){version =1;}
 		App.getApp().setProperty("isWhiteBackground", IsWhiteBackground);
 		App.getApp().setProperty("timerValue", TimerValue);
 		App.getApp().setProperty("IsAutoRecording", IsAutoRecording);
-		App.getApp().setProperty("CurrentRoute", CurrentRoute);
 		
+		App.getApp().setProperty("version",version);
 		App.getApp().setProperty("prepTime"+version, PREP_TIME);
 		App.getApp().setProperty("restTime"+version, REST_TIME);
 		App.getApp().setProperty("workTime"+version, WORK_TIME);
@@ -96,6 +97,17 @@ class Settings
         ForegroundColor = isWhiteBackground ? Gfx.COLOR_BLACK : Gfx.COLOR_WHITE;
         BackgroundColor = isWhiteBackground ? Gfx.COLOR_WHITE : Gfx.COLOR_BLACK;
         DimColor = isWhiteBackground ? Gfx.COLOR_DK_GRAY : Gfx.COLOR_LT_GRAY;
+	}
+	
+	static function GetVersion()
+	{
+		IsVersionUpdated = false; 
+		return version;
+	}
+	static function SetVersion(value)
+	{
+		version = (value == null) ? 1 : value;
+		IsVersionUpdated = true;
 	}
 	
 	static function GetTimerValue()
@@ -225,7 +237,7 @@ class Settings
 		var quotient = 5*(count/9);
 		if (quotient == 0){quotient = 1;}
 		if (phase == :version) {
-			if(version==1){version=2;}else{version=1;}
+			if(version>10){version=1;}else{version=version+1;}
 	    }else{
 		if (phase == :prep) {
 			PREP_TIME=PREP_TIME+quotient;
@@ -270,7 +282,7 @@ class Settings
 		var quotient = 5*(count/9);
 		if (quotient == 0){quotient = 1;}
 		if (phase == :version) {
-			if(version==1){version=2;}else{version=1;}
+			if(version<2){version=11;}else{version=version-1;}
 	    }else{
 		if (phase == :prep) {
     		if(PREP_TIME>quotient){PREP_TIME=PREP_TIME-quotient;}

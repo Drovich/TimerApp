@@ -4,25 +4,126 @@
     <property id="IsAutoRecording" type="boolean">false</property>
     <property id="userId" type = "string">Bob</property>
     <property id="timerValue" type="number">45</property>
+    <property id="version" type="number">1</property>
     
-    <property id="prepTime1" type="number">45</property>
-    <property id="restTime1" type="number">45</property>
-    <property id="workTime1" type="number">45</property>
-    <property id="NumRound1" type="number">4</property>
+    <property id="prepTime1" type="number">180</property>
+    <property id="restTime1" type="number">1</property>
+    <property id="workTime1" type="number">600</property>
+    <property id="NumRound1" type="number">1</property>
     <property id="NumLap1" type="number">3</property>
-    <property id="HeartWork1" type="number">155</property>
-    <property id="HeartRest1" type="number">145</property>
+    <property id="HeartWork1" type="number">165</property>
+    <property id="HeartRest1" type="number">135</property>
     <property id="SpeedWork1" type="number">12</property>
-    <property id="SpeedRest1" type="number">8</property>
+    <property id="SpeedRest1" type="number">2</property>
     
-    <property id="prepTime2" type="number">120</property>
-    <property id="restTime2" type="number">5</property>
-    <property id="workTime2" type="number">15</property>
-    <property id="NumRound2" type="number">3</property>
-    <property id="NumLap2" type="number">12</property>
-    <property id="HeartWork2" type="number">165</property>
-    <property id="HeartRest2" type="number">125</property>
+    <property id="prepTime2" type="number">180</property>
+    <property id="restTime2" type="number">24</property>
+    <property id="workTime2" type="number">36</property>
+    <property id="NumRound2" type="number">10</property>
+    <property id="NumLap2" type="number">3</property>
+    <property id="HeartWork2" type="number">170</property>
+    <property id="HeartRest2" type="number">145</property>
 	<property id="SpeedWork2" type="number">15</property>
-    <property id="SpeedRest2" type="number">4</property>
+    <property id="SpeedRest2" type="number">2</property>
+    
+    <property id="prepTime3" type="number">180</property>
+    <property id="restTime3" type="number">12</property>
+    <property id="workTime3" type="number">18</property>
+    <property id="NumRound3" type="number">16</property>
+    <property id="NumLap3" type="number">3</property>
+    <property id="HeartWork3" type="number">175</property>
+    <property id="HeartRest3" type="number">165</property>
+    <property id="SpeedWork3" type="number">16</property>
+    <property id="SpeedRest3" type="number">2</property>
+    
+    <property id="prepTime4" type="number">180</property>
+    <property id="restTime4" type="number">6</property>
+    <property id="workTime4" type="number">9</property>
+    <property id="NumRound4" type="number">20</property>
+    <property id="NumLap4" type="number">3</property>
+    <property id="HeartWork4" type="number">175</property>
+    <property id="HeartRest4" type="number">155</property>
+    <property id="SpeedWork4" type="number">18</property>
+    <property id="SpeedRest4" type="number">2</property>
+    
+    <property id="prepTime5" type="number">45</property>
+    <property id="restTime5" type="number">45</property>
+    <property id="workTime5" type="number">45</property>
+    <property id="NumRound5" type="number">4</property>
+    <property id="NumLap5" type="number">3</property>
+    <property id="HeartWork5" type="number">155</property>
+    <property id="HeartRest5" type="number">145</property>
+    <property id="SpeedWork5" type="number">12</property>
+    <property id="SpeedRest5" type="number">8</property>
+    
+    <property id="prepTime5" type="number">90</property>
+    <property id="restTime5" type="number">8</property>
+    <property id="workTime5" type="number">12</property>
+    <property id="NumRound5" type="number">4</property>
+    <property id="NumLap5" type="number">15</property>
+    <property id="HeartWork5" type="number">165</property>
+    <property id="HeartRest5" type="number">145</property>
+    <property id="SpeedWork5" type="number">17</property>
+    <property id="SpeedRest5" type="number">2</property>
+    
+    <property id="prepTime6" type="number">45</property>
+    <property id="restTime6" type="number">45</property>
+    <property id="workTime6" type="number">45</property>
+    <property id="NumRound6" type="number">4</property>
+    <property id="NumLap6" type="number">3</property>
+    <property id="HeartWork6" type="number">155</property>
+    <property id="HeartRest6" type="number">145</property>
+    <property id="SpeedWork6" type="number">12</property>
+    <property id="SpeedRest6" type="number">8</property>
+    
+    <property id="prepTime7" type="number">45</property>
+    <property id="restTime7" type="number">45</property>
+    <property id="workTime7" type="number">45</property>
+    <property id="NumRound7" type="number">4</property>
+    <property id="NumLap7" type="number">3</property>
+    <property id="HeartWork7" type="number">155</property>
+    <property id="HeartRest7" type="number">145</property>
+    <property id="SpeedWork7" type="number">12</property>
+    <property id="SpeedRest7" type="number">8</property>
+    
+    <property id="prepTime8" type="number">45</property>
+    <property id="restTime8" type="number">45</property>
+    <property id="workTime8" type="number">45</property>
+    <property id="NumRound8" type="number">4</property>
+    <property id="NumLap8" type="number">3</property>
+    <property id="HeartWork8" type="number">155</property>
+    <property id="HeartRest8" type="number">145</property>
+    <property id="SpeedWork8" type="number">12</property>
+    <property id="SpeedRest8" type="number">8</property>
+    
+    <property id="prepTime9" type="number">45</property>
+    <property id="restTime9" type="number">45</property>
+    <property id="workTime9" type="number">45</property>
+    <property id="NumRound9" type="number">4</property>
+    <property id="NumLap9" type="number">3</property>
+    <property id="HeartWork9" type="number">155</property>
+    <property id="HeartRest9" type="number">145</property>
+    <property id="SpeedWork9" type="number">12</property>
+    <property id="SpeedRest9" type="number">8</property>
+    
+    <property id="prepTime10" type="number">45</property>
+    <property id="restTime10" type="number">45</property>
+    <property id="workTime10" type="number">45</property>
+    <property id="NumRound10" type="number">4</property>
+    <property id="NumLap10" type="number">3</property>
+    <property id="HeartWork10" type="number">155</property>
+    <property id="HeartRest10" type="number">145</property>
+    <property id="SpeedWork10" type="number">12</property>
+    <property id="SpeedRest10" type="number">8</property>
+    
+    <property id="prepTime11" type="number">45</property>
+    <property id="restTime11" type="number">45</property>
+    <property id="workTime11" type="number">45</property>
+    <property id="NumRound11" type="number">4</property>
+    <property id="NumLap11" type="number">3</property>
+    <property id="HeartWork11" type="number">155</property>
+    <property id="HeartRest11" type="number">145</property>
+    <property id="SpeedWork11" type="number">12</property>
+    <property id="SpeedRest11" type="number">8</property>
 
 </properties>

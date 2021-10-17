@@ -32,7 +32,6 @@ class TimerTestView extends Ui.View {
  	heartRestGoal = model.HEART_REST_GOAL;
  	speedWorkGoal = model.SPEED_WORK_GOAL;
  	speedRestGoal = model.SPEED_REST_GOAL;
- 	
   	setupDisplay(dc, model.phase);
   	if (model.done){
   		Ui.switchToView(new DoneView(), new DoneDelegate(), Ui.SLIDE_IMMEDIATE);

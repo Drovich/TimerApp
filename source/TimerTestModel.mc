@@ -30,7 +30,7 @@ class Model{
 	var started = false;
 	var currentRound = 0;
 	var phase = :prep;
-	var goal = :heartRate;
+	var goal = :speed;
 	var version = 1;
 	var done = false;
 

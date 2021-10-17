@@ -18,6 +18,8 @@
     <string id="TimerValueTitle">Race Timer</string>
     <string id="IsAutoRecordingTitle">Enable Auto Recording</string>
     <string id="isWhiteBackgroundTitle">White Background</string>
+    <string id="versionTitle">Workout number</string>
+    
     
     <string id="PrepTimeValueTitle1">1. Prep Time</string>
     <string id="RestTimeValueTitle1">1. Rest Time</string>
@@ -38,6 +40,96 @@
     <string id="HeartRestValueTitle2">2. Rest Heart</string>
     <string id="SpeedWorkValueTitle2">2. Work Speed</string>
     <string id="SpeedRestValueTitle2">2. Rest Speed</string>
+    
+    <string id="PrepTimeValueTitle3">3. Prep Time</string>
+    <string id="RestTimeValueTitle3">3. Rest Time</string>
+    <string id="WorkTimeValueTitle3">3. Work Time</string>
+    <string id="NumRoundValueTitle3">3. Number of Rounds</string>
+    <string id="NumLapValueTitle3">3. Number of Laps</string>
+    <string id="HeartWorkValueTitle3">3. Work Heart</string>
+    <string id="HeartRestValueTitle3">3. Rest Heart</string>
+    <string id="SpeedWorkValueTitle3">3. Work Speed</string>
+    <string id="SpeedRestValueTitle3">3. Rest Speed</string>
+    
+    <string id="PrepTimeValueTitle4">4. Prep Time</string>
+    <string id="RestTimeValueTitle4">4. Rest Time</string>
+    <string id="WorkTimeValueTitle4">4. Work Time</string>
+    <string id="NumRoundValueTitle4">4. Number of Rounds</string>
+    <string id="NumLapValueTitle4">4. Number of Laps</string>
+    <string id="HeartWorkValueTitle4">4. Work Heart</string>
+    <string id="HeartRestValueTitle4">4. Rest Heart</string>
+    <string id="SpeedWorkValueTitle4">4. Work Speed</string>
+    <string id="SpeedRestValueTitle4">4. Rest Speed</string>
+    
+    <string id="PrepTimeValueTitle5">5. Prep Time</string>
+    <string id="RestTimeValueTitle5">5. Rest Time</string>
+    <string id="WorkTimeValueTitle5">5. Work Time</string>
+    <string id="NumRoundValueTitle5">5. Number of Rounds</string>
+    <string id="NumLapValueTitle5">5. Number of Laps</string>
+    <string id="HeartWorkValueTitle5">5. Work Heart</string>
+    <string id="HeartRestValueTitle5">5. Rest Heart</string>
+    <string id="SpeedWorkValueTitle5">5. Work Speed</string>
+    <string id="SpeedRestValueTitle5">5. Rest Speed</string>
+    
+    <string id="PrepTimeValueTitle6">6. Prep Time</string>
+    <string id="RestTimeValueTitle6">6. Rest Time</string>
+    <string id="WorkTimeValueTitle6">6. Work Time</string>
+    <string id="NumRoundValueTitle6">6. Number of Rounds</string>
+    <string id="NumLapValueTitle6">6. Number of Laps</string>
+    <string id="HeartWorkValueTitle6">6. Work Heart</string>
+    <string id="HeartRestValueTitle6">6. Rest Heart</string>
+    <string id="SpeedWorkValueTitle6">6. Work Speed</string>
+    <string id="SpeedRestValueTitle6">6. Rest Speed</string>
+    
+    <string id="PrepTimeValueTitle7">7. Prep Time</string>
+    <string id="RestTimeValueTitle7">7. Rest Time</string>
+    <string id="WorkTimeValueTitle7">7. Work Time</string>
+    <string id="NumRoundValueTitle7">7. Number of Rounds</string>
+    <string id="NumLapValueTitle7">7. Number of Laps</string>
+    <string id="HeartWorkValueTitle7">7. Work Heart</string>
+    <string id="HeartRestValueTitle7">7. Rest Heart</string>
+    <string id="SpeedWorkValueTitle7">7. Work Speed</string>
+    <string id="SpeedRestValueTitle7">7. Rest Speed</string>
+    
+    <string id="PrepTimeValueTitle8">8. Prep Time</string>
+    <string id="RestTimeValueTitle8">8. Rest Time</string>
+    <string id="WorkTimeValueTitle8">8. Work Time</string>
+    <string id="NumRoundValueTitle8">8. Number of Rounds</string>
+    <string id="NumLapValueTitle8">8. Number of Laps</string>
+    <string id="HeartWorkValueTitle8">8. Work Heart</string>
+    <string id="HeartRestValueTitle8">8. Rest Heart</string>
+    <string id="SpeedWorkValueTitle8">8. Work Speed</string>
+    <string id="SpeedRestValueTitle8">8. Rest Speed</string>
+    
+    <string id="PrepTimeValueTitle9">	9. Prep Time</string>
+    <string id="RestTimeValueTitle9">	9. Rest Time</string>
+    <string id="WorkTimeValueTitle9">	9. Work Time</string>
+    <string id="NumRoundValueTitle9">	9. Number of Rounds</string>
+    <string id="NumLapValueTitle9">		9. Number of Laps</string>
+    <string id="HeartWorkValueTitle9">	9. Work Heart</string>
+    <string id="HeartRestValueTitle9">	9. Rest Heart</string>
+    <string id="SpeedWorkValueTitle9">	9. Work Speed</string>
+    <string id="SpeedRestValueTitle9">	9. Rest Speed</string>
+    
+    <string id="PrepTimeValueTitle10">10. Prep Time</string>
+    <string id="RestTimeValueTitle10">10. Rest Time</string>
+    <string id="WorkTimeValueTitle10">10. Work Time</string>
+    <string id="NumRoundValueTitle10">10. Number of Rounds</string>
+    <string id="NumLapValueTitle10">10. Number of Laps</string>
+    <string id="HeartWorkValueTitle10">10. Work Heart</string>
+    <string id="HeartRestValueTitle10">10. Rest Heart</string>
+    <string id="SpeedWorkValueTitle10">10. Work Speed</string>
+    <string id="SpeedRestValueTitle10">10. Rest Speed</string>
+    
+    <string id="PrepTimeValueTitle11">11. Prep Time</string>
+    <string id="RestTimeValueTitle11">11. Rest Time</string>
+    <string id="WorkTimeValueTitle11">11. Work Time</string>
+    <string id="NumRoundValueTitle11">11. Number of Rounds</string>
+    <string id="NumLapValueTitle11">11. Number of Laps</string>
+    <string id="HeartWorkValueTitle11">11. Work Heart</string>
+    <string id="HeartRestValueTitle11">11. Rest Heart</string>
+    <string id="SpeedWorkValueTitle11">11. Work Speed</string>
+    <string id="SpeedRestValueTitle11">11. Rest Speed</string>
     
     <string id="mmenuRacetimer">Race Timer</string>
     <string id="mmenuCruise">Cruise</string>
