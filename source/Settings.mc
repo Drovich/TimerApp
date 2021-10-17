@@ -49,13 +49,15 @@ class Settings
 
 	static function LoadSettings(version)
 	{
-		if (version<1 || version>11){version =1;}
+//		if (version<1 || version>11){version =1;}
+//		SetVersion(App.getApp().getProperty("version"));
+		
 		SetAutoRecording(App.getApp().getProperty("IsAutoRecording"));
 		//SetTimerValue(App.getApp().getProperty("timerValue"));
 		//SetPrepValue(App.getApp().getProperty("timerValue"));
 		SetBackground(App.getApp().getProperty("isWhiteBackground"));
 		
-		SetVersion(App.getApp().getProperty("version"+version));
+		
 		SetPrepValue(App.getApp().getProperty("prepTime"+version));
 		SetRestValue(App.getApp().getProperty("restTime"+version));
 		SetWorkValue(App.getApp().getProperty("workTime"+version));
@@ -71,12 +73,14 @@ class Settings
 
 	static function SaveSettings(version)
 	{
-		if (version<1 || version>11){version =1;}
+//		if (version<1 || version>11){version =1;}
+		App.getApp().setProperty("version",version);
+		
 		App.getApp().setProperty("isWhiteBackground", IsWhiteBackground);
 		App.getApp().setProperty("timerValue", TimerValue);
 		App.getApp().setProperty("IsAutoRecording", IsAutoRecording);
 		
-		App.getApp().setProperty("version",version);
+		
 		App.getApp().setProperty("prepTime"+version, PREP_TIME);
 		App.getApp().setProperty("restTime"+version, REST_TIME);
 		App.getApp().setProperty("workTime"+version, WORK_TIME);
@@ -99,16 +103,7 @@ class Settings
         DimColor = isWhiteBackground ? Gfx.COLOR_DK_GRAY : Gfx.COLOR_LT_GRAY;
 	}
 	
-	static function GetVersion()
-	{
-		IsVersionUpdated = false; 
-		return version;
-	}
-	static function SetVersion(value)
-	{
-		version = (value == null) ? 1 : value;
-		IsVersionUpdated = true;
-	}
+
 	
 	static function GetTimerValue()
 	{
@@ -121,6 +116,16 @@ class Settings
 		IsTimerValueUpdated = true;
 	}
 	
+	static function GetVersion()
+	{
+		IsVersionUpdated = false; 
+		return version;
+	}
+	static function SetVersion(value)
+	{
+		version = (value == null) ? 1 : value;
+		IsVersionUpdated = true;
+	}
 	
 	static function GetLapValue()
 	{
@@ -282,7 +287,7 @@ class Settings
 		var quotient = 5*(count/9);
 		if (quotient == 0){quotient = 1;}
 		if (phase == :version) {
-			if(version<2){version=11;}else{version=version-1;}
+			if(version==1){version=11;}else{version=version-1;}
 	    }else{
 		if (phase == :prep) {
     		if(PREP_TIME>quotient){PREP_TIME=PREP_TIME-quotient;}
