@@ -18,7 +18,7 @@ class Settings
 	static var SPEED_WORK_GOAL = 12;
 	static var SPEED_REST_GOAL = 8;
 	static var isRecorded = false;
-//	static var goal = :speed;
+	static var goal = :speed;
 	static var version = 1;
 	
 	static var HEART_VAR = 0.1;
