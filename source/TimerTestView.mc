@@ -6,32 +6,15 @@ class TimerTestView extends Ui.View {
   	var model;
 	hidden var _setTimerView;
 	hidden var _setTimerDelegate;
-	static var heartWorkGoal;
-	static var heartRestGoal;
-	static var speedWorkGoal;
-	static var speedRestGoal;
-	
-	var heartVar;
-	var speedVar;
 	
 	function initialize(mdl) {
 		model = mdl;
 		View.initialize();
-		heartWorkGoal = Settings.HEART_WORK_GOAL;
-		heartRestGoal = Settings.HEART_REST_GOAL;
-		heartVar = Settings.HEART_VAR;
-		speedWorkGoal = Settings.SPEED_WORK_GOAL;
-		speedRestGoal = Settings.SPEED_REST_GOAL;
-		speedVar = Settings.SPEED_VAR;
 	  }
 	  
 
   function onUpdate(dc) {
   	model.update();
- 	heartWorkGoal = model.HEART_WORK_GOAL;
- 	heartRestGoal = model.HEART_REST_GOAL;
- 	speedWorkGoal = model.SPEED_WORK_GOAL;
- 	speedRestGoal = model.SPEED_REST_GOAL;
  	
   	setupDisplay(dc, model.phase);
   	if (model.done){
@@ -42,78 +25,103 @@ class TimerTestView extends Ui.View {
 
 	    if (model.goal == :speed){
     		if (model.phase == :goal){
-    			topText("" + speedWorkGoal + " |Goal:S| " + speedRestGoal + "", dc);
-    			//largeText("Speed", dc);
+    			topText("" + model.SPEED_WORK_GOAL + " |Goal| " + model.SPEED_REST_GOAL + "", dc);
+    			largeText("Speed", dc);
     		}
 			if (model.phase == :prep) {
-    			topText("" + speedRestGoal + " |PREP| " + model.speed.format("%02.1f") + "", dc);
-    			largeText(timerString(), dc);
+    			topText("" + model.SPEED_REST_GOAL + " |PREP| " + model.speed.format("%02.1f") + "", dc);
+    			largeNumber(timerString(), dc);
 	    	}
 	    	if (model.phase == :rest) {
-	    		topText("" + speedRestGoal + " |REST| " + model.speed.format("%02.1f") + "", dc);
-	    		largeText(timerString(), dc);
+	    		topText("" + model.SPEED_REST_GOAL + " |REST| " + model.speed.format("%02.1f") + "", dc);
+	    		largeNumber(timerString(), dc);
 	    	}
 	      	if (model.phase == :work) {
-	    		topText("" + speedWorkGoal + " |GO| " + model.speed.format("%02.1f") + "", dc);
-	    		largeText(timerString(), dc);
+	    		topText("" + model.SPEED_WORK_GOAL + " |GO| " + model.speed.format("%02.1f") + "", dc);
+	    		largeNumber(timerString(), dc);
 	    	}
 	    	if (model.phase == :rounds) {
-	    		topText("" + speedWorkGoal + " |ROUND| " + speedRestGoal + "", dc);
-	    		largeText(model.NUM_ROUNDS,dc);
+	    		topText("" + model.SPEED_WORK_GOAL + " |ROUND| " + model.SPEED_REST_GOAL + "", dc);
+	    		largeNumber(model.NUM_ROUNDS,dc);
 	    	}
 	    	if (model.phase == :lap) {
-	    		topText("" + speedWorkGoal + " |LAP| " + speedRestGoal + "", dc);
-	    		largeText(model.NUM_LAP,dc);
+	    		topText("" + model.SPEED_WORK_GOAL + " |LAP| " + model.SPEED_REST_GOAL + "", dc);
+	    		largeNumber(model.NUM_LAP,dc);
 	    	}
 	      	if (model.phase == :workSpeed) {
-	    		topText("" + speedWorkGoal + " |WSpeed| " + model.speed.format("%2.1f") + "", dc);
-	    		largeText(speedWorkGoal,dc);
+	    		topText("" + model.SPEED_WORK_GOAL + " |WSpeed| " + model.speed.format("%2.1f") + "", dc);
+	    		largeNumber(model.SPEED_WORK_GOAL,dc);
 	    	}
 	    	if (model.phase == :restSpeed) {
-	    		topText("" + speedRestGoal + " |RSpeed| " + model.speed.format("%2.1f") + "", dc);
-	    		largeText(speedRestGoal,dc);
+	    		topText("" + model.SPEED_REST_GOAL + " |RSpeed| " + model.speed.format("%2.1f") + "", dc);
+	    		largeNumber(model.SPEED_REST_GOAL,dc);
 	    	}
 	    	if (model.phase == :version){
-		    	topText("" + speedWorkGoal + " |Training| " + speedRestGoal + "" , dc);
-		    	largeText("Workout : "+model.version,dc);
+		    	topText("" + model.SPEED_WORK_GOAL + " |Work| " + model.SPEED_REST_GOAL + "" , dc);
+		    	largeText("Workout"+model.version,dc);
+			}
+			if (model.phase == :buzz){
+		    	topText("" + model.SPEED_WORK_GOAL + " |Buzz| " + model.SPEED_REST_GOAL + "" , dc);
+		    	if(model.buzzMode == :none){
+		    		largeText("None",dc);
+		    	}else if (model.buzzMode == :silent){
+		    		largeText("Silent",dc);
+		    	}else if (model.buzzMode == :normal){
+		    		largeText("Normal",dc);
+		    	}else if (model.buzzMode == :vibrate){
+		    		largeText("Vibrating",dc);
+		    	}
 			}
 		}else if (model.goal == :heartRate){
 			if (model.phase == :goal){	
-				topText("" + heartWorkGoal + " |Goal:HR| " + heartRestGoal + "", dc);
-    			//largeText("Rate", dc);
+				topText("" + model.HEART_WORK_GOAL + " |Goal| " + model.HEART_REST_GOAL + "", dc);
+    			largeText("Heart Rate", dc);
 			}
 			if (model.phase == :prep) {
-    			topText("" + heartRestGoal + " |PREP| " + model.heartRate + "", dc);
-    			largeText(timerString(), dc);
+    			topText("" + model.HEART_REST_GOAL + " |PREP| " + model.heartRate + "", dc);
+    			largeNumber(timerString(), dc);
 	    	}
 	    	if (model.phase == :rest) {
-	    		topText("" + heartRestGoal + " |REST| " + model.heartRate + "", dc);
-	    		largeText(timerString(), dc);
+	    		topText("" + model.HEART_REST_GOAL + " |REST| " + model.heartRate + "", dc);
+	    		largeNumber(timerString(), dc);
 	    	}
 	      	if (model.phase == :work) {
-	    		topText("" + heartWorkGoal + " |GO| " + model.heartRate + "", dc);
-	    		largeText(timerString(), dc);
+	    		topText("" + model.HEART_WORK_GOAL + " |GO| " + model.heartRate + "", dc);
+	    		largeNumber(timerString(), dc);
 	    	}
 	    	if (model.phase == :rounds) {
-	    		topText("" + heartWorkGoal + " |ROUND| " + heartRestGoal + "", dc);
-	    		largeText(model.NUM_ROUNDS,dc);
+	    		topText("" + model.HEART_WORK_GOAL + " |ROUND| " + model.HEART_REST_GOAL + "", dc);
+	    		largeNumber(model.NUM_ROUNDS,dc);
 	    	}
 	    	if (model.phase == :lap) {
-	    		topText("" + heartWorkGoal + " |LAP| " + heartRestGoal + "", dc);
-	    		largeText(model.NUM_LAP,dc);
+	    		topText("" + model.HEART_WORK_GOAL + " |LAP| " + model.HEART_REST_GOAL + "", dc);
+	    		largeNumber(model.NUM_LAP,dc);
 	    	}
 	      	if (model.phase == :workHeart) {
-	    		topText("" + heartWorkGoal + " |W HR| " + model.heartRate + "", dc);
-	    		largeText(heartWorkGoal,dc);
+	    		topText("" + model.HEART_WORK_GOAL + " |W HR| " + model.heartRate + "", dc);
+	    		largeNumber(model.HEART_WORK_GOAL,dc);
 	    	}
 	    	if (model.phase == :restHeart) {
-	    		topText("" + heartRestGoal + " |R HR| " + model.heartRate + "", dc);
-	    		largeText(heartRestGoal,dc);
+	    		topText("" + model.HEART_REST_GOAL + " |R HR| " + model.heartRate + "", dc);
+	    		largeNumber(model.HEART_REST_GOAL,dc);
 	    	}
 	    	if (model.phase == :version){
-		    	topText("" + heartWorkGoal + " |Work| " + heartRestGoal + "" , dc);
-		    	largeText(model.version,dc);
+		    	topText("" + model.HEART_WORK_GOAL + " |Work| " + model.HEART_REST_GOAL + "" , dc);
+		    	largeText("Workout"+model.version,dc);
 			}
+			if (model.phase == :buzz){
+		    	topText("" + model.HEART_WORK_GOAL + " |Buzz| " + model.HEART_REST_GOAL + "" , dc);
+		    	if(model.buzzMode == :none){
+		    		largeText("None",dc);
+		    	}else if (model.buzzMode == :silent){
+		    		largeText("Silent",dc);
+		    	}else if (model.buzzMode == :normal){
+		    		largeText("Normal",dc);
+		    	}else if (model.buzzMode == :vibrate){
+		    		largeText("Vibrating",dc);
+		    	}
+			}
+			
 		}
 		
 	   	if (model.phase == :isRecord){
@@ -135,17 +143,17 @@ class TimerTestView extends Ui.View {
  	}
  	if (model.goal == :heartRate){
 	  	if (phase == :work) {
-	  		if(model.heartRate < heartWorkGoal-heartWorkGoal*heartVar ){
+	  		if(model.heartRate < model.HEART_WORK_GOAL-model.HEART_WORK_GOAL*Settings.HEART_VAR ){
 	  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLUE);
-	  		} else if (model.heartRate > heartWorkGoal+heartWorkGoal*heartVar){
+	  		} else if (model.heartRate > model.HEART_WORK_GOAL+model.HEART_WORK_GOAL*Settings.HEART_VAR){
 	  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_RED);
 	  		} else { 
 	  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_DK_GREEN);
 	  	}
 	  	} else if (phase == :rest) {
-		  	if(model.heartRate < heartRestGoal-2*heartRestGoal*heartVar ){
+		  	if(model.heartRate < model.HEART_REST_GOAL-2*model.HEART_REST_GOAL*Settings.HEART_VAR ){
 		  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_DK_BLUE);
-		  	}  else if (model.heartRate > heartRestGoal+heartRestGoal*heartVar){
+		  	}  else if (model.heartRate > model.HEART_REST_GOAL+model.HEART_REST_GOAL*Settings.HEART_VAR){
 	  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_RED);
 	  		} else { 
 	  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_GREEN);
@@ -156,17 +164,17 @@ class TimerTestView extends Ui.View {
 	  }
 	  if (model.goal == :speed){
 		  if (phase == :work) {
-		  		if(model.speed < speedWorkGoal-speedWorkGoal*speedVar ){
+		  		if(model.speed < model.SPEED_WORK_GOAL-model.SPEED_WORK_GOAL*Settings.SPEED_VAR ){
 		  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLUE);
-		  		} else if (model.speed > speedWorkGoal+speedWorkGoal*speedVar){
+		  		} else if (model.speed > model.SPEED_WORK_GOAL+model.SPEED_WORK_GOAL*Settings.SPEED_VAR){
 		  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_RED);
 		  		} else { 
 		  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_DK_GREEN);
 		  	}
 		  	} else if (phase == :rest) {
-			  	if(model.speed < speedRestGoal-2*speedRestGoal*speedVar ){
+			  	if(model.speed < model.SPEED_REST_GOAL-2*model.SPEED_REST_GOAL*Settings.SPEED_VAR ){
 			  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_DK_BLUE);
-			  	}  else if (model.speed > speedRestGoal+speedRestGoal*speedVar){
+			  	}  else if (model.speed > model.SPEED_REST_GOAL+model.SPEED_REST_GOAL*Settings.SPEED_VAR){
 		  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_RED);
 		  		} else { 
 		  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_GREEN);
@@ -186,8 +194,12 @@ class TimerTestView extends Ui.View {
   	dc.drawText(dc.getWidth()/2, dc.getHeight()*0.8, Gfx.FONT_LARGE, text, Gfx.TEXT_JUSTIFY_CENTER);
   }
 
-  function largeText(text, dc){
+  function largeNumber(text, dc){
   	dc.drawText(dc.getWidth()/2, dc.getHeight()*0.25, Gfx.FONT_NUMBER_THAI_HOT, text, Gfx.TEXT_JUSTIFY_CENTER);
+  }
+  
+  function largeText(text, dc){
+  	dc.drawText(dc.getWidth()/2, dc.getHeight()*0.25, Gfx.FONT_LARGE, text, Gfx.TEXT_JUSTIFY_CENTER);
   }
 
   function timerString(){

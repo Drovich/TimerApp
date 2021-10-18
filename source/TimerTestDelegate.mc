@@ -69,47 +69,54 @@ class TimerTestDelegate extends Ui.InputDelegate {
 					
 				}else if(model.phase == :rounds){
 					model.phase = :lap;
-				}else if(model.phase == :goal){
-					model.phase = :isRecord;
 				}else if(model.phase == :lap){
 					model.phase = :goal;
+				}else if(model.phase == :goal){
+					model.phase = :isRecord;
 				}else if(model.phase == :isRecord){
+					model.phase = :buzz;
+				}else if(model.phase == :buzz){
 					model.phase = :version;
 				}else if(model.phase == :version){
 					model.phase = :prep;
 				}
+				
 			}else if (xCoordonate < 60){
 				decreaseCount=0;
 				increaseCount=0;
 				if(model.phase == :prep){
 					model.phase = :version;
 				}else if(model.phase == :version){
+					model.phase = :buzz;
+				}else if(model.phase == :buzz){
 					model.phase = :isRecord;
-				}else if(model.phase == :rest){
-					model.phase = :prep;
-				}else if(model.phase == :work){
-					model.phase = :rest;
+				}else if(model.phase == :isRecord){
+					model.phase = :goal;
+				}else if(model.phase == :goal){
+					model.phase = :lap;
+				}else if(model.phase == :lap){
+					model.phase = :rounds;
+					
+				}else if(model.phase == :rounds && model.goal == :heartRate){
+					model.phase = :restHeart;
+				}else if(model.phase == :rounds && model.goal == :speed){
+					model.phase = :restSpeed;	
+					
+				}else if(model.phase == :restSpeed){
+					model.phase = :workSpeed;
+				}else if(model.phase == :restHeart){
+					model.phase = :workHeart;
+					
 					
 				}else if(model.phase == :workSpeed){
 					model.phase = :work;
-				}else if(model.phase == :restSpeed){
-					model.phase = :workSpeed;
 				}else if(model.phase == :workHeart){
 					model.phase = :work;
-				}else if(model.phase == :restHeart){
-					model.phase = :workHeart;
-				}
-				else if(model.phase == :rounds && model.goal == :heartRate){
-					model.phase = :restHeart;
-				}else if(model.phase == :rounds && model.goal == :speed){
-					model.phase = :restSpeed;
 					
-				}else if(model.phase == :lap){
-					model.phase = :rounds;
-				}else if(model.phase == :goal){
-					model.phase = :lap;
-				}else if(model.phase == :isRecord){
-					model.phase = :goal;
+				}else if(model.phase == :work){
+					model.phase = :rest;	
+				}else if(model.phase == :rest){
+					model.phase = :prep;
 				}
 				Ui.requestUpdate();
 				return true;

@@ -8,16 +8,21 @@ using Toybox.Time as Time;
 
 class Model{
 
-	var NUM_LAP = 3;
-	var isRecorded = false;
-	var PREP_TIME = 3;
-	var REST_TIME = 3;
-	var WORK_TIME = 3;
-	var NUM_ROUNDS = 3;
-	var HEART_WORK_GOAL = 150;
-	var HEART_REST_GOAL = 130;
-	var SPEED_WORK_GOAL = 15;
-	var SPEED_REST_GOAL = 13;
+	static var PREP_TIME = 30;
+	static var REST_TIME = 10;
+	static var WORK_TIME = 20;
+	static var NUM_ROUNDS = 8;
+	static var NUM_LAP = 4;
+	static var HEART_WORK_GOAL = 150;
+	static var HEART_REST_GOAL = 130;
+	static var SPEED_WORK_GOAL = 12;
+	static var SPEED_REST_GOAL = 8;
+	static var HEART_VAR = 0.1;
+	static var SPEED_VAR = 0.1;
+	static var isRecorded = false;
+	static var goal = :heartRate;
+	static var version = 1;
+	
 	var TOTAL_ROUNDS = NUM_ROUNDS*NUM_LAP;
 	const HAS_TONES = Attention has :playTone;
 
@@ -30,8 +35,7 @@ class Model{
 	var started = false;
 	var currentRound = 0;
 	var phase = :prep;
-	var goal = :heartRate;
-	var version = 1;
+	var buzzMode = :normal;
 	var done = false;
 
 	var session = ActivityRecording.createSession({
@@ -47,8 +51,8 @@ class Model{
 	function initialize(){	
 	
 	}
-
-	function update(){	
+	
+	function getSettings(){
 		version = Settings.version;
 		Settings.LoadSettings(version);
 		NUM_LAP = Settings.GetLapValue();
@@ -60,12 +64,19 @@ class Model{
 		HEART_REST_GOAL = Settings.GetHeartRestValue();
 		SPEED_WORK_GOAL = Settings.GetSpeedWorkValue();
 		SPEED_REST_GOAL = Settings.GetSpeedRestValue();
+		HEART_VAR = Settings.HEART_VAR;
+		SPEED_VAR = Settings.SPEED_VAR;
 		heartRate = Activity.getActivityInfo().currentHeartRate;		
 		speed = Activity.getActivityInfo().currentSpeed;
 		isRecorded = Settings.isRecorded;
 		goal = Settings.goal;
+		buzzMode = Settings.buzzMode;
+		
 		
 		TOTAL_ROUNDS = NUM_ROUNDS*NUM_LAP;
+	}
+	
+	function setTimer(phase){
 		if (phase == :prep) {
 			counterBis = PREP_TIME;
 		} else if (phase == :work) {
@@ -75,10 +86,22 @@ class Model{
 		}else {
 			counterBis = WORK_TIME;
 		}
-
 	}
-	function start(){
-		
+
+	function update(){	
+		getSettings();
+		setTimer(phase);
+	}
+	
+	function start(){if (phase == :prep) {
+			counterBis = PREP_TIME;
+		} else if (phase == :work) {
+			counterBis = WORK_TIME;
+		}else if (phase == :rest) {
+			counterBis = REST_TIME;
+		}else {
+			counterBis = WORK_TIME;
+		}	
 		started = true;
 		counter = PREP_TIME;
 		TOTAL_ROUNDS = NUM_ROUNDS*NUM_LAP;
@@ -145,15 +168,19 @@ class Model{
 	}
 	
 	function buzzHandler(counter){
-		if (counter == 1){
+		if(buzzMode==:none) {
+		}else if (counter == 1){
 			if (round == TOTAL_ROUNDS){
 				stopBuzz();
 			}else {
 				intervalBuzz();
 			}
+		} else if(buzzMode==:silent){
 		} else if (buzzCondition(counter)){
 			preBuzz();
-		}
+		} else if (counter%4==0 && goalBuzzCondition() && buzzMode == :vibrate){
+			goalBuzz();
+		} 
 	}
 		
 	function buzzCondition(counter){	
@@ -164,7 +191,39 @@ class Model{
 		){return true;}
 		else {return false;}
 	}
+	
+	function goalBuzzCondition(){
+	
+	if (	 (
+				goal==:speed
+				&& (
+						phase == :work
+					&&	(
+							(speed < SPEED_WORK_GOAL-SPEED_WORK_GOAL*Settings.SPEED_VAR)
+						||	(speed > SPEED_WORK_GOAL+SPEED_WORK_GOAL*Settings.SPEED_VAR)
+						)
+					||	(speed < SPEED_REST_GOAL-2*SPEED_REST_GOAL*Settings.SPEED_VAR)
+					||	(speed > SPEED_REST_GOAL+SPEED_REST_GOAL*Settings.SPEED_VAR)
+					)
+				)
+				|| 
+				(
+				(goal==:heartRate) 
+				&& ( 
+						phase == :work
+					&&	(
+							(heartRate < HEART_WORK_GOAL-HEART_WORK_GOAL*Settings.HEART_VAR)
+						||	(heartRate > HEART_WORK_GOAL+HEART_WORK_GOAL*Settings.HEART_VAR)
+						) 
+					||	(heartRate < HEART_REST_GOAL-2*HEART_REST_GOAL*Settings.HEART_VAR)
+					||	(heartRate > HEART_REST_GOAL+HEART_REST_GOAL*Settings.HEART_VAR)
+					) 
+			)
+		){return true;}
+		else {return false;}
+	}
 
+	  	
 	function startBuzz(){
 		var foo = HAS_TONES && beep(Attention.TONE_LOUD_BEEP);
 		vibrate(1500);
@@ -182,7 +241,12 @@ class Model{
 	
 	function preBuzz(){
 		var foo = HAS_TONES && beep(Attention.TONE_LOUD_BEEP);
-		vibrate(250);
+		vibrate(500);
+	}
+	
+	function goalBuzz(){
+		var foo = HAS_TONES && beep(Attention.TONE_LOUD_BEEP);
+		vibrate(100);
 	}
 
 	function vibrate(duration){

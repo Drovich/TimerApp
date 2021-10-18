@@ -20,6 +20,7 @@ class Settings
 	static var isRecorded = false;
 	static var goal = :heartRate;
 	static var version = 1;
+	static var buzzMode = :normal;
 	
 	static var HEART_VAR = 0.1;
 	static var SPEED_VAR = 0.1;
@@ -280,6 +281,13 @@ class Settings
 			if(goal==:speed){goal=:heartRate;
 			}else if (goal == :heartRate) {goal=:speed;}
 	    }
+	    if (phase == :buzz) {
+			if(buzzMode==:vibrate){buzzMode=:none;
+			}else if (buzzMode == :none) {buzzMode=:silent;
+			}else if (buzzMode == :silent) {buzzMode=:normal;
+			}else if (buzzMode == :normal) {buzzMode=:vibrate;
+			}
+	    }
 	    SaveSettings(version);
 	    }
 	}
@@ -329,6 +337,13 @@ class Settings
 	    if (phase == :goal) {
 			if(goal==:speed){goal=:heartRate;
 			}else if (goal == :heartRate) {goal=:speed;}
+	    }
+	    if (phase == :buzz) {
+			if(buzzMode==:vibrate){buzzMode=:normal;
+			}else if (buzzMode == :normal) {buzzMode=:silent;
+			}else if (buzzMode == :silent) {buzzMode=:none;
+			}else if (buzzMode == :none) {buzzMode=:vibrate;
+			}
 	    }
 	    SaveSettings(version);
 	    }
