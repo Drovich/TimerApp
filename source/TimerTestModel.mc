@@ -13,22 +13,31 @@ class Model{
 	static var WORK_TIME = 20;
 	static var NUM_ROUNDS = 8;
 	static var NUM_LAP = 4;
-	static var HEART_WORK_GOAL = 150;
-	static var HEART_REST_GOAL = 130;
-	static var SPEED_WORK_GOAL = 12;
-	static var SPEED_REST_GOAL = 8;
-	static var HEART_VAR = 0.1;
-	static var SPEED_VAR = 0.1;
+	
 	static var isRecorded = false;
 	static var goal = :heartRate;
 	static var version = 1;
 	
+	static var heartWorkGoal = 150;
+	static var heartRestGoal = 130;
+	static var heartVar = 0.1;
+	var heartRate = 60;
+	
+	static var speedWorkGoal = 12;
+	static var speedRestGoal = 8;
+	static var speedVar = 0.1;
+	var speed = 10;
+	
+	static var cadenceWorkGoal = 185;
+	static var cadenceRestGoal = 170;
+	static var cadenceVar = 0.1;
+	var cadence = 10;
+	var cadenceTracking = true;
+	
+		
 	var TOTAL_ROUNDS = NUM_ROUNDS*NUM_LAP;
 	const HAS_TONES = Attention has :playTone;
 
-
-	var heartRate = 60;
-	var speed = 10;
 	var counter = PREP_TIME;
 	var counterBis =PREP_TIME;
 	var round = 0;
@@ -60,14 +69,28 @@ class Model{
 		REST_TIME = Settings.GetRestValue();
 		WORK_TIME = Settings.GetWorkValue();
 		NUM_ROUNDS = Settings.GetRoundsValue();
-		HEART_WORK_GOAL = Settings.GetHeartWorkValue();
-		HEART_REST_GOAL = Settings.GetHeartRestValue();
-		SPEED_WORK_GOAL = Settings.GetSpeedWorkValue();
-		SPEED_REST_GOAL = Settings.GetSpeedRestValue();
-		HEART_VAR = Settings.HEART_VAR;
-		SPEED_VAR = Settings.SPEED_VAR;
-		heartRate = Activity.getActivityInfo().currentHeartRate;		
+		
+		heartWorkGoal = Settings.GetHeartWorkValue();
+		heartRestGoal = Settings.GetHeartRestValue();
+		heartVar = Settings.GetHeartVar();
+		heartRate = Activity.getActivityInfo().currentHeartRate;	
+		if (heartRate==null){heartRate=-1;}
+		
+		speedWorkGoal = Settings.GetSpeedWorkValue();
+		speedRestGoal = Settings.GetSpeedRestValue();
+		speedVar = Settings.GetSpeedVar();
 		speed = Activity.getActivityInfo().currentSpeed;
+		if (speed==null){speed=-1;}
+		
+			
+		cadenceWorkGoal = Settings.GetCadenceWorkValue();
+		cadenceRestGoal = Settings.GetCadenceRestValue();
+		cadenceVar = Settings.GetCadenceVar();
+		cadence = Activity.getActivityInfo().currentCadence;
+		cadenceTracking = Settings.GetCadenceTracking();
+		if (cadence==null){cadence=-1;}
+		
+		
 		isRecorded = Settings.isRecorded;
 		goal = Settings.goal;
 		buzzMode = Settings.buzzMode;
@@ -178,7 +201,7 @@ class Model{
 		} else if(buzzMode==:silent){
 		} else if (buzzCondition(counter)){
 			preBuzz();
-		} else if (counter%4==0 && goalBuzzCondition() && buzzMode == :vibrate){
+		} else if (counter%3==0 && goalBuzzCondition() && buzzMode == :vibrate){
 			goalBuzz();
 		} 
 	}
@@ -194,16 +217,16 @@ class Model{
 	
 	function goalBuzzCondition(){
 	
-	if (	 (
+	if (	 	(
 				goal==:speed
 				&& (
 						phase == :work
 					&&	(
-							(speed < SPEED_WORK_GOAL-SPEED_WORK_GOAL*Settings.SPEED_VAR)
-						||	(speed > SPEED_WORK_GOAL+SPEED_WORK_GOAL*Settings.SPEED_VAR)
+							(speed < speedWorkGoal-speedWorkGoal*speedVar)
+						||	(speed > speedWorkGoal+speedWorkGoal*speedVar)
 						)
-					||	(speed < SPEED_REST_GOAL-2*SPEED_REST_GOAL*Settings.SPEED_VAR)
-					||	(speed > SPEED_REST_GOAL+SPEED_REST_GOAL*Settings.SPEED_VAR)
+					||	(speed < speedRestGoal-speedRestGoal*speedVar)
+					||	(speed > speedRestGoal+speedRestGoal*speedVar)
 					)
 				)
 				|| 
@@ -212,13 +235,26 @@ class Model{
 				&& ( 
 						phase == :work
 					&&	(
-							(heartRate < HEART_WORK_GOAL-HEART_WORK_GOAL*Settings.HEART_VAR)
-						||	(heartRate > HEART_WORK_GOAL+HEART_WORK_GOAL*Settings.HEART_VAR)
+							(heartRate < heartWorkGoal-heartWorkGoal*heartVar)
+						||	(heartRate > heartWorkGoal+heartWorkGoal*heartVar)
 						) 
-					||	(heartRate < HEART_REST_GOAL-2*HEART_REST_GOAL*Settings.HEART_VAR)
-					||	(heartRate > HEART_REST_GOAL+HEART_REST_GOAL*Settings.HEART_VAR)
+					||	(heartRate < heartRestGoal-heartRestGoal*heartVar)
+					||	(heartRate > heartRestGoal+heartRestGoal*heartVar)
 					) 
-			)
+				)
+				|| 
+				(
+				(goal==:cadence || cadenceTracking==true) 
+				&& (
+						phase == :work
+					&&	(
+							(cadence < cadenceWorkGoal-cadenceWorkGoal*cadenceVar)
+						||	(cadence > cadenceWorkGoal+cadenceWorkGoal*cadenceVar)
+						) 
+					||	(cadence < cadenceRestGoal-cadenceRestGoal*cadenceVar)
+					||	(cadence > cadenceRestGoal+cadenceRestGoal*cadenceVar)
+					) 
+				)
 		){return true;}
 		else {return false;}
 	}
@@ -246,7 +282,7 @@ class Model{
 	
 	function goalBuzz(){
 		var foo = HAS_TONES && beep(Attention.TONE_LOUD_BEEP);
-		vibrate(100);
+		vibrate(200);
 	}
 
 	function vibrate(duration){

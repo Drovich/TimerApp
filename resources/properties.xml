@@ -5,6 +5,10 @@
     <property id="userId" type = "string">Bob</property>
     <property id="timerValue" type="number">45</property>
     <property id="version" type="number">1</property>
+    <property id="cadenceTracking" type="boolean">true</property>
+    <property id="cadenceWork" type="number">185</property>
+    <property id="cadenceRest" type="number">170</property>
+    
     
     <property id="prepTime1" type="number">180</property>
     <property id="restTime1" type="number">1</property>

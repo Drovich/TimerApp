@@ -19,6 +19,10 @@
     <string id="isRecordedTitle">Enable Recording</string>
     <string id="isWhiteBackgroundTitle">White Background</string>
     <string id="versionTitle">Workout number</string>
+    <string id="cadenceWorkValueTitle1">Work cadence</string>
+    <string id="cadenceRestValueTitle1">Rest cadence</string>
+    <string id="cadenceTrackingTitle">Cadence tracking</string>
+    
     
     
     <string id="PrepTimeValueTitle1">1. Prep Time</string>

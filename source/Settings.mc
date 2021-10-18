@@ -13,18 +13,35 @@ class Settings
 	static var WORK_TIME = 20;
 	static var NUM_ROUNDS = 8;
 	static var NUM_LAP = 4;
-	static var HEART_WORK_GOAL = 150;
-	static var HEART_REST_GOAL = 130;
-	static var SPEED_WORK_GOAL = 12;
-	static var SPEED_REST_GOAL = 8;
+	
+	
 	static var isRecorded = false;
 	static var goal = :heartRate;
 	static var version = 1;
 	static var buzzMode = :normal;
 	
+	static var HEART_WORK_GOAL = 150;
+	static var HEART_REST_GOAL = 130;
 	static var HEART_VAR = 0.1;
-	static var SPEED_VAR = 0.1;
+	static var IsHeartVarUpdated = false;
+	static var IsHeartWorkValueUpdated = false;
+	static var IsHeartRestValueUpdated = false;
 	
+	static var SPEED_WORK_GOAL = 12;
+	static var SPEED_REST_GOAL = 8;
+	static var SPEED_VAR = 0.1;
+	static var IsSpeedWorkValueUpdated = false;
+	static var IsSpeedRestValueUpdated = false;
+	static var IsSpeedVarUpdated = false;
+	
+	static var CADENCE_WORK_GOAL = 185;
+	static var CADENCE_REST_GOAL = 170;
+	static var CADENCE_VAR = 0.1;
+	static var cadenceTracking = 0.1;
+	static var IsCadenceWorkValueUpdated = false;
+	static var IsCadenceRestValueUpdated = false;
+	static var IsCadenceVarUpdated = false;
+	static var IsCadenceTrackingUpdated = false; 
 	
 	static var TimerValue = 40;
 	static var IsTimerValueUpdated = false;
@@ -32,13 +49,16 @@ class Settings
 	static var IsRoundsValueUpdated = false;
 	static var IsPrepValueUpdated = false;
 	static var IsRestValueUpdated = false;
-	static var IsHeartWorkValueUpdated = false;
-	static var IsHeartRestValueUpdated = false;
-	static var IsSpeedWorkValueUpdated = false;
-	static var IsSpeedRestValueUpdated = false;
+	
+	
+	
+	
 	static var IsWorkValueUpdated = false;
 	static var IsRecordedValueUpdated = false;
 	static var IsVersionUpdated = false; 
+	
+	
+	
 	
 	
 	static var DimColor = Gfx.COLOR_LT_GRAY;
@@ -65,6 +85,9 @@ class Settings
 		SetHeartRestValue(App.getApp().getProperty("HeartRest"+version));
 		SetSpeedWorkValue(App.getApp().getProperty("SpeedWork"+version));
 		SetSpeedRestValue(App.getApp().getProperty("SpeedRest"+version));
+		SetCadenceWorkValue(App.getApp().getProperty("cadenceWork"));
+		SetCadenceRestValue(App.getApp().getProperty("cadenceRest"));
+		SetCadenceTrackingValue(App.getApp().getProperty("cadenceTracking"));
 		SetRoundsValue(App.getApp().getProperty("NumRound"+version));
 		SetLapValue(App.getApp().getProperty("NumLap"+version));
 		
@@ -88,6 +111,10 @@ class Settings
 		App.getApp().setProperty("HeartRest"+version, HEART_REST_GOAL);
 		App.getApp().setProperty("SpeedWork"+version, SPEED_WORK_GOAL);
 		App.getApp().setProperty("SpeedRest"+version, SPEED_REST_GOAL);
+		App.getApp().setProperty("cadenceWork", CADENCE_WORK_GOAL);
+		App.getApp().setProperty("cadenceRest", CADENCE_REST_GOAL);
+		App.getApp().setProperty("cadenceTracking", cadenceTracking);
+		
 		App.getApp().setProperty("NumRound"+version, NUM_ROUNDS);
 		App.getApp().setProperty("NumLap"+version, NUM_LAP);
 		
@@ -102,8 +129,6 @@ class Settings
         BackgroundColor = isWhiteBackground ? Gfx.COLOR_WHITE : Gfx.COLOR_BLACK;
         DimColor = isWhiteBackground ? Gfx.COLOR_DK_GRAY : Gfx.COLOR_LT_GRAY;
 	}
-	
-
 	
 	static function GetTimerValue()
 	{
@@ -182,6 +207,12 @@ class Settings
 		IsRestValueUpdated = true;
 	}
 	
+	static function GetHeartVar()
+	{
+		IsHeartVarUpdated = false; 
+		return HEART_VAR;
+	}
+
 	static function GetHeartWorkValue()
 	{
 		IsHeartWorkValueUpdated = false; 
@@ -204,6 +235,12 @@ class Settings
 		IsHeartRestValueUpdated = true;
 	}
 	
+	static function GetSpeedVar()
+	{
+		IsSpeedVarUpdated = false; 
+		return SPEED_VAR;
+	}
+
 	static function GetSpeedWorkValue()
 	{
 		IsSpeedWorkValueUpdated = false; 
@@ -224,6 +261,44 @@ class Settings
 	{
 		SPEED_REST_GOAL = (value == null) ? 8 : value;
 		IsSpeedRestValueUpdated = true;
+	}
+	
+	
+	static function GetCadenceVar()
+	{
+		IsCadenceVarUpdated = false; 
+		return CADENCE_VAR;
+	}
+	static function GetCadenceTracking()
+	{
+		IsCadenceTrackingUpdated = false; 
+		return cadenceTracking;
+	}
+	static function SetCadenceTrackingValue(value)
+	{
+		cadenceTracking = (value == null) ? true : value;
+		IsCadenceTrackingUpdated = true;
+	}
+	static function GetCadenceWorkValue()
+	{
+		IsCadenceWorkValueUpdated = false; 
+		return SPEED_WORK_GOAL;
+	}
+	static function SetCadenceWorkValue(value)
+	{
+		CADENCE_WORK_GOAL = (value == null) ? 185 : value;
+		IsCadenceWorkValueUpdated = true;
+	}
+	
+	static function GetCadenceRestValue()
+	{
+		IsCadenceRestValueUpdated = false; 
+		return CADENCE_REST_GOAL;
+	}
+	static function SetCadenceRestValue(value)
+	{
+		CADENCE_REST_GOAL = (value == null) ? 170 : value;
+		IsCadenceRestValueUpdated = true;
 	}
 	
 	static function GetIsRecorded()

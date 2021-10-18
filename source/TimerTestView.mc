@@ -22,46 +22,48 @@ class TimerTestView extends Ui.View {
   	} else {
   		//largeText(timerString(), dc);
     	bottomText( "" +  model.currentRound + "/" + model.NUM_ROUNDS + " | " + "" + model.round + "/" + model.TOTAL_ROUNDS, dc);
-
+		if (model.cadenceTracking == true){
+			largeTextBot("Cadence : "+model.cadence,dc);
+			}
 	    if (model.goal == :speed){
     		if (model.phase == :goal){
-    			topText("" + model.SPEED_WORK_GOAL + " |Goal| " + model.SPEED_REST_GOAL + "", dc);
+    			topText("" + model.speedWorkGoal + " |Goal| " + model.speedRestGoal + "", dc);
     			largeText("Speed", dc);
     		}
 			if (model.phase == :prep) {
-    			topText("" + model.SPEED_REST_GOAL + " |PREP| " + model.speed.format("%02.1f") + "", dc);
+    			topText("" + model.speedRestGoal + " |PREP| " + model.speed.format("%02.1f") + "", dc);
     			largeNumber(timerString(), dc);
 	    	}
 	    	if (model.phase == :rest) {
-	    		topText("" + model.SPEED_REST_GOAL + " |REST| " + model.speed.format("%02.1f") + "", dc);
+	    		topText("" + model.speedRestGoal + " |REST| " + model.speed.format("%02.1f") + "", dc);
 	    		largeNumber(timerString(), dc);
 	    	}
 	      	if (model.phase == :work) {
-	    		topText("" + model.SPEED_WORK_GOAL + " |GO| " + model.speed.format("%02.1f") + "", dc);
+	    		topText("" + model.speedWorkGoal + " |GO| " + model.speed.format("%02.1f") + "", dc);
 	    		largeNumber(timerString(), dc);
 	    	}
 	    	if (model.phase == :rounds) {
-	    		topText("" + model.SPEED_WORK_GOAL + " |ROUND| " + model.SPEED_REST_GOAL + "", dc);
+	    		topText("" + model.speedWorkGoal + " |ROUND| " + model.speedRestGoal + "", dc);
 	    		largeNumber(model.NUM_ROUNDS,dc);
 	    	}
 	    	if (model.phase == :lap) {
-	    		topText("" + model.SPEED_WORK_GOAL + " |LAP| " + model.SPEED_REST_GOAL + "", dc);
+	    		topText("" + model.speedWorkGoal + " |LAP| " + model.speedRestGoal + "", dc);
 	    		largeNumber(model.NUM_LAP,dc);
 	    	}
 	      	if (model.phase == :workSpeed) {
-	    		topText("" + model.SPEED_WORK_GOAL + " |WSpeed| " + model.speed.format("%2.1f") + "", dc);
-	    		largeNumber(model.SPEED_WORK_GOAL,dc);
+	    		topText("" + model.speedWorkGoal + " |WSpeed| " + model.speed.format("%2.1f") + "", dc);
+	    		largeNumber(model.speedWorkGoal,dc);
 	    	}
 	    	if (model.phase == :restSpeed) {
-	    		topText("" + model.SPEED_REST_GOAL + " |RSpeed| " + model.speed.format("%2.1f") + "", dc);
-	    		largeNumber(model.SPEED_REST_GOAL,dc);
+	    		topText("" + model.speedRestGoal + " |RSpeed| " + model.speed.format("%2.1f") + "", dc);
+	    		largeNumber(model.speedRestGoal,dc);
 	    	}
 	    	if (model.phase == :version){
-		    	topText("" + model.SPEED_WORK_GOAL + " |Work| " + model.SPEED_REST_GOAL + "" , dc);
+		    	topText("" + model.speedWorkGoal + " |Work| " + model.speedRestGoal + "" , dc);
 		    	largeText("Workout"+model.version,dc);
 			}
 			if (model.phase == :buzz){
-		    	topText("" + model.SPEED_WORK_GOAL + " |Buzz| " + model.SPEED_REST_GOAL + "" , dc);
+		    	topText("" + model.speedWorkGoal + " |Buzz| " + model.speedRestGoal + "" , dc);
 		    	if(model.buzzMode == :none){
 		    		largeText("None",dc);
 		    	}else if (model.buzzMode == :silent){
@@ -74,43 +76,43 @@ class TimerTestView extends Ui.View {
 			}
 		}else if (model.goal == :heartRate){
 			if (model.phase == :goal){	
-				topText("" + model.HEART_WORK_GOAL + " |Goal| " + model.HEART_REST_GOAL + "", dc);
+				topText("" + model.heartWorkGoal + " |Goal| " + model.heartRestGoal + "", dc);
     			largeText("Heart Rate", dc);
 			}
 			if (model.phase == :prep) {
-    			topText("" + model.HEART_REST_GOAL + " |PREP| " + model.heartRate + "", dc);
+    			topText("" + model.heartRestGoal + " |PREP| " + model.heartRate + "", dc);
     			largeNumber(timerString(), dc);
 	    	}
 	    	if (model.phase == :rest) {
-	    		topText("" + model.HEART_REST_GOAL + " |REST| " + model.heartRate + "", dc);
+	    		topText("" + model.heartRestGoal + " |REST| " + model.heartRate + "", dc);
 	    		largeNumber(timerString(), dc);
 	    	}
 	      	if (model.phase == :work) {
-	    		topText("" + model.HEART_WORK_GOAL + " |GO| " + model.heartRate + "", dc);
+	    		topText("" + model.heartWorkGoal + " |GO| " + model.heartRate + "", dc);
 	    		largeNumber(timerString(), dc);
 	    	}
 	    	if (model.phase == :rounds) {
-	    		topText("" + model.HEART_WORK_GOAL + " |ROUND| " + model.HEART_REST_GOAL + "", dc);
+	    		topText("" + model.heartWorkGoal + " |ROUND| " + model.heartRestGoal + "", dc);
 	    		largeNumber(model.NUM_ROUNDS,dc);
 	    	}
 	    	if (model.phase == :lap) {
-	    		topText("" + model.HEART_WORK_GOAL + " |LAP| " + model.HEART_REST_GOAL + "", dc);
+	    		topText("" + model.heartWorkGoal + " |LAP| " + model.heartRestGoal + "", dc);
 	    		largeNumber(model.NUM_LAP,dc);
 	    	}
 	      	if (model.phase == :workHeart) {
-	    		topText("" + model.HEART_WORK_GOAL + " |W HR| " + model.heartRate + "", dc);
-	    		largeNumber(model.HEART_WORK_GOAL,dc);
+	    		topText("" + model.heartWorkGoal + " |W HR| " + model.heartRate + "", dc);
+	    		largeNumber(model.heartWorkGoal,dc);
 	    	}
 	    	if (model.phase == :restHeart) {
-	    		topText("" + model.HEART_REST_GOAL + " |R HR| " + model.heartRate + "", dc);
-	    		largeNumber(model.HEART_REST_GOAL,dc);
+	    		topText("" + model.heartRestGoal + " |R HR| " + model.heartRate + "", dc);
+	    		largeNumber(model.heartRestGoal,dc);
 	    	}
 	    	if (model.phase == :version){
-		    	topText("" + model.HEART_WORK_GOAL + " |Work| " + model.HEART_REST_GOAL + "" , dc);
+		    	topText("" + model.heartWorkGoal + " |Work| " + model.heartRestGoal + "" , dc);
 		    	largeText("Workout"+model.version,dc);
 			}
 			if (model.phase == :buzz){
-		    	topText("" + model.HEART_WORK_GOAL + " |Buzz| " + model.HEART_REST_GOAL + "" , dc);
+		    	topText("" + model.heartWorkGoal + " |Buzz| " + model.heartRestGoal + "" , dc);
 		    	if(model.buzzMode == :none){
 		    		largeText("None",dc);
 		    	}else if (model.buzzMode == :silent){
@@ -135,25 +137,19 @@ class TimerTestView extends Ui.View {
 	  }
 
   function setupDisplay(dc, phase){
- 	if (model.heartRate == null ){
- 		model.heartRate=111;
- 	}
- 	if (model.speed == null ){
- 		model.speed=11;
- 	}
  	if (model.goal == :heartRate){
 	  	if (phase == :work) {
-	  		if(model.heartRate < model.HEART_WORK_GOAL-model.HEART_WORK_GOAL*Settings.HEART_VAR ){
+	  		if(model.heartRate < model.heartWorkGoal-model.heartWorkGoal*model.heartVar ){
 	  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLUE);
-	  		} else if (model.heartRate > model.HEART_WORK_GOAL+model.HEART_WORK_GOAL*Settings.HEART_VAR){
+	  		} else if (model.heartRate > model.heartWorkGoal+model.heartWorkGoal*model.heartVar){
 	  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_RED);
 	  		} else { 
 	  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_DK_GREEN);
 	  	}
 	  	} else if (phase == :rest) {
-		  	if(model.heartRate < model.HEART_REST_GOAL-2*model.HEART_REST_GOAL*Settings.HEART_VAR ){
+		  	if(model.heartRate < model.heartRestGoal-model.heartRestGoal*model.heartVar ){
 		  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_DK_BLUE);
-		  	}  else if (model.heartRate > model.HEART_REST_GOAL+model.HEART_REST_GOAL*Settings.HEART_VAR){
+		  	}  else if (model.heartRate > model.heartRestGoal+model.heartRestGoal*model.heartVar){
 	  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_RED);
 	  		} else { 
 	  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_GREEN);
@@ -164,17 +160,17 @@ class TimerTestView extends Ui.View {
 	  }
 	  if (model.goal == :speed){
 		  if (phase == :work) {
-		  		if(model.speed < model.SPEED_WORK_GOAL-model.SPEED_WORK_GOAL*Settings.SPEED_VAR ){
+		  		if(model.speed < model.speedWorkGoal-model.speedWorkGoal*model.speedVar ){
 		  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLUE);
-		  		} else if (model.speed > model.SPEED_WORK_GOAL+model.SPEED_WORK_GOAL*Settings.SPEED_VAR){
+		  		} else if (model.speed > model.speedWorkGoal+model.speedWorkGoal*model.speedVar){
 		  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_RED);
 		  		} else { 
 		  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_DK_GREEN);
 		  	}
 		  	} else if (phase == :rest) {
-			  	if(model.speed < model.SPEED_REST_GOAL-2*model.SPEED_REST_GOAL*Settings.SPEED_VAR ){
+			  	if(model.speed < model.speedRestGoal-model.speedRestGoal*model.speedVar ){
 			  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_DK_BLUE);
-			  	}  else if (model.speed > model.SPEED_REST_GOAL+model.SPEED_REST_GOAL*Settings.SPEED_VAR){
+			  	}  else if (model.speed > model.speedRestGoal+model.speedRestGoal*model.speedVar){
 		  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_RED);
 		  		} else { 
 		  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_GREEN);
@@ -183,6 +179,27 @@ class TimerTestView extends Ui.View {
 		  		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
 		  	}
 	  }
+//	  if (model.cadenceTracking == true){
+//		  if (phase == :work) {
+//		  		if(model.cadence < model.cadenceWorkGoal-model.cadenceWorkGoal*model.cadenceVar ){
+//		  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLUE);
+//		  		} else if (model.cadence > model.cadenceWorkGoal+model.cadenceWorkGoal*model.cadenceVar){
+//		  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_RED);
+//		  		} else { 
+//		  			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_DK_GREEN);
+//		  	}
+//		  	} else if (phase == :rest) {
+//			  	if(model.cadence < model.cadenceRestGoal-model.cadenceRestGoal*model.cadenceVar ){
+//			  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_DK_BLUE);
+//			  	}  else if (model.cadence > model.cadenceRestGoal+model.cadenceRestGoal*model.cadenceVar){
+//		  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_RED);
+//		  		} else { 
+//		  			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_GREEN);
+//		  		}
+//		  	}else {
+//		  		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
+//		  }
+//	  }
     dc.clear();
   }
 
@@ -200,6 +217,10 @@ class TimerTestView extends Ui.View {
   
   function largeText(text, dc){
   	dc.drawText(dc.getWidth()/2, dc.getHeight()*0.25, Gfx.FONT_LARGE, text, Gfx.TEXT_JUSTIFY_CENTER);
+  }
+  
+  function largeTextBot(text, dc){
+  	dc.drawText(dc.getWidth()/2, dc.getHeight()*0.6, Gfx.FONT_LARGE, text, Gfx.TEXT_JUSTIFY_CENTER);
   }
 
   function timerString(){

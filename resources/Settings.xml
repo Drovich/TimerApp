@@ -23,6 +23,16 @@
     <setting propertyKey="@Properties.version" title="@Strings.versionTitle">
         <settingConfig type="numeric" />
     </setting>
+    <setting propertyKey="@Properties.cadenceTracking" title="@Strings.cadenceTrackingTitle">
+        <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.cadenceWork" title="@Strings.cadenceWorkValueTitle1">
+        <settingConfig type="numeric" />
+    </setting>
+    <setting propertyKey="@Properties.cadenceRest" title="@Strings.cadenceRestValueTitle1">
+        <settingConfig type="numeric" />
+    </setting>
+    
     
     <setting propertyKey="@Properties.prepTime1" title="@Strings.PrepTimeValueTitle1">
         <settingConfig type="numeric" />
