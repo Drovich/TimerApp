@@ -32,68 +32,87 @@ class TimerTestView extends Ui.View {
  	heartRestGoal = model.HEART_REST_GOAL;
  	speedWorkGoal = model.SPEED_WORK_GOAL;
  	speedRestGoal = model.SPEED_REST_GOAL;
+ 	
   	setupDisplay(dc, model.phase);
   	if (model.done){
   		Ui.switchToView(new DoneView(), new DoneDelegate(), Ui.SLIDE_IMMEDIATE);
   	} else {
-  		largeText(timerString(), dc);
+  		//largeText(timerString(), dc);
     	bottomText( "" +  model.currentRound + "/" + model.NUM_ROUNDS + " | " + "" + model.round + "/" + model.TOTAL_ROUNDS, dc);
 
 	    if (model.goal == :speed){
     		if (model.phase == :goal){
-    			topText("Goal : Speed " , dc);
+    			topText("" + speedWorkGoal + " |Goal:S| " + speedRestGoal + "", dc);
+    			//largeText("Speed", dc);
     		}
 			if (model.phase == :prep) {
     			topText("" + speedRestGoal + " |PREP| " + model.speed.format("%02.1f") + "", dc);
+    			largeText(timerString(), dc);
 	    	}
 	    	if (model.phase == :rest) {
 	    		topText("" + speedRestGoal + " |REST| " + model.speed.format("%02.1f") + "", dc);
+	    		largeText(timerString(), dc);
 	    	}
 	      	if (model.phase == :work) {
 	    		topText("" + speedWorkGoal + " |GO| " + model.speed.format("%02.1f") + "", dc);
+	    		largeText(timerString(), dc);
 	    	}
 	    	if (model.phase == :rounds) {
-	    		topText("" + speedWorkGoal + " |ROUND| " + model.speed.format("%02.1f") + "", dc);
+	    		topText("" + speedWorkGoal + " |ROUND| " + speedRestGoal + "", dc);
+	    		largeText(model.NUM_ROUNDS,dc);
 	    	}
 	    	if (model.phase == :lap) {
-	    		topText("" + speedWorkGoal + " |LAP| " + model.speed.format("%2.1f") + "", dc);
+	    		topText("" + speedWorkGoal + " |LAP| " + speedRestGoal + "", dc);
+	    		largeText(model.NUM_LAP,dc);
 	    	}
 	      	if (model.phase == :workSpeed) {
-	    		topText("" + speedWorkGoal + " |W HR| " + model.speed.format("%2.1f") + "", dc);
+	    		topText("" + speedWorkGoal + " |WSpeed| " + model.speed.format("%2.1f") + "", dc);
+	    		largeText(speedWorkGoal,dc);
 	    	}
 	    	if (model.phase == :restSpeed) {
-	    		topText("" + speedRestGoal + " |R HR| " + model.speed.format("%2.1f") + "", dc);
+	    		topText("" + speedRestGoal + " |RSpeed| " + model.speed.format("%2.1f") + "", dc);
+	    		largeText(speedRestGoal,dc);
 	    	}
 	    	if (model.phase == :version){
-		    	topText("" + speedWorkGoal + " |Work"+model.version + "| " + model.speed.format("%2.1f") + "" , dc);
+		    	topText("" + speedWorkGoal + " |Training| " + speedRestGoal + "" , dc);
+		    	largeText("Workout : "+model.version,dc);
 			}
 		}else if (model.goal == :heartRate){
 			if (model.phase == :goal){	
-				topText("Goal : Heart " , dc);
+				topText("" + heartWorkGoal + " |Goal:HR| " + heartRestGoal + "", dc);
+    			//largeText("Rate", dc);
 			}
 			if (model.phase == :prep) {
     			topText("" + heartRestGoal + " |PREP| " + model.heartRate + "", dc);
+    			largeText(timerString(), dc);
 	    	}
 	    	if (model.phase == :rest) {
 	    		topText("" + heartRestGoal + " |REST| " + model.heartRate + "", dc);
+	    		largeText(timerString(), dc);
 	    	}
 	      	if (model.phase == :work) {
 	    		topText("" + heartWorkGoal + " |GO| " + model.heartRate + "", dc);
+	    		largeText(timerString(), dc);
 	    	}
 	    	if (model.phase == :rounds) {
-	    		topText("" + heartWorkGoal + " |ROUND| " + model.heartRate + "", dc);
+	    		topText("" + heartWorkGoal + " |ROUND| " + heartRestGoal + "", dc);
+	    		largeText(model.NUM_ROUNDS,dc);
 	    	}
 	    	if (model.phase == :lap) {
-	    		topText("" + heartWorkGoal + " |LAP| " + model.heartRate + "", dc);
+	    		topText("" + heartWorkGoal + " |LAP| " + heartRestGoal + "", dc);
+	    		largeText(model.NUM_LAP,dc);
 	    	}
 	      	if (model.phase == :workHeart) {
 	    		topText("" + heartWorkGoal + " |W HR| " + model.heartRate + "", dc);
+	    		largeText(heartWorkGoal,dc);
 	    	}
 	    	if (model.phase == :restHeart) {
 	    		topText("" + heartRestGoal + " |R HR| " + model.heartRate + "", dc);
+	    		largeText(heartRestGoal,dc);
 	    	}
 	    	if (model.phase == :version){
-		    	topText("" + heartWorkGoal + " |Work"+model.version + "| " + model.heartRate + "" , dc);
+		    	topText("" + heartWorkGoal + " |Work| " + heartRestGoal + "" , dc);
+		    	largeText(model.version,dc);
 			}
 		}
 		
@@ -108,8 +127,11 @@ class TimerTestView extends Ui.View {
 	  }
 
   function setupDisplay(dc, phase){
- 	if (model.heartRate == null){
- 		model.heartRate=100;
+ 	if (model.heartRate == null ){
+ 		model.heartRate=111;
+ 	}
+ 	if (model.speed == null ){
+ 		model.speed=11;
  	}
  	if (model.goal == :heartRate){
 	  	if (phase == :work) {

@@ -51,11 +51,11 @@ class Settings
 //		if (version<1 || version>11){version =1;}
 //		SetVersion(App.getApp().getProperty("version"));
 		
-		SetIsRecorded(App.getApp().getProperty("isRecorded"));
+		
 		//SetTimerValue(App.getApp().getProperty("timerValue"));
 		//SetPrepValue(App.getApp().getProperty("timerValue"));
 		SetBackground(App.getApp().getProperty("isWhiteBackground"));
-		
+		SetIsRecorded(App.getApp().getProperty("isRecorded"));
 		
 		SetPrepValue(App.getApp().getProperty("prepTime"+version));
 		SetRestValue(App.getApp().getProperty("restTime"+version));
@@ -210,7 +210,7 @@ class Settings
 	}
 	static function SetSpeedWorkValue(value)
 	{
-		SPEED_WORK_GOAL = (value == null) ? 150 : value;
+		SPEED_WORK_GOAL = (value == null) ? 15 : value;
 		IsSpeedWorkValueUpdated = true;
 	}
 	
@@ -221,7 +221,7 @@ class Settings
 	}
 	static function SetSpeedRestValue(value)
 	{
-		SPEED_REST_GOAL = (value == null) ? 150 : value;
+		SPEED_REST_GOAL = (value == null) ? 8 : value;
 		IsSpeedRestValueUpdated = true;
 	}
 	
@@ -230,13 +230,13 @@ class Settings
 		IsRecordedValueUpdated = false; 
 		return isRecorded;
 	}
-	static function SetIsRecorded(isRecorded)
+	static function SetIsRecorded(value)
 	{
-		isRecorded = (isRecorded == null) ? false : isRecorded;
+		isRecorded = (value == null) ? false : value;
 	}
 	
 	static function Increment(phase,count){
-		var quotient = 5*(count/9);
+		var quotient = 5*(count/11);
 		if (quotient == 0){quotient = 1;}
 		if (phase == :version) {
 			if(version>10){version=1;}else{version=version+1;}
@@ -257,16 +257,20 @@ class Settings
 			NUM_ROUNDS=NUM_ROUNDS+quotient;
 		}
 		if (phase == :workHeart) {
-			HEART_WORK_GOAL=HEART_WORK_GOAL+quotient;
+			if(HEART_WORK_GOAL<200-quotient){HEART_WORK_GOAL=HEART_WORK_GOAL+quotient;
+			}else{HEART_WORK_GOAL=200;}
 		}
 		if (phase == :restHeart) {
-			HEART_REST_GOAL=HEART_REST_GOAL+quotient;
+			if(HEART_REST_GOAL<160-quotient){HEART_REST_GOAL=HEART_REST_GOAL+quotient;
+			}else{HEART_REST_GOAL=160;}
     	}
     	if (phase == :workSpeed) {
-			SPEED_WORK_GOAL=SPEED_WORK_GOAL+quotient;
+			if(SPEED_WORK_GOAL<60-quotient){SPEED_WORK_GOAL=SPEED_WORK_GOAL+quotient;
+			}else{SPEED_WORK_GOAL=60;}
 		}
 		if (phase == :restSpeed) {
-			SPEED_REST_GOAL=SPEED_REST_GOAL+quotient;
+			if(SPEED_REST_GOAL<30-quotient){SPEED_REST_GOAL=SPEED_REST_GOAL+quotient;
+			}else{SPEED_REST_GOAL=30;}
     	}
     	if (phase == :isRecord) {
 			if(isRecorded==true){isRecorded=false;
@@ -281,10 +285,10 @@ class Settings
 	}
 	
 		static function Decrement(phase,count){
-		var quotient = 5*(count/9);
+		var quotient = 5*(count/11);
 		if (quotient == 0){quotient = 1;}
 		if (phase == :version) {
-			if(version==1){version=11;}else{version=version-1;}
+			if(version<1){version=11;}else{version=version-1;}
 	    }else{
 		if (phase == :prep) {
     		if(PREP_TIME>quotient){PREP_TIME=PREP_TIME-quotient;}
@@ -296,22 +300,26 @@ class Settings
     		if(WORK_TIME>quotient){WORK_TIME=WORK_TIME-quotient;}
     	}
 		if (phase == :lap) {
-			if(NUM_LAP>quotient){NUM_LAP=NUM_LAP-quotient;}
+			if(NUM_LAP>quotient){NUM_LAP=NUM_LAP-quotient;}else{NUM_LAP=1;}
 		}
 		if (phase == :rounds) {
-			if(NUM_ROUNDS>quotient){NUM_ROUNDS=NUM_ROUNDS-quotient;}
+			if(NUM_ROUNDS>quotient){NUM_ROUNDS=NUM_ROUNDS-quotient;}else{NUM_ROUNDS=1;}
 		}
 		if (phase == :workHeart) {
-			if(HEART_WORK_GOAL>40+quotient){HEART_WORK_GOAL=HEART_WORK_GOAL-quotient;}
+			if(HEART_WORK_GOAL>40+quotient){HEART_WORK_GOAL=HEART_WORK_GOAL-quotient;
+			}else{HEART_WORK_GOAL=40;}
 		}
 		if (phase == :restHeart) {
-			if(HEART_REST_GOAL>30+quotient){HEART_REST_GOAL=HEART_REST_GOAL-quotient;}
+			if(HEART_REST_GOAL>30+quotient){HEART_REST_GOAL=HEART_REST_GOAL-quotient;
+			}else{HEART_REST_GOAL=30;}
 	    }
 	    if (phase == :workSpeed) {
-			if(SPEED_WORK_GOAL>40+quotient){SPEED_WORK_GOAL=SPEED_WORK_GOAL-quotient;}
+			if(SPEED_WORK_GOAL>quotient){SPEED_WORK_GOAL=SPEED_WORK_GOAL-quotient;
+			}else{SPEED_WORK_GOAL=1;}
 		}
 		if (phase == :restSpeed) {
-			if(SPEED_REST_GOAL>30+quotient){SPEED_REST_GOAL=SPEED_REST_GOAL-quotient;}
+			if(SPEED_REST_GOAL>quotient-1){SPEED_REST_GOAL=SPEED_REST_GOAL-quotient;
+			}else{SPEED_REST_GOAL=0;}
 	    }
 	    
 	    if (phase == :isRecord) {

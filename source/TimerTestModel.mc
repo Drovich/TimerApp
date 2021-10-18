@@ -58,6 +58,8 @@ class Model{
 		NUM_ROUNDS = Settings.GetRoundsValue();
 		HEART_WORK_GOAL = Settings.GetHeartWorkValue();
 		HEART_REST_GOAL = Settings.GetHeartRestValue();
+		SPEED_WORK_GOAL = Settings.GetSpeedWorkValue();
+		SPEED_REST_GOAL = Settings.GetSpeedRestValue();
 		heartRate = Activity.getActivityInfo().currentHeartRate;		
 		speed = Activity.getActivityInfo().currentSpeed;
 		isRecorded = Settings.isRecorded;

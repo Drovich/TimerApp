@@ -80,7 +80,7 @@
         <settingConfig type="numeric" />
     </setting>
     
-<!--     <setting propertyKey="@Properties.prepTime3" title="@Strings.PrepTimeValueTitle3">
+    <setting propertyKey="@Properties.prepTime3" title="@Strings.PrepTimeValueTitle3">
         <settingConfig type="numeric" />
     </setting>
      <setting propertyKey="@Properties.restTime3" title="@Strings.RestTimeValueTitle3">
@@ -331,6 +331,6 @@
     </setting>
     <setting propertyKey="@Properties.SpeedRest11" title="@Strings.SpeedRestValueTitle11">
         <settingConfig type="numeric" />
-    </setting> -->
+    </setting> 
 	
 </settings>

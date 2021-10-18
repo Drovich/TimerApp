@@ -41,7 +41,7 @@
     <string id="SpeedWorkValueTitle2">2. Work Speed</string>
     <string id="SpeedRestValueTitle2">2. Rest Speed</string>
     
-  <!--   <string id="PrepTimeValueTitle3">3. Prep Time</string>
+    <string id="PrepTimeValueTitle3">3. Prep Time</string>
     <string id="RestTimeValueTitle3">3. Rest Time</string>
     <string id="WorkTimeValueTitle3">3. Work Time</string>
     <string id="NumRoundValueTitle3">3. Number of Rounds</string>
@@ -129,7 +129,7 @@
     <string id="HeartWorkValueTitle11">11. Work Heart</string>
     <string id="HeartRestValueTitle11">11. Rest Heart</string>
     <string id="SpeedWorkValueTitle11">11. Work Speed</string>
-    <string id="SpeedRestValueTitle11">11. Rest Speed</string> -->
+    <string id="SpeedRestValueTitle11">11. Rest Speed</string>
     
     <string id="mmenuRacetimer">Race Timer</string>
     <string id="mmenuCruise">Cruise</string>
