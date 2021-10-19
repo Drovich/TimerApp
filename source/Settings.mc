@@ -356,6 +356,11 @@ class Settings
 			if(goal==:speed){goal=:heartRate;
 			}else if (goal == :heartRate) {goal=:speed;}
 	    }
+	    if (phase == :cadence) {
+			if(cadenceTracking==true){cadenceTracking=false;
+			}else if (cadenceTracking == false) {cadenceTracking=true;
+			}
+	    }
 	    if (phase == :buzz) {
 			if(buzzMode==:vibrate){buzzMode=:none;
 			}else if (buzzMode == :none) {buzzMode=:silent;
@@ -412,6 +417,11 @@ class Settings
 	    if (phase == :goal) {
 			if(goal==:speed){goal=:heartRate;
 			}else if (goal == :heartRate) {goal=:speed;}
+	    }
+	    if (phase == :cadence) {
+			if(cadenceTracking==true){cadenceTracking=false;
+			}else if (cadenceTracking == false) {cadenceTracking=true;
+			}
 	    }
 	    if (phase == :buzz) {
 			if(buzzMode==:vibrate){buzzMode=:normal;

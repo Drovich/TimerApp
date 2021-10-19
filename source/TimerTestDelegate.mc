@@ -72,6 +72,8 @@ class TimerTestDelegate extends Ui.InputDelegate {
 				}else if(model.phase == :lap){
 					model.phase = :goal;
 				}else if(model.phase == :goal){
+					model.phase = :cadence;
+				}else if(model.phase == :cadence){
 					model.phase = :isRecord;
 				}else if(model.phase == :isRecord){
 					model.phase = :buzz;
@@ -91,6 +93,8 @@ class TimerTestDelegate extends Ui.InputDelegate {
 				}else if(model.phase == :buzz){
 					model.phase = :isRecord;
 				}else if(model.phase == :isRecord){
+					model.phase = :cadence;
+				}else if(model.phase == :cadence){
 					model.phase = :goal;
 				}else if(model.phase == :goal){
 					model.phase = :lap;

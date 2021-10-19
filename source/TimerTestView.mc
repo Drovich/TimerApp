@@ -62,6 +62,14 @@ class TimerTestView extends Ui.View {
 		    	topText("" + model.speedWorkGoal + " |Work| " + model.speedRestGoal + "" , dc);
 		    	largeText("Workout"+model.version,dc);
 			}
+			if (model.phase == :cadence){
+		    	topText("" + model.cadenceWorkGoal + "|Cadence|" + model.cadenceRestGoal + "" , dc);
+		    	if(model.cadenceTracking == true){
+		    		largeText("Cadence Tracking",dc);
+		    	}else if (model.cadenceTracking == false){
+		    		largeText("No CadenceTracking",dc);
+		    	}
+			}
 			if (model.phase == :buzz){
 		    	topText("" + model.speedWorkGoal + " |Buzz| " + model.speedRestGoal + "" , dc);
 		    	if(model.buzzMode == :none){
@@ -110,6 +118,14 @@ class TimerTestView extends Ui.View {
 	    	if (model.phase == :version){
 		    	topText("" + model.heartWorkGoal + " |Work| " + model.heartRestGoal + "" , dc);
 		    	largeText("Workout"+model.version,dc);
+			}
+			if (model.phase == :cadence){
+		    	topText("" + model.cadenceWorkGoal + "|Kdence|" + model.cadenceRestGoal + "" , dc);
+		    	if(model.cadenceTracking == true){
+		    		largeText("Kdence Track",dc);
+		    	}else if (model.cadenceTracking == false){
+		    		largeText("No KdenceTrack",dc);
+		    	}
 			}
 			if (model.phase == :buzz){
 		    	topText("" + model.heartWorkGoal + " |Buzz| " + model.heartRestGoal + "" , dc);
